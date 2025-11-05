@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{83c7861c-6277-4d3e-ba77-21ef86954974}</ProjectGuid>
+    <RootNamespace>SFMLGamebase</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SFML_Platformer_Base</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\natha\Documents\SFML-2.6.2\include;C:\Users\natha\Documents\rapidjson-1.1.0\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\natha\Documents\SFML-2.6.2\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\natha\Documents\SFML-2.6.2\include;C:\Users\natha\Documents\rapidjson-1.1.0\include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\natha\Documents\SFML-2.6.2\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Actions.h" />
+    <ClInclude Include="Actionable.h" />
+    <ClInclude Include="Bar.h" />
+    <ClInclude Include="ChangeableAnimation.h" />
+    <ClInclude Include="AnimatedPlatform.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Application.hpp" />
+    <ClInclude Include="Attack.h" />
+    <ClInclude Include="Attacker.h" />
+    <ClInclude Include="Button.hpp" />
+    <ClInclude Include="Categories.hpp" />
+    <ClInclude Include="ChasePlayer.h" />
+    <ClInclude Include="Command.hpp" />
+    <ClInclude Include="CommandQueue.hpp" />
+    <ClInclude Include="Component.hpp" />
+    <ClInclude Include="Container.hpp" />
+    <ClInclude Include="DataRetrivalTypes.h" />
+    <ClInclude Include="DataTable.h" />
+    <ClInclude Include="Door.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Entity.hpp" />
+    <ClInclude Include="FallingPlatform.h" />
+    <ClInclude Include="FleePlayer.h" />
+    <ClInclude Include="GameState.hpp" />
+    <ClInclude Include="Greatsword.h" />
+    <ClInclude Include="OverlayState.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="Interact.h" />
+    <ClInclude Include="Interactable.h" />
+    <ClInclude Include="Jump.h" />
+    <ClInclude Include="Label.hpp" />
+    <ClInclude Include="LoadingState.h" />
+    <ClInclude Include="Lock.h" />
+    <ClInclude Include="MakeAttack.h" />
+    <ClInclude Include="MenuesViewHandler.h" />
+    <ClInclude Include="MenuState.hpp" />
+    <ClInclude Include="Movable.h" />
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="MoveDis.h" />
+    <ClInclude Include="MovingPlatform.h" />
+    <ClInclude Include="NormalPlatform.h" />
+    <ClInclude Include="Pause.h" />
+    <ClInclude Include="PauseState.hpp" />
+    <ClInclude Include="Platform.h" />
+    <ClInclude Include="Platformer.h" />
+    <ClInclude Include="Player.hpp" />
+    <ClInclude Include="Player_Entity.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="RelativeRect.h" />
+    <ClInclude Include="ResourceHolder.hpp" />
+    <ClInclude Include="ResourceIdentifiers.hpp" />
+    <ClInclude Include="SceneNode.hpp" />
+    <ClInclude Include="Scene_Builder.h" />
+    <ClInclude Include="SettingsState.hpp" />
+    <ClInclude Include="Slash.h" />
+    <ClInclude Include="SpriteNode.hpp" />
+    <ClInclude Include="State.hpp" />
+    <ClInclude Include="States.hpp" />
+    <ClInclude Include="StateStack.hpp" />
+    <ClInclude Include="TitleState.hpp" />
+    <ClInclude Include="UseWeapon.h" />
+    <ClInclude Include="Utility.hpp" />
+    <ClInclude Include="ViewArea.h" />
+    <ClInclude Include="ViewHandler.h" />
+    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponWielder.h" />
+    <ClInclude Include="With.h" />
+    <ClInclude Include="World.hpp" />
+    <ClInclude Include="WorldCommand.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResourceHolder.inl" />
+    <None Include="Utility.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Actions.cpp" />
+    <ClCompile Include="Actionable.cpp" />
+    <ClCompile Include="Bar.cpp" />
+    <ClCompile Include="ChangeableAnimation.cpp" />
+    <ClCompile Include="AnimatedPlatform.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="Attacker.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ChasePlayer.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="CommandQueue.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Container.cpp" />
+    <ClCompile Include="DataTable.cpp" />
+    <ClCompile Include="Door.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="FallingPlatform.cpp" />
+    <ClCompile Include="FleePlayer.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Greatsword.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="Interact.cpp" />
+    <ClCompile Include="Interactable.cpp" />
+    <ClCompile Include="Jump.cpp" />
+    <ClCompile Include="Label.cpp" />
+    <ClCompile Include="LoadingState.cpp" />
+    <ClCompile Include="Lock.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MakeAttack.cpp" />
+    <ClCompile Include="MenuesViewHandler.cpp" />
+    <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="Movable.cpp" />
+    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="MoveDis.cpp" />
+    <ClCompile Include="MovingPlatform.cpp" />
+    <ClCompile Include="NormalPlatform.cpp" />
+    <ClCompile Include="OverlayState.cpp" />
+    <ClCompile Include="Pause.cpp" />
+    <ClCompile Include="PauseState.cpp" />
+    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="Platformer.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Player_Entity.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="RelativeRect.cpp" />
+    <ClCompile Include="SceneNode.cpp" />
+    <ClCompile Include="Scene_Builder.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="SettingsState.cpp" />
+    <ClCompile Include="Slash.cpp" />
+    <ClCompile Include="SpriteNode.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateStack.cpp" />
+    <ClCompile Include="TitleState.cpp" />
+    <ClCompile Include="UseWeapon.cpp" />
+    <ClCompile Include="Utility.cpp" />
+    <ClCompile Include="ViewArea.cpp" />
+    <ClCompile Include="ViewHandler.cpp" />
+    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponWielder.cpp" />
+    <ClCompile Include="With.cpp" />
+    <ClCompile Include="World.cpp" />
+    <ClCompile Include="WorldCommand.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,2 +1,2259 @@
-﻿  main.cpp
-  Scorch.vcxproj -> C:\Users\natha\Documents\GitHub\Scorch\Scorch\x64\Debug\Scorch.exe
+﻿  Actionable.cpp
+  AnimatedPlatform.cpp
+  Animation.cpp
+  Application.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,24): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::VideoMode'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,24):
+      'sf::VideoMode::VideoMode': no overloaded function could convert all the argument types
+          C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\VideoMode.hpp(61,5):
+          could be 'sf::VideoMode::VideoMode(sf::Vector2u,unsigned int)'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,24):
+              'sf::VideoMode::VideoMode(sf::Vector2u,unsigned int)': cannot convert argument 1 from 'T' to 'sf::Vector2u'
+          with
+          [
+              T=float
+          ]
+                  C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                  'sf::Vector2<unsigned int>::Vector2': no overloaded function could convert all the argument types
+                      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\System\Vector2.hpp(205,1):
+                      could be 'sf::Vector2<unsigned int>::Vector2(sf::Vector2<unsigned int> &&)'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                          'sf::Vector2<unsigned int>::Vector2(sf::Vector2<unsigned int> &&)': cannot convert argument 1 from 'T' to 'sf::Vector2<unsigned int> &&'
+          with
+          [
+              T=float
+          ]
+                              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                              Reason: cannot convert from 'T' to 'sf::Vector2<unsigned int>'
+          with
+          [
+              T=float
+          ]
+                              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                              Conversion requires a second user-defined-conversion operator or constructor
+                      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\System\Vector2.hpp(205,1):
+                      or       'sf::Vector2<unsigned int>::Vector2(const sf::Vector2<unsigned int> &)'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                          'sf::Vector2<unsigned int>::Vector2(const sf::Vector2<unsigned int> &)': cannot convert argument 1 from 'T' to 'const sf::Vector2<unsigned int> &'
+          with
+          [
+              T=float
+          ]
+                              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                              Reason: cannot convert from 'T' to 'const sf::Vector2<unsigned int>'
+          with
+          [
+              T=float
+          ]
+                              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                              Conversion requires a second user-defined-conversion operator or constructor
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,52):
+                      while trying to match the argument list '(T)'
+          with
+          [
+              T=float
+          ]
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,24):
+          while trying to match the argument list '(T, T)'
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,10): error C2665: 'sf::RenderWindow::RenderWindow': no overloaded function could convert all the argument types
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(127,5):
+      could be 'sf::RenderWindow::RenderWindow(sf::WindowHandle,const sf::ContextSettings &)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,10):
+          'sf::RenderWindow::RenderWindow(sf::WindowHandle,const sf::ContextSettings &)': cannot convert argument 1 from 'const char [7]' to 'sf::WindowHandle'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+              Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(86,5):
+      or       'sf::RenderWindow::RenderWindow(sf::VideoMode,const sf::String &,uint32_t,sf::State,const sf::ContextSettings &)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,10):
+          'sf::RenderWindow::RenderWindow(sf::VideoMode,const sf::String &,uint32_t,sf::State,const sf::ContextSettings &)': cannot convert argument 1 from 'const char [7]' to 'sf::VideoMode'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+              'sf::VideoMode::VideoMode': no overloaded function could convert all the argument types
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\VideoMode.hpp(104,1):
+                  could be 'sf::VideoMode::VideoMode(sf::VideoMode &&)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+                      'sf::VideoMode::VideoMode(sf::VideoMode &&)': cannot convert argument 1 from 'const char [7]' to 'sf::VideoMode &&'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+                          Reason: cannot convert from 'const char [7]' to 'sf::VideoMode'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\VideoMode.hpp(104,1):
+                  or       'sf::VideoMode::VideoMode(const sf::VideoMode &)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+                      'sf::VideoMode::VideoMode(const sf::VideoMode &)': cannot convert argument 1 from 'const char [7]' to 'const sf::VideoMode &'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+                          Reason: cannot convert from 'const char [7]' to 'const sf::VideoMode'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,88):
+                  while trying to match the argument list '(const char [7])'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(19,10):
+      while trying to match the argument list '(const char [7], sf::Style::<unnamed-enum-None>)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(24,18): error C2512: 'sf::Text::Text': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(24,18):
+      while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(40,18): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(40,18):
+      while trying to match the argument list '(float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(81,12): error C2512: 'sf::Event': no appropriate default constructor available
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(82,17): error C2660: 'sf::WindowBase::pollEvent': function does not take 1 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\WindowBase.hpp(226,40):
+      see declaration of 'sf::WindowBase::pollEvent'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(82,17):
+      while trying to match the argument list '(sf::Event)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp(86,13): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+  Attack.cpp
+  Attacker.cpp
+  Bar.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Bar.cpp(42,34): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Bar.cpp(43,51): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Bar.cpp(43,94): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+  Button.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(21,10): error C2512: 'sf::Sprite::Sprite': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(21,10):
+      while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,8): error C2665: 'sf::Text::Text': no overloaded function could convert all the argument types
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Text.hpp(93,5):
+      could be 'sf::Text::Text(const sf::Font &&,sf::String,unsigned int)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,8):
+          'sf::Text::Text(const sf::Font &&,sf::String,unsigned int)': cannot convert argument 1 from 'const char [1]' to 'const sf::Font &&'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+              Reason: cannot convert from 'const char [1]' to 'const sf::Font'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+              'sf::Font::Font': no overloaded function could convert all the argument types
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  could be 'sf::Font::Font(sf::Font &&)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                      'sf::Font::Font(sf::Font &&)': cannot convert argument 1 from 'const char [1]' to 'sf::Font &&'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Reason: cannot convert from 'const char [1]' to 'sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  or       'sf::Font::Font(const sf::Font &)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                      'sf::Font::Font(const sf::Font &)': cannot convert argument 1 from 'const char [1]' to 'const sf::Font &'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Reason: cannot convert from 'const char [1]' to 'const sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                  while trying to match the argument list '(const char [1])'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Text.hpp(87,5):
+      or       'sf::Text::Text(const sf::Font &,sf::String,unsigned int)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,8):
+          'sf::Text::Text(const sf::Font &,sf::String,unsigned int)': cannot convert argument 1 from 'const char [1]' to 'const sf::Font &'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+              Reason: cannot convert from 'const char [1]' to 'const sf::Font'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+              'sf::Font::Font': no overloaded function could convert all the argument types
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  could be 'sf::Font::Font(sf::Font &&)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                      'sf::Font::Font(sf::Font &&)': cannot convert argument 1 from 'const char [1]' to 'sf::Font &&'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Reason: cannot convert from 'const char [1]' to 'sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  or       'sf::Font::Font(const sf::Font &)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                      'sf::Font::Font(const sf::Font &)': cannot convert argument 1 from 'const char [1]' to 'const sf::Font &'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Reason: cannot convert from 'const char [1]' to 'const sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,9):
+                  while trying to match the argument list '(const char [1])'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(22,8):
+      while trying to match the argument list '(const char [1], const Resource, int)'
+          with
+          [
+              Resource=sf::Font
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(28,27): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(28,47): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(114,29): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(114,47): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(115,14): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(115,31): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(118,27): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp(118,47): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+  ChangeableAnimation.cpp
+  ChasePlayer.cpp
+  Command.cpp
+  Component.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Component.cpp(57,30): error C2039: 'getPosition': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+  Container.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(36,17): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(38,13): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(38,39): error C2039: 'W': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(38,39): error C2065: 'W': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(38,50): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(38,76): error C2039: 'Up': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(38,76): error C2065: 'Up': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(42,18): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(42,44): error C2039: 'S': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(42,44): error C2065: 'S': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(42,55): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(42,81): error C2039: 'Down': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(42,81): error C2065: 'Down': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(46,18): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(46,44): error C2039: 'Return': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(46,44): error C2065: 'Return': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(46,60): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(46,86): error C2039: 'Space': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(46,86): error C2065: 'Space': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(52,12): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(55,122): error C2039: 'mouseButton': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(55,143): error C2039: 'mouseButton': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(62,12): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(65,77): error C2039: 'mouseMove': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(65,96): error C2039: 'mouseMove': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(102,20): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp(129,40): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  DataTable.cpp
+  Door.cpp
+  Enemy.cpp
+  FallingPlatform.cpp
+  FleePlayer.cpp
+  GameState.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\GameState.cpp(42,12): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\GameState.cpp(42,51): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\GameState.cpp(42,77): error C2039: 'Escape': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\GameState.cpp(42,77): error C2065: 'Escape': undeclared identifier
+  Greatsword.cpp
+  Generating Code...
+  Compiling...
+  Image.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Image.cpp(10,2): error C2512: 'sf::Sprite': no appropriate default constructor available
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Sprite.hpp(50,25):
+      see declaration of 'sf::Sprite'
+  
+  Interact.cpp
+  Interactable.cpp
+  Label.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,8): error C2665: 'sf::Text::Text': no overloaded function could convert all the argument types
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Text.hpp(93,5):
+      could be 'sf::Text::Text(const sf::Font &&,sf::String,unsigned int)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,8):
+          'sf::Text::Text(const sf::Font &&,sf::String,unsigned int)': cannot convert argument 1 from 'const std::string' to 'const sf::Font &&'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,9):
+              Reason: cannot convert from 'const std::string' to 'const sf::Font'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,9):
+              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Text.hpp(87,5):
+      or       'sf::Text::Text(const sf::Font &,sf::String,unsigned int)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,8):
+          'sf::Text::Text(const sf::Font &,sf::String,unsigned int)': cannot convert argument 1 from 'const std::string' to 'const sf::Font &'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,9):
+              Reason: cannot convert from 'const std::string' to 'const sf::Font'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,9):
+              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(12,8):
+      while trying to match the argument list '(const std::string, const Resource, int)'
+          with
+          [
+              Resource=sf::Font
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(43,27): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Label.cpp(43,47): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+  LoadingState.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,15): error C2665: 'sf::Text::Text': no overloaded function could convert all the argument types
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Text.hpp(93,5):
+      could be 'sf::Text::Text(const sf::Font &&,sf::String,unsigned int)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,15):
+          'sf::Text::Text(const sf::Font &&,sf::String,unsigned int)': cannot convert argument 1 from 'const char [8]' to 'const sf::Font &&'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+              Reason: cannot convert from 'const char [8]' to 'const sf::Font'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+              'sf::Font::Font': no overloaded function could convert all the argument types
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  could be 'sf::Font::Font(sf::Font &&)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                      'sf::Font::Font(sf::Font &&)': cannot convert argument 1 from 'const char [8]' to 'sf::Font &&'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Reason: cannot convert from 'const char [8]' to 'sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  or       'sf::Font::Font(const sf::Font &)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                      'sf::Font::Font(const sf::Font &)': cannot convert argument 1 from 'const char [8]' to 'const sf::Font &'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Reason: cannot convert from 'const char [8]' to 'const sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                  while trying to match the argument list '(const char [8])'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Text.hpp(87,5):
+      or       'sf::Text::Text(const sf::Font &,sf::String,unsigned int)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,15):
+          'sf::Text::Text(const sf::Font &,sf::String,unsigned int)': cannot convert argument 1 from 'const char [8]' to 'const sf::Font &'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+              Reason: cannot convert from 'const char [8]' to 'const sf::Font'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+              'sf::Font::Font': no overloaded function could convert all the argument types
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  could be 'sf::Font::Font(sf::Font &&)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                      'sf::Font::Font(sf::Font &&)': cannot convert argument 1 from 'const char [8]' to 'sf::Font &&'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Reason: cannot convert from 'const char [8]' to 'sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Font.hpp(461,1):
+                  or       'sf::Font::Font(const sf::Font &)'
+                      C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                      'sf::Font::Font(const sf::Font &)': cannot convert argument 1 from 'const char [8]' to 'const sf::Font &'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Reason: cannot convert from 'const char [8]' to 'const sf::Font'
+                          C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,16):
+                  while trying to match the argument list '(const char [8])'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\LoadingState.cpp(18,15):
+      while trying to match the argument list '(const char [8], Resource)'
+          with
+          [
+              Resource=sf::Font
+          ]
+  
+  Lock.cpp
+  MakeAttack.cpp
+  MenuState.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(15,58): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(15,58):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(15,58):
+          while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(15,44): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(15,44):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(15,44):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(18,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(18,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(18,56):
+          while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(18,42): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(18,42):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(18,42):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(21,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(21,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(21,56):
+          while trying to match the argument list '(int, int, double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(21,42): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(21,42):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(21,42):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(31,60): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(31,60):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(31,60):
+          while trying to match the argument list '(double, double, double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(31,46): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(31,46):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(31,46):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(39,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(39,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(39,56):
+          while trying to match the argument list '(int, int, double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(39,42): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(39,42):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(39,42):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(56,30): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(56,30):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(56,30):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(65,40): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(65,40):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\MenuState.cpp(65,40):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+  Movable.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244: '=': conversion from 'T' to 'T', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:         with
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:             T=float
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:         ]
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:         and
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:             T=int
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(47,31): warning C4244:         ]
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244: '=': conversion from 'T' to 'T', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:         with
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:             T=float
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:         ]
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:         and
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:             T=int
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Movable.cpp(50,31): warning C4244:         ]
+  MovingPlatform.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(66,37): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(66,37): warning C4244:         with
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(66,37): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(66,37): warning C4244:             T=float
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(66,37): warning C4244:         ]
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(67,37): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(67,37): warning C4244:         with
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(67,37): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(67,37): warning C4244:             T=float
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(67,37): warning C4244:         ]
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(70,37): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(70,37): warning C4244:         with
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(70,37): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(70,37): warning C4244:             T=float
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(70,37): warning C4244:         ]
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(71,37): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(71,37): warning C4244:         with
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(71,37): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(71,37): warning C4244:             T=float
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\MovingPlatform.cpp(71,37): warning C4244:         ]
+  NormalPlatform.cpp
+  OverlayState.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(18,21): error C2512: 'sf::Sprite::Sprite': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(18,21):
+      while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(26,58): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(26,58):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(26,58):
+          while trying to match the argument list '(int, int, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(26,44): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(26,44):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(26,44):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(34,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(34,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(34,56):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(34,42): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(34,42):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(34,42):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(37,57): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(37,57):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(37,57):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(37,43): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(37,43):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(37,43):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(51,53): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(51,53):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(51,53):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(51,39): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(51,39):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(51,39):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(59,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(59,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(59,56):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(59,42): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(59,42):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(59,42):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(63,55): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(63,55):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(63,55):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(63,41): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(63,41):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(63,41):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(76,30): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(76,30):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(76,30):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(89,40): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(89,40):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(89,40):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(93,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(104,11): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(104,50): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\OverlayState.cpp(104,97): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+  Pause.cpp
+  PauseState.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(17,20): error C2512: 'sf::Sprite::Sprite': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(17,20):
+      while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(21,58): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(21,58):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(21,58):
+          while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(21,44): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(21,44):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(21,44):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(29,58): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(29,58):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(29,58):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(29,44): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(29,44):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(29,44):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(37,62): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(37,62):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(37,62):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(37,48): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(37,48):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(37,48):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(50,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(50,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(50,56):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(50,42): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'RelativeRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(50,42):
+      'RelativeRect::RelativeRect': function does not take 2 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(50,42):
+          while trying to match the argument list '(RelativeWH, Anchor)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(66,30): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(66,30):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(66,30):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(79,40): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(79,40):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\PauseState.cpp(79,40):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+  Platform.cpp
+  Platformer.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(25,4): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(25,4):
+      while trying to match the argument list '(T, T)'
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(31,4): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(31,4):
+      while trying to match the argument list '(T, T)'
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(38,4): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(38,4):
+      while trying to match the argument list '(T, T)'
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(45,4): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(45,4):
+      while trying to match the argument list '(T, T)'
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(78,25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(90,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(93,24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(98,23): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Platformer.cpp(101,24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Player.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(107,28): error C2039: 'Left': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(107,28): error C2065: 'Left': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(108,28): error C2039: 'Right': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(108,28): error C2065: 'Right': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(109,28): error C2039: 'Up': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(109,28): error C2065: 'Up': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(110,28): error C2039: 'Down': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(110,28): error C2065: 'Down': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(111,28): error C2039: 'Space': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(111,28): error C2065: 'Space': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(112,28): error C2039: 'Num1': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(112,28): error C2065: 'Num1': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(113,28): error C2039: 'Num2': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(113,28): error C2065: 'Num2': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(114,28): error C2039: 'Num3': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(114,28): error C2065: 'Num3': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(115,28): error C2039: 'Num4': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(115,28): error C2065: 'Num4': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(127,12): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(130,39): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(131,7): error C3536: 'found': cannot be used before it is initialized
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(131,13): error C2446: '!=': no conversion from 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const sf::Keyboard::Key,Player::PActions>>>>' to '<error type>'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(131,31):
+      No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,46): error C7732: expected an expression before ']'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,18): error C2679: binary '[': no operator found which takes a right-hand operand of type 'int' (or there is no acceptable conversion)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\map(345,18):
+      could be 'Command &std::map<Player::PActions,Command,std::less<Player::PActions>,std::allocator<std::pair<const Player::PActions,Command>>>::operator [](const Player::PActions &)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,18):
+          'Command &std::map<Player::PActions,Command,std::less<Player::PActions>,std::allocator<std::pair<const Player::PActions,Command>>>::operator [](const Player::PActions &)': cannot convert argument 2 from 'int' to 'const Player::PActions &'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,46):
+              Reason: cannot convert from 'int' to 'const Player::PActions'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,46):
+              Conversion to enumeration type requires an explicit cast (static_cast, C-style cast or parenthesized function-style cast)
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\map(174,18):
+      or       'Command &std::map<Player::PActions,Command,std::less<Player::PActions>,std::allocator<std::pair<const Player::PActions,Command>>>::operator [](Player::PActions &&)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,18):
+          'Command &std::map<Player::PActions,Command,std::less<Player::PActions>,std::allocator<std::pair<const Player::PActions,Command>>>::operator [](Player::PActions &&)': cannot convert argument 2 from 'int' to 'Player::PActions &&'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,46):
+              Reason: cannot convert from 'int' to 'Player::PActions'
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,46):
+              Conversion to enumeration type requires an explicit cast (static_cast, C-style cast or parenthesized function-style cast)
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(132,18):
+      while trying to match the argument list '(std::map<Player::PActions,Command,std::less<Player::PActions>,std::allocator<std::pair<const Player::PActions,Command>>>, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(170,23): error C2039: 'Unknown': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp(170,23): error C2065: 'Unknown': undeclared identifier
+  Player_Entity.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player_Entity.cpp(16,1): error C2512: 'sf::Sprite': no appropriate default constructor available
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Sprite.hpp(50,25):
+      see declaration of 'sf::Sprite'
+  
+  Projectile.cpp
+  RelativeRect.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(5,10): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(6,10): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(7,10): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(8,10): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(16,10): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(17,10): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(18,10): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(19,10): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(28,12): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(29,12): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(33,12): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(33,31): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(34,12): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(34,30): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(38,12): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(38,32): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(39,12): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(39,29): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(43,18): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(43,41): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(44,13): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(44,32): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(45,13): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(45,31): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(48,13): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(48,33): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(49,13): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(49,30): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(54,12): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(54,31): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(55,12): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(55,32): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(58,11): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(59,11): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(63,12): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(63,30): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(64,12): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(64,29): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(68,12): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(68,30): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(68,51): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(69,12): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(69,29): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(73,12): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(73,30): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(74,12): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(74,29): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(74,51): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(78,12): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(78,30): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(78,51): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(79,12): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(79,29): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(79,51): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(83,12): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(83,30): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(83,51): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(84,12): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(84,29): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(84,51): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(92,14): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(93,14): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(94,14): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(95,14): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(111,26): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(111,65): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(112,26): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(112,65): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(114,9): error C2660: 'sf::Transformable::scale': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(207,10):
+      see declaration of 'sf::Transformable::scale'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(114,9):
+      while trying to match the argument list '(float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(119,26): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(119,65): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(120,26): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(120,65): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(123,21): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(123,60): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(128,21): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(128,60): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(133,16): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(133,43): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(134,22): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(134,61): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(138,22): error C2039: 'getSize': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(138,61): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(143,9): error C2660: 'sf::Transformable::scale': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(207,10):
+      see declaration of 'sf::Transformable::scale'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp(143,9):
+      while trying to match the argument list '(float, float)'
+  
+  Generating Code...
+  Compiling...
+  SceneNode.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(46,2): error C2664: 'void SceneNode::drawCurrent(sf::RenderTarget &,sf::RenderStates) const': cannot convert argument 2 from 'sf::Transform' to 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(46,39):
+      use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.hpp(57,18):
+      see declaration of 'SceneNode::drawCurrent'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(46,2):
+      while trying to match the argument list '(sf::RenderTarget, sf::Transform)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(60,17): error C2027: use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(63,2): error C2027: use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(66,2): error C2664: 'void SceneNode::drawCurrent(sf::RenderTarget &,sf::RenderStates) const': cannot convert argument 2 from 'sf::RenderStates' to 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(66,22):
+      use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.hpp(57,18):
+      see declaration of 'SceneNode::drawCurrent'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(66,2):
+      while trying to match the argument list '(sf::RenderTarget, sf::RenderStates)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(67,2): error C2664: 'void SceneNode::drawChildren(sf::RenderTarget &,sf::RenderStates) const': cannot convert argument 2 from 'sf::RenderStates' to 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(67,23):
+      use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.hpp(58,12):
+      see declaration of 'SceneNode::drawChildren'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(67,2):
+      while trying to match the argument list '(sf::RenderTarget, sf::RenderStates)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(70,17): error C2027: use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(75,17): error C2027: use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(78,10): error C2664: 'void SceneNode::draw(sf::RenderTarget &,sf::RenderStates) const': cannot convert argument 2 from 'sf::RenderStates' to 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(78,23):
+      use of undefined type 'sf::RenderStates'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Drawable.hpp(36,8):
+      see declaration of 'sf::RenderStates'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(60,17):
+      see declaration of 'SceneNode::draw'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(78,10):
+      while trying to match the argument list '(sf::RenderTarget, sf::RenderStates)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp(164,31): error C2039: 'intersects': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+  Scene_Builder.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(40,37): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(40,37):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(43,22): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(43,22):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(47,41): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(47,41):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(50,28): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(50,28):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(54,36): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(54,36):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(57,21): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(57,21):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(60,29): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(60,29):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(62,15): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(62,15):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(65,29): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(65,29):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(67,15): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(67,15):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(70,29): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(70,29):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(72,15): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(72,15):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(76,22): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(76,22):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(80,21): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(80,21):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(84,10): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(84,10):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(88,11): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(88,11):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(93,37): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(93,37):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(96,22): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(96,22):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(99,29): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(99,29):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(101,15): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(101,15):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(105,10): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(105,10):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(109,15): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(109,15):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(113,15): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(113,15):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(116,34): error C2661: 'sf::Rect<int>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(116,34):
+      while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(118,20): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(118,20):
+      while trying to match the argument list '(int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(129,11): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp(129,11):
+      while trying to match the argument list '(T, T)'
+          with
+          [
+              T=float
+          ]
+  
+  SettingsState.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(14,1): error C2512: 'sf::Sprite': no appropriate default constructor available
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Sprite.hpp(50,25):
+      see declaration of 'sf::Sprite'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(15,58): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(15,58):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(15,58):
+          while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(15,44): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(15,44):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(15,44):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(20,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(21,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(23,32): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(24,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(25,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(26,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(28,34): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(33,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(33,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(33,56):
+          while trying to match the argument list '(double, double, double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(33,42): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(33,42):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(33,42):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(51,40): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(51,40):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(51,40):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(65,14): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(67,81): error C2039: 'key': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(67,26): error C2660: 'Player::assignKey': function does not take 1 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.hpp(40,12):
+      see declaration of 'Player::assignKey'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(67,26):
+      while trying to match the argument list '(Player::PActions)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(97,69): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(97,69):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(97,69):
+          while trying to match the argument list '(double, float, double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(97,55): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(97,55):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(97,55):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(102,68): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(102,68):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(102,68):
+          while trying to match the argument list '(double, float, double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(102,54): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(102,54):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp(102,54):
+          while trying to match the argument list '()'
+  
+  Slash.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(6,1): error C2512: 'Animation': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Animation.h(8,7):
+      see declaration of 'Animation'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(14,37): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(17,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(18,26): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(19,57): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(19,57): warning C4244:         with
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(19,57): warning C4244:         [
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(19,57): warning C4244:             T=float
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp(19,57): warning C4244:         ]
+  State.cpp
+  StateStack.cpp
+  TitleState.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(16,58): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(16,58):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(16,58):
+          while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(16,44): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(16,44):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(16,44):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(19,56): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(19,56):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(19,56):
+          while trying to match the argument list '(int, int, int, int)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(19,42): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(19,42):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(19,42):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(22,51): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(22,51):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(22,51):
+          while trying to match the argument list '(double, double, double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(22,37): error C2512: 'RelativeRect': no appropriate default constructor available
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(22,37):
+      'RelativeRect::RelativeRect': no appropriate default constructor available
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(22,37):
+          while trying to match the argument list '()'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(37,40): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(37,40):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(37,40):
+          while trying to match the argument list '(int, int, T, T)'
+          with
+          [
+              T=unsigned int
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(45,12): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp(45,52): error C2039: 'type': is not a member of 'sf::Event'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+  UseWeapon.cpp
+  Utility.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(29,3): error C2039: 'Unknown': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(29,3): error C2065: 'Unknown': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(29,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(29,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(30,3): error C2039: 'A': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(30,3): error C2065: 'A': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(30,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(30,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(31,3): error C2039: 'B': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(31,3): error C2065: 'B': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(31,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(31,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(32,3): error C2039: 'C': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(32,3): error C2065: 'C': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(32,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(32,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(33,3): error C2039: 'D': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(33,3): error C2065: 'D': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(33,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(33,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(34,3): error C2039: 'E': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(34,3): error C2065: 'E': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(34,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(34,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(35,3): error C2039: 'F': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(35,3): error C2065: 'F': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(35,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(35,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(36,3): error C2039: 'G': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(36,3): error C2065: 'G': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(36,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(36,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(37,3): error C2039: 'H': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(37,3): error C2065: 'H': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(37,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(37,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(38,3): error C2039: 'I': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(38,3): error C2065: 'I': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(38,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(38,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(39,3): error C2039: 'J': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(39,3): error C2065: 'J': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(39,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(39,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(40,3): error C2039: 'K': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(40,3): error C2065: 'K': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(40,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(40,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(41,3): error C2039: 'L': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(41,3): error C2065: 'L': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(41,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(41,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(42,3): error C2039: 'M': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(42,3): error C2065: 'M': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(42,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(42,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(43,3): error C2039: 'N': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(43,3): error C2065: 'N': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(43,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(43,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(44,3): error C2039: 'O': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(44,3): error C2065: 'O': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(44,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(44,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(45,3): error C2039: 'P': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(45,3): error C2065: 'P': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(45,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(45,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(46,3): error C2039: 'Q': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(46,3): error C2065: 'Q': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(46,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(46,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(47,3): error C2039: 'R': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(47,3): error C2065: 'R': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(47,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(47,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(48,3): error C2039: 'S': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(48,3): error C2065: 'S': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(48,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(48,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(49,3): error C2039: 'T': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(49,3): error C2065: 'T': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(49,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(49,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(50,3): error C2039: 'U': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(50,3): error C2065: 'U': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(50,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(50,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(51,3): error C2039: 'V': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(51,3): error C2065: 'V': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(51,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(51,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(52,3): error C2039: 'W': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(52,3): error C2065: 'W': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(52,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(52,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(53,3): error C2039: 'X': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(53,3): error C2065: 'X': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(53,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(53,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(54,3): error C2039: 'Y': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(54,3): error C2065: 'Y': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(54,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(54,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(55,3): error C2039: 'Z': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(55,3): error C2065: 'Z': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(55,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(55,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(56,3): error C2039: 'Num0': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(56,3): error C2065: 'Num0': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(56,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(56,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(57,3): error C2039: 'Num1': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(57,3): error C2065: 'Num1': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(57,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(57,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(58,3): error C2039: 'Num2': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(58,3): error C2065: 'Num2': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(58,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(58,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(59,3): error C2039: 'Num3': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(59,3): error C2065: 'Num3': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(59,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(59,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(60,3): error C2039: 'Num4': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(60,3): error C2065: 'Num4': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(60,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(60,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(61,3): error C2039: 'Num5': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(61,3): error C2065: 'Num5': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(61,3): error C2131: expression did not evaluate to a constant
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(61,3):
+      a non-constant (sub-)expression was encountered
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(62,3): error C2039: 'Num6': is not a member of 'sf::Keyboard'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Window\Keyboard.hpp(41,11):
+      see declaration of 'sf::Keyboard'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(62,3): error C2065: 'Num6': undeclared identifier
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp(62,3): error C1003: error count exceeds 100; stopping compilation
+  ViewArea.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewArea.cpp(14,8): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewArea.cpp(14,26): error C2039: 'width': is not a member of 'sf::Rect<int>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<int>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewArea.cpp(15,8): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewArea.cpp(15,27): error C2039: 'height': is not a member of 'sf::Rect<int>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<int>'
+  
+  ViewHandler.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(64,32): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::FloatRect'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(64,32):
+      'sf::Rect<float>::Rect': function does not take 4 arguments
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(64,32):
+          while trying to match the argument list '(float, float, float, float)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(76,7): error C2660: 'sf::View::setSize': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\View.hpp(91,10):
+      see declaration of 'sf::View::setSize'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(76,7):
+      while trying to match the argument list '(double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(81,8): error C2660: 'sf::View::setCenter': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\View.hpp(81,10):
+      see declaration of 'sf::View::setCenter'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(81,8):
+      while trying to match the argument list '(double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(91,47): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(92,41): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(93,78): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(93,26): error C2672: 'std::max': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(85,26):
+      could be '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(93,26):
+          '_Ty std::max(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'float'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(82,26):
+      or       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(93,26):
+          '_Ty std::max(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(74,6):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(93,26):
+          'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(64,33):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(93,26):
+          'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(97,47): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(97,66): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(98,41): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(98,55): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(99,77): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(99,91): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(99,26): error C2672: 'std::min': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(109,26):
+      could be '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(99,26):
+          '_Ty std::min(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'float'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(106,26):
+      or       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(99,26):
+          '_Ty std::min(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(98,6):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(99,26):
+          'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(88,33):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(99,26):
+          'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(103,40): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(104,77): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(104,25): error C2672: 'std::max': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(85,26):
+      could be '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(104,25):
+          '_Ty std::max(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'float'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(82,26):
+      or       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(104,25):
+          '_Ty std::max(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(74,6):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(104,25):
+          'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(64,33):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(104,25):
+          'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(106,40): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(106,53): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(107,76): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(107,89): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(107,25): error C2672: 'std::min': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(109,26):
+      could be '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(107,25):
+          '_Ty std::min(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'float'
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(106,26):
+      or       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(107,25):
+          '_Ty std::min(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(98,6):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(107,25):
+          'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(88,33):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(107,25):
+          'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(111,7): error C2660: 'sf::View::move': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\View.hpp(204,10):
+      see declaration of 'sf::View::move'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp(111,7):
+      while trying to match the argument list '(float, float)'
+  
+  Weapon.cpp
+  WeaponInteractable.cpp
+  WeaponWielder.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponWielder.cpp(80,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponWielder.cpp(97,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  World.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(73,33): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(73,22): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(100,61): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(99,15): error C2661: 'sf::Rect<float>::Rect': no overloaded function takes 4 arguments
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(99,15):
+      while trying to match the argument list '(float, float, T, T)'
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(100,17): error C2665: 'sf::Vector2<float>::Vector2': no overloaded function could convert all the argument types
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\System\Vector2.hpp(205,1):
+      could be 'sf::Vector2<float>::Vector2(sf::Vector2<float> &&)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(100,17):
+          'sf::Vector2<float>::Vector2(sf::Vector2<float> &&)': cannot convert argument 1 from 'T' to 'sf::Vector2<float> &&'
+          with
+          [
+              T=float
+          ]
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(100,41):
+              Reason: cannot convert from 'T' to 'sf::Vector2<float>'
+          with
+          [
+              T=float
+          ]
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\System\Vector2.hpp(205,1):
+      or       'sf::Vector2<float>::Vector2(const sf::Vector2<float> &)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(100,17):
+          'sf::Vector2<float>::Vector2(const sf::Vector2<float> &)': cannot convert argument 1 from 'T' to 'const sf::Vector2<float> &'
+          with
+          [
+              T=float
+          ]
+              C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(100,41):
+              Reason: cannot convert from 'T' to 'const sf::Vector2<float>'
+          with
+          [
+              T=float
+          ]
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(100,17):
+      while trying to match the argument list '(T)'
+          with
+          [
+              T=float
+          ]
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(190,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(198,49): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(198,20): error C2672: 'std::max': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(85,26):
+      could be '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(198,20):
+          '_Ty std::max(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'T'
+          with
+          [
+              T=float
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(82,26):
+      or       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(198,20):
+          '_Ty std::max(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(74,6):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(198,20):
+          'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(64,33):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(198,20):
+          'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(199,49): error C2039: 'left': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(199,69): error C2039: 'width': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(199,20): error C2672: 'std::min': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(109,26):
+      could be '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(199,20):
+          '_Ty std::min(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'T'
+          with
+          [
+              T=float
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(106,26):
+      or       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(199,20):
+          '_Ty std::min(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(98,6):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(199,20):
+          'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(88,33):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(199,20):
+          'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(200,49): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(200,20): error C2672: 'std::max': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(85,26):
+      could be '_Ty std::max(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(200,20):
+          '_Ty std::max(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'T'
+          with
+          [
+              T=float
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(82,26):
+      or       '_Ty std::max(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(200,20):
+          '_Ty std::max(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(74,6):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(200,20):
+          'const _Ty &std::max(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(64,33):
+      or       'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(200,20):
+          'const _Ty &std::max(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(201,49): error C2039: 'top': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(201,68): error C2039: 'height': is not a member of 'sf::Rect<float>'
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Rect.hpp(42,7):
+      see declaration of 'sf::Rect<float>'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(201,20): error C2672: 'std::min': no matching overloaded function found
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(109,26):
+      could be '_Ty std::min(std::initializer_list<_Elem>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(201,20):
+          '_Ty std::min(std::initializer_list<_Elem>)': could not deduce template argument for 'std::initializer_list<_Elem>' from 'T'
+          with
+          [
+              T=float
+          ]
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(106,26):
+      or       '_Ty std::min(std::initializer_list<_Elem>,_Pr)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(201,20):
+          '_Ty std::min(std::initializer_list<_Elem>,_Pr)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(98,6):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(201,20):
+          'const _Ty &std::min(const _Ty &,const _Ty &) noexcept(<expr>)': expects 2 arguments - 1 provided
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\utility(88,33):
+      or       'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)'
+          C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(201,20):
+          'const _Ty &std::min(const _Ty &,const _Ty &,_Pr) noexcept(<expr>)': expects 3 arguments - 1 provided
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(208,94): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(208,79): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(208,61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(215,34): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(215,34):
+      while trying to match the argument list '(double, double)'
+  
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(216,27): error C2660: 'sf::Transformable::setPosition': function does not take 2 arguments
+      C:\Users\natha\Documents\SFML-3.0.2\include\SFML\Graphics\Transformable.hpp(70,10):
+      see declaration of 'sf::Transformable::setPosition'
+      C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp(216,27):
+      while trying to match the argument list '(double, double)'
+  
+  Generating Code...
