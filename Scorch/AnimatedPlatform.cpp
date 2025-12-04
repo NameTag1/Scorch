@@ -1,5 +1,4 @@
 #include "AnimatedPlatform.h"
-#include <iostream>
 
 
 AnimatedPlatform::AnimatedPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type)

@@ -1,6 +1,5 @@
 #include "MovingPlatform.h"
 #include "Utility.hpp"
-#include <iostream>
 
 
 MovingPlatform::MovingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type)
@@ -33,10 +32,10 @@ MovingPlatform::MovingPlatform(TextureHolder& textureHolder, DataRetrivalType::P
 
 void MovingPlatform::adust_for_platformer(Platformer& platformer) {
 	if (!mReturning) {
-		platformer.setPosition({ platformer.getPosition().x + mSpeed.x, platformer.getPosition().y + mSpeed.y });
+		platformer.setPosition(platformer.getPosition().x + mSpeed.x, platformer.getPosition().y + mSpeed.y);
 	}
 	if (mReturning) {
-		platformer.setPosition({ platformer.getPosition().x - mSpeed.x, platformer.getPosition().y }); //Y handled by gravity and platformer class
+		platformer.setPosition(platformer.getPosition().x - mSpeed.x, platformer.getPosition().y); //Y handled by gravity and platformer class
 	}
 };
 
@@ -63,12 +62,12 @@ void MovingPlatform::updateCurrent(sf::Time dt, CommandQueue& commands) {
 	};
 
 	if (!mReturning) {
-		mSpritePosition.x = adjustToNumber(mSpritePosition.x, mSpeed.x, mEndPoint.x);
-		mSpritePosition.y = adjustToNumber(mSpritePosition.y, mSpeed.y, mEndPoint.y);
+		mSpritePosition.x = adjustToNumber(mSpritePosition.x, mSpeed.x, float(mEndPoint.x));
+		mSpritePosition.y = adjustToNumber(mSpritePosition.y, mSpeed.y, float(mEndPoint.y));
 	} 
 	else if (mReturning) {
-		mSpritePosition.x = adjustToNumber(mSpritePosition.x, mSpeed.x, mStartingPoint.x);
-		mSpritePosition.y = adjustToNumber(mSpritePosition.y, mSpeed.y, mStartingPoint.y);
+		mSpritePosition.x = adjustToNumber(mSpritePosition.x, mSpeed.x, float(mStartingPoint.x));
+		mSpritePosition.y = adjustToNumber(mSpritePosition.y, mSpeed.y, float(mStartingPoint.y));
 	}
 
 	setPosition(mStartingPosition+mSpritePosition);

@@ -3,6 +3,7 @@
 #ifndef DataTable_hpp
 #define DataTable_hpp
 
+#include "Scenes.h"
 #include "ResourceIdentifiers.hpp"
 #include "Scene_Builder.h"
 #include "DataRetrivalTypes.h"
@@ -14,13 +15,8 @@
 #include <vector>
 #include <functional>
 
-//#include "rapidjson/document.h"
-#include "rapidjson/writer.h"
-#include "rapidjson/stringbuffer.h"
-#include "rapidjson/filereadstream.h"
-#include "rapidjson/istreamwrapper.h"
-
-using namespace rapidjson;
+#include "nlohmann/json.hpp"
+using json = nlohmann::json;
 
 namespace DataStorageTypes{
 	enum Datatype {
@@ -110,9 +106,12 @@ struct ViewAreaData
 //Look to settings for Application-updated consts (which ig means their not consts...)
 class DATATABLE {
 public:
-	static void prepareData();
-	static void prepareJsonFile();
-	
+	static void loadScene(Scenes s);
+	static void offloadScene(Scenes s);
+
+	static std::map<Scenes, json> SCENE_DATA;
+	static std::map<std::string, std::string> RESOURCE_LOCATIONS;
+
 	static std::vector<EntityData> entityData;
 	static std::vector<PlatformData> platformData;
 	static std::vector<AnimationData> animationData;
@@ -124,8 +123,7 @@ public:
 	static std::map<Scenes, std::vector<SceneElement*>> SceneData;
 
 private:
-	//static Document JSONDATA;
-	static const std::string JSON_FILEPATH;
+	static std::map<Scenes, std::string> SCENE_FILE_NAMES;
 	static std::vector<EntityData>	initializeEntityData();
 	static std::vector<PlatformData> initializePlatformData();
 	static std::vector<AnimationData> initializeAnimationData();

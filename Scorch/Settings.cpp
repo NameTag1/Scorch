@@ -10,18 +10,18 @@ int Settings::DefaultFontSizeL = 24;
 
 double Settings::FontScalar = 1;
 
-sf::Vector2f Settings::DefaultWindowSize(1000,750);
+sf::Vector2u Settings::DefaultWindowSize(1000,750);
 
 void Settings::updateFontSize(sf::Vector2u windowSize)
 {
 	if (windowSize.x / DefaultWindowSize.x < windowSize.y / DefaultWindowSize.y) {
-		FontSizeS = windowSize.x / DefaultWindowSize.x * FontScalar * DefaultFontSizeS;
-		FontSizeM = windowSize.x / DefaultWindowSize.x * FontScalar * DefaultFontSizeM;
-		FontSizeL = windowSize.x / DefaultWindowSize.x * FontScalar * DefaultFontSizeL;
+		FontSizeS = (int)(windowSize.x / DefaultWindowSize.x * FontScalar * DefaultFontSizeS);
+		FontSizeM = (int)(windowSize.x / DefaultWindowSize.x * FontScalar * DefaultFontSizeM);
+		FontSizeL = (int)(windowSize.x / DefaultWindowSize.x * FontScalar * DefaultFontSizeL);
 	}
 	else{
-		FontSizeS = windowSize.y / DefaultWindowSize.y * FontScalar * DefaultFontSizeS;
-		FontSizeM = windowSize.y / DefaultWindowSize.y * FontScalar * DefaultFontSizeM;
-		FontSizeL = windowSize.y / DefaultWindowSize.y * FontScalar * DefaultFontSizeL;
+		FontSizeS = (int)(windowSize.y / DefaultWindowSize.y * FontScalar * DefaultFontSizeS);
+		FontSizeM = (int)(windowSize.y / DefaultWindowSize.y * FontScalar * DefaultFontSizeM);
+		FontSizeL = (int)(windowSize.y / DefaultWindowSize.y * FontScalar * DefaultFontSizeL);
 	}
 }

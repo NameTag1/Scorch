@@ -1,6 +1,4 @@
 #include "Actionable.h"
-#include <iostream>
-
 
 Actionable::Actionable()
 : selected(0)
@@ -24,7 +22,7 @@ void Actionable::update(sf::Time dt, CommandQueue& Commands, SceneNode& target) 
 	}
 	mLiveActions.clear();
 
-	if (mActions.size() != 0) {
+	if (!mActions.empty()) {
 		mActions[selected]->update(dt, Commands, target);
 
 		if (mActions[selected]->isFinnished()) {
@@ -35,10 +33,17 @@ void Actionable::update(sf::Time dt, CommandQueue& Commands, SceneNode& target) 
 				selected++;
 			}
 
-			if (selected == mActions.size()) {
+			if (!mActions.empty()) {
+				if (selected >= mActions.size()) {
+					selected = 0;
+				}
+				mActions[selected]->reset();
+			}
+			else {
+				// No actions left: unlock and ensure selected is valid
+				mLock = false;
 				selected = 0;
 			}
-			mActions[selected]->reset();
 		}
 	}
 	else {

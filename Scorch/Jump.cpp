@@ -1,5 +1,4 @@
 #include "Jump.h"
-#include <iostream>
 
 Jump::Jump()
 : mJumped(false)

@@ -2,7 +2,6 @@
 #include "StateStack.hpp"
 
 #include <cassert>
-#include <iostream>
 
 
 StateStack::StateStack(State::Context context)

@@ -4,7 +4,6 @@
 
 #include <algorithm>
 #include <cmath>
-#include <iostream>
 
 #include "Utility.hpp"
 
@@ -70,7 +69,7 @@ struct MovementCap
 		if (entity.getVelocity().y > 0) {
 			changedVY = std::min((float)entity.getVelocity().y, MaxVY);
 		}
-		entity.setVelocity(changedVX, changedVY);
+		entity.setVelocity((float)changedVX, (float)changedVY);
 	}
 
 	float MaxVX;
@@ -212,8 +211,8 @@ void World::enforceVelocityCap() {
 
 void World::adaptView() {
 	mViewHandler.adaptView(mWorldView, mPlayer, mWorldBounds);
-	mSceneLayers[MovingBackground]->setPosition(mViewHandler.getXViewAbsolute()*0.5, mViewHandler.getYViewAbsolute()*0.5); //Moves at 0.5 speed of view
-	mSceneLayers[Forground]->setPosition(mViewHandler.getXViewAbsolute()*1.5, mViewHandler.getYViewAbsolute()*1.5); //Moves at 1.5 speed of view
+	mSceneLayers[MovingBackground]->setPosition(mViewHandler.getXViewAbsolute()*0.5f, mViewHandler.getYViewAbsolute()*0.5f); //Moves at 0.5 speed of view
+	mSceneLayers[Forground]->setPosition(mViewHandler.getXViewAbsolute()*1.5f, mViewHandler.getYViewAbsolute()*1.5f); //Moves at 1.5 speed of view
 };
 
 sf::FloatRect World::getWorldViewBounds() {

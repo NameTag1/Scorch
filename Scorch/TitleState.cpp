@@ -4,7 +4,6 @@
 #include "Utility.hpp"
 
 #include <SFML/Graphics/RenderWindow.hpp>
-#include <iostream>
 #include "Image.h"
 #include "Label.hpp"
 
@@ -19,7 +18,7 @@ TitleState::TitleState(StateStack& stack, Context context)
 	background->setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 1, 1)));
 
 	auto title = std::make_shared<GUI::Label>("Scorch\nClick anywhere to start", *context.fonts);
-	title->setRelativeRect(RelativeRect(sf::FloatRect(0.5, 0.5, 0.2, 0.2)));
+	title->setRelativeRect(RelativeRect(sf::FloatRect(0.5f, 0.5f, 0.2f, 0.2f)));
 
 	mGUIContainer.pack(background);
 	mGUIContainer.pack(title);
@@ -34,7 +33,7 @@ void TitleState::draw()
 bool TitleState::update(sf::Time dt)
 {
 	sf::RenderWindow& window = *getContext().window;
-	mGUIContainer.updateRect(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	mGUIContainer.updateRect(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 
 	return true;
 }

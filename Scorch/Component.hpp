@@ -1,6 +1,7 @@
 #ifndef Component_hpp
 #define Component_hpp
 
+#include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 
@@ -16,7 +17,7 @@ namespace sf
 namespace GUI
 {
 
-class Component : public sf::Drawable, public sf::Transformable
+class Component : public sf::Drawable, public sf::Transformable, private sf::NonCopyable
 {
     public:
         typedef std::shared_ptr<Component> Ptr;

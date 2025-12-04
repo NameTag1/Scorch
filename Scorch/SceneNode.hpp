@@ -4,6 +4,7 @@
 #include "Categories.hpp"
 #include "CommandQueue.hpp"
 
+#include <SFML/System/NonCopyable.hpp>
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/Graphics/Drawable.hpp>
@@ -16,7 +17,7 @@
 struct Command;
 class CommandQueue;
 
-class SceneNode : public sf::Transformable, public sf::Drawable
+class SceneNode : public sf::Transformable, public sf::Drawable, private sf::NonCopyable
 {
 	public:
 		typedef std::unique_ptr<SceneNode> Ptr;

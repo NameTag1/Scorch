@@ -1,6 +1,5 @@
 #include "Scene_Builder.h"
 
-#include <iostream>
 
 #include "NormalPlatform.h"
 #include "FallingPlatform.h"
@@ -12,6 +11,8 @@
 #include "MovingPlatform.h"
 #include "Enemy.h"
 #include "Greatsword.h"
+
+#include "Logger.h"
 
 Scene_Builder* Scene_Builder::instance = new Scene_Builder();
 
@@ -35,7 +36,20 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 		clearLayers();
 		loadTextures();
 
-		if (scene == Scenes::Test) {
+		DATATABLE::loadScene(scene);
+		
+		for (auto& i : DATATABLE::SCENE_DATA[scene]) {
+			std::string s = i["Type"];
+			if (s == "Normal_Platform") {
+				sf::IntRect platformARect(0, 0, i["W"], i["H"]);
+				std::unique_ptr<NormalPlatform> platform(new NormalPlatform(*mTextures, i));
+				platform->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(platform));
+			}
+			Logger::Instance->LogData(Logger::Action, "Created " + s);
+		}
+
+		if (scene == Scenes::Test) {			
 			sf::Texture& backgroundTexture = mTextures->get(Textures::Background);
 			sf::IntRect backgroundTextureRect(0, 0, 50000, 50000);
 			backgroundTexture.setRepeated(true);
@@ -130,7 +144,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 		mSceneLayers[Play]->attachChild(std::move(player));
 	}
 	catch (...) {
-		std::cout << "Failed to Load Scene";
+		Logger::Instance->LogData(Logger::Action, "Scenebuilder Exception");
 	}
 };
 
@@ -149,18 +163,29 @@ Scene_Builder* Scene_Builder::getInstance()
 
 void Scene_Builder::loadTextures() {
 	mTextures->load(Textures::Background, "resources/Background.jpg");
+	mTextures->load("Background", "resources/Background.jpg");
 	mTextures->load(Textures::Background2, "resources/Background2.jpg");
+	mTextures->load("Background2", "resources/Background2.jpg");
 	mTextures->load(Textures::Player, "resources/Player.png");
+	mTextures->load("Player", "resources/Player.png");
 	mTextures->load(Textures::Enemy, "resources/Enemy.png");
+	mTextures->load("Enemy", "resources/Enemy.png");
 	mTextures->load(Textures::Platform, "resources/Platform.jpg");
 	mTextures->get(Textures::Platform).setRepeated(true);
+	mTextures->load("Platform", "resources/Platform.jpg");
+	mTextures->get("Platform").setRepeated(true);
 	mTextures->load(Textures::TestAnimation, "resources/TestAnimated.bmp");
+	mTextures->load("TestAnimation", "resources/TestAnimated.bmp");
 	mTextures->load(Textures::FallingSand, "resources/FallingSand.png");
+	mTextures->load("FallingSand", "resources/FallingSand.png");
 	mTextures->load(Textures::Door, "resources/DefaultDoor.bmp");
+	mTextures->load("Door", "resources/DefaultDoor.bmp");
 	mTextures->load(Textures::DoorArrow, "resources/DoorArrow.png");
+	mTextures->load("DoorArrow", "resources/DoorArrow.png");
 	mTextures->load(Textures::Slash, "resources/Slash.png");
-	mTextures->load(Textures::Greatsword, "resources/Greatsword.bmp");
-	mTextures->load(Textures::Default, "resources/Default.bmp");
+	mTextures->load("Slash", "resources/Slash.png");
+	//mTextures->load(Textures::Greatsword, "resources/Greatsword.bmp");
+	//mTextures->load(Textures::Default, "resources/Default.bmp");
 };
 
 void Scene_Builder::clearLayers() {

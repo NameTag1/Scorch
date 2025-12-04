@@ -1,8 +1,6 @@
-
 #include "Container.hpp"
 
 #include <SFML/Graphics.hpp>
-#include <iostream>
 
 namespace GUI
 {
@@ -51,18 +49,22 @@ void Container::handleEvent(const sf::Event& event)
 	}
 	if (event.type == sf::Event::MouseButtonReleased)
 	{
-		for (int i = 0; i < mChildren.size(); i++) {
-			if (mChildren[mSelectedChild]->isSelectable() && getTransform().transformRect(mChildren[i]->getRect()).contains(event.mouseButton.x, event.mouseButton.y)) {
+		// iterate children, check the *clicked* child for selectability (was using mSelectedChild incorrectly)
+		for (std::size_t i = 0; i < mChildren.size(); ++i) {
+			if (mChildren[i]->isSelectable() &&
+				getTransform().transformRect(mChildren[i]->getRect()).contains(static_cast<float>(event.mouseButton.x), static_cast<float>(event.mouseButton.y))) {
 				select(i);
-				mChildren[mSelectedChild]->activate();
+				// after select(i) mSelectedChild is valid; guard just in case
+				if (hasSelection())
+					mChildren[mSelectedChild]->activate();
 				break;
 			}
 		}
 	}
 	if (event.type == sf::Event::MouseMoved)
 	{
-		for (int i = 0; i < mChildren.size(); i++) {
-			if (getTransform().transformRect(mChildren[i]->getRect()).contains(event.mouseMove.x, event.mouseMove.y)) {
+		for (std::size_t i = 0; i < mChildren.size(); ++i) {
+			if (getTransform().transformRect(mChildren[i]->getRect()).contains(static_cast<float>(event.mouseMove.x), static_cast<float>(event.mouseMove.y))) {
 				select(i);
 			}
 		}
@@ -72,8 +74,8 @@ void Container::handleEvent(const sf::Event& event)
 void Container::updateRect(sf::FloatRect parrentRect)
 {
 	Component::updateRect(parrentRect);
-	for (int i = 0; i < mChildren.size(); i++) {
-		mChildren[i].get()->updateRect(getRect());
+	for (std::size_t i = 0; i < mChildren.size(); ++i) {
+		mChildren[i]->updateRect(getRect());
 	}
 }
 
@@ -99,7 +101,7 @@ void Container::select(std::size_t index)
 			mChildren[mSelectedChild]->deselect();
 
 		mChildren[index]->select();
-		mSelectedChild = index;
+		mSelectedChild = int(index);
 	}
 }
 
@@ -126,7 +128,7 @@ void Container::selectPrevious()
 	// Search previous component that is selectable, wrap around if necessary
 	int prev = mSelectedChild;
 	do
-		prev = (prev + mChildren.size() - 1) % mChildren.size();
+		prev = (prev + mChildren.size() - 1) % int(mChildren.size());
 	while (!mChildren[prev]->isSelectable());
 
 	// Select that component

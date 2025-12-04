@@ -6,11 +6,15 @@
 #include "ResourceHolder.hpp"
 #include <SFML/Graphics.hpp>
 
-class Platformer;
+#include "nlohmann/json.hpp"
+using json = nlohmann::json;
+
+class Platformer; //Psuedo def
 
 class NormalPlatform : public Platform
 {
 public:
+	NormalPlatform(TextureHolder& textureHolder, json data);
 	NormalPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type);
 	NormalPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type, sf::IntRect bounds);
 	NormalPlatform(TextureHolder& textureHolder, NormalPlatformData data);

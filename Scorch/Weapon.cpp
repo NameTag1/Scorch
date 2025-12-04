@@ -3,7 +3,6 @@
 #include "ResourceIdentifiers.hpp"
 #include "ResourceHolder.hpp"
 #include "Player_Entity.h"
-#include <iostream>
 
 Weapon::Weapon(const TextureHolder& textures, Category::Type type)
 : mIcon(Textures::Default)

@@ -1,6 +1,5 @@
 #include "Player_Entity.h"
 #include "Utility.hpp"
-#include <iostream>
 
 #include "Greatsword.h"
 #include "Slash.h"

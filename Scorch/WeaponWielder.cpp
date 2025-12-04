@@ -1,5 +1,4 @@
 #include "WeaponWielder.h"
-#include <iostream>
 
 WeaponWielder::WeaponWielder()
 	: selected(0)
@@ -14,19 +13,25 @@ WeaponWielder::WeaponWielder()
 void WeaponWielder::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 {
 	Movable* entity = dynamic_cast<Movable*>(&target);
+	if (!entity) return;
+
 	bool left = (entity->lastKnownDirection().x <= 0) ? true : false;
 	bool up = (entity->lastKnownDirection().y <= 0) ? true : false;
+
+	// guard against empty weapons vector and invalid selected index
+	if (weapons.empty()) return;
+	if (selected < 0 || selected >= static_cast<int>(weapons.size())) selected = 0;
 
 	if (weapons[selected] != nullptr) {
 		weapons[selected]->setDirection(left, up);
 
 		if (lastSelected != selected) {
 			Attacker* attacker = dynamic_cast<Attacker*>(&target);
-			attacker->clearAttacks();
-
-			attacker->pushAttack(weapons[selected]->getAttacks());
+			if (attacker) {
+				attacker->clearAttacks();
+				attacker->pushAttack(weapons[selected]->getAttacks());
+			}
 			lastSelected = selected;
-			//target.detachChild(*weapons[lastSelected]); Last selected not always still attached
 			target.attachChild(SceneNode::Ptr(weapons[selected]));
 		}
 	}
@@ -36,7 +41,6 @@ std::vector<Textures::ID> WeaponWielder::weaponIcons()
 {
 	std::vector<Textures::ID> i;
 	for (Weapon* x : weapons) {
-		//std::cout << x->getCategory()[1];
 		if (x != nullptr) {
 			i.push_back(x->getIcon());
 		}
@@ -51,7 +55,6 @@ std::vector<Textures::ID> WeaponWielder::weaponIconsHeld()
 {
 	std::vector<Textures::ID> i;
 	for (Weapon* x : held) {
-		//std::cout << x->getCategory()[1];
 		if (x != nullptr) {
 			i.push_back(x->getIcon());
 		}
@@ -64,22 +67,27 @@ std::vector<Textures::ID> WeaponWielder::weaponIconsHeld()
 
 void WeaponWielder::pushWeapon(Weapon* weapon)
 {
-	std::cout << "PushedWeapon\n";
 	for (int i = 0; i < maxWeapons; i++) {
 		if (weapons[i] == nullptr) {
 			weapons[i] = weapon;
-			return; //Once open slot found, deposites weapon and exits FUNCTION, not just FOR
+			return;
 		}
 	}
-	held.push_back(weapon); //If no open slots found, put in bag
+	held.push_back(weapon);
 }
 
 void WeaponWielder::selectWeapon(int weapon)
 {
-	if (weapon > weapons.size()) {
-		selected = weapons.size() - 1;
+	if (weapons.empty()) {
+		selected = 0;
+		return;
 	}
-	else if (weapon < 0) {
+
+	// clamp into [0, size-1]
+	if (weapon >= static_cast<int>(weapons.size())) {
+		selected = static_cast<int>(weapons.size()) - 1;
+	}
+	else if (weapon <= 0) {
 		selected = 0;
 	}
 	else {
@@ -89,17 +97,22 @@ void WeaponWielder::selectWeapon(int weapon)
 
 void WeaponWielder::nextWeapon(int increment)
 {
-	selected += increment;
-	if (selected > weapons.size()) {
+	if (weapons.empty()) {
 		selected = 0;
+		return;
 	}
-	else if (selected < 0) {
-		selected = weapons.size() - 1;
-	}
+
+	const int n = static_cast<int>(weapons.size());
+	int newIndex = (selected + increment) % n;
+	if (newIndex < 0) newIndex += n;
+	selected = newIndex;
 }
 
 void WeaponWielder::useWeapon(std::string selectedAttack, SceneNode& target)
 {
+	if (weapons.empty()) return;
+	if (selected < 0 || selected >= static_cast<int>(weapons.size())) return;
+
 	if (weapons[selected] != nullptr) {
 		weapons[selected]->useWeapon(selectedAttack, target);
 	}

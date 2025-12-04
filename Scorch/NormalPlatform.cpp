@@ -1,6 +1,11 @@
 #include "NormalPlatform.h"
-#include <iostream>
 
+
+NormalPlatform::NormalPlatform(TextureHolder& textureHolder, json data)
+: mSprite(textureHolder.get(std::string(data["Texture"])))
+, Platform(data["Platform"])
+{
+}
 
 NormalPlatform::NormalPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type)
 : mSprite(textureHolder.get(DATATABLE::platformData[type].texture))

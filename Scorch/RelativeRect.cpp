@@ -1,5 +1,4 @@
 #include "RelativeRect.h"
-#include <iostream>
 
 RelativeRect::RelativeRect(sf::FloatRect rect)
 : x(rect.left)

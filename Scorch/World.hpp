@@ -1,6 +1,7 @@
 #ifndef World_hpp
 #define World_hpp
 
+#include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
@@ -24,7 +25,7 @@ struct Scene_Change_Request {
 	bool fadeIn;
 };
 
-class World
+class World : private sf::NonCopyable
 {
 	public:
 											World();
@@ -77,11 +78,11 @@ class World
 
 		Player_Entity*						mPlayer;
 
-		double								mGravity;
-		double								mMaxFallVelocity;
-		double								mMaxXVelocity;
-		double								mMaxYVelocity;
-		double								mConstantDeaccel;
+		float								mGravity;
+		float								mMaxFallVelocity;
+		float								mMaxXVelocity;
+		float								mMaxYVelocity;
+		float								mConstantDeaccel;
 
 		ViewHandler							mViewHandler;
 

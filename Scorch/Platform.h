@@ -7,12 +7,15 @@
 #include "DataRetrivalTypes.h"
 #include <SFML/Graphics.hpp>
 
+#include "nlohmann/json.hpp"
+using json = nlohmann::json;
 
 class Platformer;
 
 class Platform : public SceneNode
 {
 public:
+	Platform(json data);
 	Platform(int friction);
 	Platform(int friction, DataRetrivalType::Platforms type);
 	virtual void adust_for_platformer(Platformer& platformer);

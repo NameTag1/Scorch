@@ -34,8 +34,8 @@ int randomInt(int exclusiveMax);
 float length(sf::Vector2f vector);
 sf::Vector2f unitVector(sf::Vector2f vector);
 
-double adjustToZero(double i, double adjustment);
-double adjustToNumber(double i, double adjustment, double number);
+float adjustToZero(float i, float adjustment);
+float adjustToNumber(float i, float adjustment, float number);
 
 bool matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Category::Type type2);
 bool matchesCategory(SceneNode& item, Category::Type type);

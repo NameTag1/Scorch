@@ -1,11 +1,15 @@
 #include "DataTable.h"
 #include "Categories.hpp"
-#include <iostream>
 #include <vector>
 #include <fstream>
 
-//Document DATATABLE::JSONDATA;
-const std::string DATATABLE::JSON_FILEPATH = "data/SceneData.json";
+#include "Logger.h"
+
+#include "nlohmann/json.hpp"
+using json = nlohmann::json;
+
+std::map<Scenes, json> DATATABLE::SCENE_DATA;
+std::map<Scenes, std::string> DATATABLE::SCENE_FILE_NAMES;
 
 std::vector<EntityData> DATATABLE::entityData = initializeEntityData();
 std::vector<PlatformData> DATATABLE::platformData = initializePlatformData();
@@ -20,27 +24,26 @@ std::map<Scenes, std::vector<SceneElement*>> DATATABLE::SceneData = initializeSc
 // For std::bind() placeholders _1, _2, ...
 using namespace std::placeholders;
 
-void DATATABLE::prepareJsonFile()
+void DATATABLE::loadScene(Scenes s)
 {
-	std::ifstream JsonFile(JSON_FILEPATH);
-	if (!JsonFile.is_open()) {
-		std::cout << "failed to open JsonFile!!!\n";
+	SCENE_FILE_NAMES.clear();
+	SCENE_FILE_NAMES.insert({ Scenes::Test, "data/SceneData.json" });
+	SCENE_FILE_NAMES.insert({ Scenes::Test2, "data/SceneData.json" });	
+
+	std::ifstream JsonFileWrapper(SCENE_FILE_NAMES[s]);
+	if (!JsonFileWrapper) {
+		Logger::Instance->LogData(Logger::Action, "Failed to Load: " + SCENE_FILE_NAMES[s]);
 		return;
 	}
 	else {
-		std::cout << "opened file!!!\n";
+		Logger::Instance->LogData(Logger::Action, "Loaded: " + SCENE_FILE_NAMES[s]);
 	}
-
-	IStreamWrapper JsonFileWrapper(JsonFile);
-	//DATATABLE::JSONDATA.ParseStream(JsonFileWrapper);
+	JsonFileWrapper >> SCENE_DATA[s];
 }
 
-void DATATABLE::prepareData()
+void DATATABLE::offloadScene(Scenes s)
 {
-	sf::Clock c;
-	while (c.getElapsedTime() <= sf::seconds(2)) {
-
-	}
+	//SCENE_DATA.erase(s);
 }
 
 std::vector<EntityData> DATATABLE::initializeEntityData()
@@ -113,7 +116,7 @@ std::vector<FallingPlatformData> DATATABLE::initializeFallingPlatformData() {
 	std::vector<AnimationData> animationData = initializeAnimationData();
 
 	data[DataRetrivalType::Falling].platform = platformData[DataRetrivalType::Falling];
-	data[DataRetrivalType::Falling].animation = animationData[DataRetrivalType::Falling];
+	data[DataRetrivalType::Falling].animation = animationData[DataRetrivalType::Test];
 	data[DataRetrivalType::Falling].resetTime = sf::seconds(999999);
 
 	data[DataRetrivalType::SandAnimatedFalling].platform = platformData[DataRetrivalType::SandAnimatedFalling];
@@ -160,12 +163,12 @@ std::vector<ViewAreaData> DATATABLE::initializeViewAreaData()
 {
 	std::vector<ViewAreaData> data(DataRetrivalType::ViewAreasTypeCount);
 
-	data[DataRetrivalType::TestViewArea].area = sf::FloatRect({ 0, 0 }, { 200, 1000 });
+	data[DataRetrivalType::TestViewArea].area = sf::FloatRect(0, 0, 200, 1000);
 	data[DataRetrivalType::TestViewArea].viewSize = sf::Vector2f(800, 600);
 	data[DataRetrivalType::TestViewArea].lockView = false;
 	data[DataRetrivalType::TestViewArea].viewCenter = sf::Vector2f();
 
-	data[DataRetrivalType::Test2ViewArea].area = sf::FloatRect({ 0, 0 }, { 200, 1000 });
+	data[DataRetrivalType::Test2ViewArea].area = sf::FloatRect(0, 0, 200, 1000);
 	data[DataRetrivalType::Test2ViewArea].viewSize = sf::Vector2f(1200, 900);
 	data[DataRetrivalType::Test2ViewArea].lockView = true;
 	data[DataRetrivalType::Test2ViewArea].viewCenter = sf::Vector2f(400, 400);

@@ -1,5 +1,4 @@
 #include "Attack.h"
-#include <iostream>
 
 Attack::Attack()
 : mDamage(0)

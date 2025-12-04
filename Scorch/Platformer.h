@@ -19,7 +19,7 @@ public:
 	bool jump();
 	void move(bool left);
 
-	void setSpeed(double speed);
+	void setSpeed(float speed);
 
 protected:
 	virtual void updateCurrent(sf::Time dt, CommandQueue& Commands);
@@ -29,9 +29,9 @@ private:
 
 private:
 	bool onPlatform;
-	double mSpeed;
-	double mJumpPower;
-	double maxMoveSpeed;
+	float mSpeed;
+	float mJumpPower;
+	float maxMoveSpeed;
 
 };
 #endif

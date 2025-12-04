@@ -8,7 +8,6 @@
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
-#include <iostream>
 #include "Player_Entity.h"
 
 
@@ -63,7 +62,7 @@ void PauseState::draw()
 	
 	//sf::RenderWindow& window = *getContext().window;
 
-	sf::View mView(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	sf::View mView(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 	//std::cout << window.getSize().x << " - " <<  mView.getSize().x << "\n";
 	window.setView(mView);
 
@@ -76,7 +75,7 @@ void PauseState::draw()
 bool PauseState::update(sf::Time)
 {
 	sf::RenderWindow& window = *getContext().window;
-	mGUIContainer.updateRect(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	mGUIContainer.updateRect(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 	return false;
 }
 

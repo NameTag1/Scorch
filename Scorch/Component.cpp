@@ -1,6 +1,4 @@
-
 #include "Component.hpp"
-#include <iostream>
 
 namespace GUI
 {

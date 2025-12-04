@@ -34,7 +34,8 @@ namespace Textures
 		FallingSand,
 		
 		Slash,
-		Greatsword
+		Greatsword,
+		Size
 	};
 }
 

@@ -1,6 +1,5 @@
 #include "ViewArea.h"
 #include "DataTable.h"
-#include <iostream>
 
 ViewArea::ViewArea(DataRetrivalType::ViewAreas type)
 : mArea(DATATABLE::viewData[type].area)
@@ -11,8 +10,8 @@ ViewArea::ViewArea(DataRetrivalType::ViewAreas type)
 };
 
 void ViewArea::setBounds(sf::IntRect newBounds) {
-	mArea.width = newBounds.width;
-	mArea.height = newBounds.height;
+	mArea.width = float(newBounds.width);
+	mArea.height = float(newBounds.height);
 }
 
 sf::FloatRect ViewArea::getBoundingRect() const {

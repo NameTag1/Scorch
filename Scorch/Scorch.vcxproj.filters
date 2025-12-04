@@ -13,417 +13,548 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\States">
+      <UniqueIdentifier>{9b2bdc7e-d8d1-475c-9fb6-47cd7715f3ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{a7e89e9a-0c5b-409a-b84c-8d4736745456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Weapons">
+      <UniqueIdentifier>{530027c1-a187-4f15-b0b3-373fd33653f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Attacks">
+      <UniqueIdentifier>{6e87f301-4c6a-4fa6-b298-e50bcf4340e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scene_Nodes">
+      <UniqueIdentifier>{67cc999a-252a-4df6-90c5-ebd5f1df5950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Commands">
+      <UniqueIdentifier>{b23fe2ed-3fc9-4fb3-a75c-6369322dd752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utility">
+      <UniqueIdentifier>{31e92511-a916-4590-ab47-fe2cff8b6b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Action_Sequences">
+      <UniqueIdentifier>{146df429-b4ef-4a9b-8723-7fa1deb00a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Action_Sequences\Base_Classes">
+      <UniqueIdentifier>{c1c4359a-6d84-4f81-b6ca-8505e8d14d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Action_Sequences\Combos">
+      <UniqueIdentifier>{8d6226f3-fc0f-460f-ad6c-0aa621783164}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Action_Sequences\Only_Player">
+      <UniqueIdentifier>{de75ea13-4048-4fdf-a622-8cc6f41e2881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity_Classes">
+      <UniqueIdentifier>{a3a8a06f-3f1c-4ca2-9ce1-436117505890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enums">
+      <UniqueIdentifier>{41394acb-b2d6-4a2b-97ee-c3937dd73579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{d7ce8004-187a-436e-ace6-437a88a13681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interactable">
+      <UniqueIdentifier>{11f4ca03-b2ba-4aea-9e8a-d44c34818976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Menus">
+      <UniqueIdentifier>{386ee70b-7a54-4a41-a2fc-fbc3f3923797}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Platforms">
+      <UniqueIdentifier>{9b4bf924-132a-412d-a2f7-0d71bcc66f5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource_Management">
+      <UniqueIdentifier>{a9359138-73d9-44bb-b9e3-6901cd5d95b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{c92837d8-8cf9-47ca-8622-5571451bcf17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\View_Adjustment">
+      <UniqueIdentifier>{275ff4f8-4da8-4ca5-834e-9fed13a9d9c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Action_Sequences">
+      <UniqueIdentifier>{3a1590a1-8d46-4013-814d-6af5402aa55e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data">
+      <UniqueIdentifier>{260b8e0e-cc18-44e4-9648-484c4b6d7440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Attacks">
+      <UniqueIdentifier>{ed0e136a-5acc-4ebb-92ae-27f9ca64b024}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Commands">
+      <UniqueIdentifier>{848b8f8d-ed8b-4c8b-9e8a-944811d17a7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entity_Classes">
+      <UniqueIdentifier>{0668d29b-23af-46c3-9700-4e4b65e8c8f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{09f63403-2475-45c2-8ce2-427e9fd682ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interactable">
+      <UniqueIdentifier>{e22bd43d-c801-4088-8a54-6e16d6725f5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Menus">
+      <UniqueIdentifier>{33c69b42-3d7d-4941-b428-388109c806b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{3484d616-a090-48ca-95e6-e6b1e89f030d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\View_Adjustment">
+      <UniqueIdentifier>{22d3b3db-d986-4f2b-bc33-734a83697b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Platforms">
+      <UniqueIdentifier>{ff400d3a-56b6-4611-b92a-1cb3f422fdfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{dd82a889-3787-4b23-95df-6ccb7e32edb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene_Nodes">
+      <UniqueIdentifier>{b73f26a2-02dd-47d8-9184-3a22e0da21ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Weapons">
+      <UniqueIdentifier>{ee35e854-2ca3-41b1-a91d-7d52ad25bfa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{773299e4-c4ab-4d98-8e26-f47cdd196da3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Action_Sequences\Base_Classes">
+      <UniqueIdentifier>{da43c89e-7880-48f3-b672-cf2438b4bb19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Action_Sequences\Combos">
+      <UniqueIdentifier>{448189ee-4cf4-470b-9fcc-da0880504c43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Action_Sequences\Only_Player">
+      <UniqueIdentifier>{7c404667-0b90-42c4-8200-d28c3ceef53f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Actionable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Actions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimatedPlatform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Animation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Attack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Attacker.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Bar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ChangeableAnimation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ChasePlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Command.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CommandQueue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Container.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DataTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Door.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FallingPlatform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FleePlayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Greatsword.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Image.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Interact.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Interactable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Jump.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Label.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LoadingState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Lock.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MakeAttack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Movable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Move.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MoveDis.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MovingPlatform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="NormalPlatform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="OverlayState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Pause.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PauseState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Platform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Platformer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player_Entity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Projectile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RelativeRect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene_Builder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Settings.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SettingsState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Slash.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SpriteNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="State.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StateStack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TitleState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UseWeapon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ViewArea.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ViewHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Weapon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WeaponInteractable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WeaponWielder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="With.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WorldCommand.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Actionable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Actions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimatedPlatform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Application.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Attack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Attacker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Bar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Button.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Categories.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ChangeableAnimation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ChasePlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Command.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CommandQueue.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Component.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Container.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DataRetrivalTypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DataTable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Door.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FallingPlatform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FleePlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameState.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Greatsword.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Interact.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Interactable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Jump.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Label.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LoadingState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Lock.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MakeAttack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuState.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Movable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Move.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveDis.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MovingPlatform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NormalPlatform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OverlayState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Pause.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PauseState.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Platform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Platformer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Player_Entity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Projectile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RelativeRect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceHolder.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceIdentifiers.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene_Builder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneNode.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Settings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SettingsState.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Slash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SpriteNode.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="State.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="States.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StateStack.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TitleState.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="UseWeapon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Utility.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewArea.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ViewHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Weapon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WeaponInteractable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WeaponWielder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="With.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="World.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Actionable.h">
+      <Filter>Header Files\Action_Sequences\Base_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions.h">
+      <Filter>Header Files\Action_Sequences\Base_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="With.h">
+      <Filter>Header Files\Action_Sequences\Combos</Filter>
+    </ClInclude>
+    <ClInclude Include="Lock.h">
+      <Filter>Header Files\Action_Sequences\Only_Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Interact.h">
+      <Filter>Header Files\Action_Sequences\Only_Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ChasePlayer.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="FleePlayer.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="Jump.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="MakeAttack.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveDis.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="Pause.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="UseWeapon.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Header Files\Attacks</Filter>
+    </ClInclude>
+    <ClInclude Include="Attacker.h">
+      <Filter>Header Files\Attacks</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files\Attacks</Filter>
+    </ClInclude>
+    <ClInclude Include="Slash.h">
+      <Filter>Header Files\Attacks</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.hpp">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandQueue.hpp">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
     <ClInclude Include="WorldCommand.h">
+      <Filter>Header Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTable.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Entity_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.hpp">
+      <Filter>Header Files\Entity_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_Entity.h">
+      <Filter>Header Files\Entity_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Categories.hpp">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="DataRetrivalTypes.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceIdentifiers.hpp">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="States.hpp">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeableAnimation.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Door.h">
+      <Filter>Header Files\Interactable</Filter>
+    </ClInclude>
+    <ClInclude Include="Interactable.h">
+      <Filter>Header Files\Interactable</Filter>
+    </ClInclude>
+    <ClInclude Include="Bar.h">
+      <Filter>Header Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.hpp">
+      <Filter>Header Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.hpp">
+      <Filter>Header Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.hpp">
+      <Filter>Header Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>Header Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.hpp">
+      <Filter>Header Files\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceHolder.hpp">
+      <Filter>Header Files\Resource_Management</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_Builder.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Movable.h">
+      <Filter>Header Files\Scene_Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneNode.hpp">
+      <Filter>Header Files\Scene_Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteNode.hpp">
+      <Filter>Header Files\Scene_Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.hpp">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.hpp">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlayState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseState.hpp">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingsState.hpp">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="State.hpp">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="StateStack.hpp">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleState.hpp">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.hpp">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="RelativeRect.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedPlatform.h">
+      <Filter>Header Files\Platforms</Filter>
+    </ClInclude>
+    <ClInclude Include="FallingPlatform.h">
+      <Filter>Header Files\Platforms</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingPlatform.h">
+      <Filter>Header Files\Platforms</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalPlatform.h">
+      <Filter>Header Files\Platforms</Filter>
+    </ClInclude>
+    <ClInclude Include="Platform.h">
+      <Filter>Header Files\Platforms</Filter>
+    </ClInclude>
+    <ClInclude Include="Platformer.h">
+      <Filter>Header Files\Platforms</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewArea.h">
+      <Filter>Header Files\View_Adjustment</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewHandler.h">
+      <Filter>Header Files\View_Adjustment</Filter>
+    </ClInclude>
+    <ClInclude Include="Greatsword.h">
+      <Filter>Header Files\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponInteractable.h">
+      <Filter>Header Files\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponWielder.h">
+      <Filter>Header Files\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon.h">
+      <Filter>Header Files\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ResourceHolder.inl">
+      <Filter>Header Files\Resource_Management</Filter>
+    </None>
+    <None Include="Utility.inl">
+      <Filter>Header Files\Utility</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlayState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="StateStack.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Greatsword.cpp">
+      <Filter>Source Files\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon.cpp">
+      <Filter>Source Files\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponInteractable.cpp">
+      <Filter>Source Files\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponWielder.cpp">
+      <Filter>Source Files\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedPlatform.cpp">
+      <Filter>Source Files\Platforms</Filter>
+    </ClCompile>
+    <ClCompile Include="FallingPlatform.cpp">
+      <Filter>Source Files\Platforms</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingPlatform.cpp">
+      <Filter>Source Files\Platforms</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalPlatform.cpp">
+      <Filter>Source Files\Platforms</Filter>
+    </ClCompile>
+    <ClCompile Include="Platform.cpp">
+      <Filter>Source Files\Platforms</Filter>
+    </ClCompile>
+    <ClCompile Include="Platformer.cpp">
+      <Filter>Source Files\Platforms</Filter>
+    </ClCompile>
+    <ClCompile Include="Bar.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Container.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Source Files\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Attack.cpp">
+      <Filter>Source Files\Attacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Attacker.cpp">
+      <Filter>Source Files\Attacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Actions.cpp">
+      <Filter>Source Files\Action_Sequences\Base_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Actionable.cpp">
+      <Filter>Source Files\Action_Sequences\Base_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="With.cpp">
+      <Filter>Source Files\Action_Sequences\Combos</Filter>
+    </ClCompile>
+    <ClCompile Include="Lock.cpp">
+      <Filter>Source Files\Action_Sequences\Only_Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Interact.cpp">
+      <Filter>Source Files\Action_Sequences\Only_Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ChasePlayer.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="FleePlayer.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="MakeAttack.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveDis.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="Pause.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="Jump.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTable.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandQueue.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldCommand.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Entity_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_Entity.cpp">
+      <Filter>Source Files\Entity_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Entity_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeableAnimation.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Door.cpp">
+      <Filter>Source Files\Interactable</Filter>
+    </ClCompile>
+    <ClCompile Include="Interactable.cpp">
+      <Filter>Source Files\Interactable</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewArea.cpp">
+      <Filter>Source Files\View_Adjustment</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewHandler.cpp">
+      <Filter>Source Files\View_Adjustment</Filter>
+    </ClCompile>
+    <ClCompile Include="UseWeapon.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Builder.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="RelativeRect.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Movable.cpp">
+      <Filter>Source Files\Scene_Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneNode.cpp">
+      <Filter>Source Files\Scene_Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteNode.cpp">
+      <Filter>Source Files\Scene_Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Source Files\Attacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Slash.cpp">
+      <Filter>Source Files\Attacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

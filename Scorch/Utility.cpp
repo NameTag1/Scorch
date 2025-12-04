@@ -172,7 +172,7 @@ sf::Vector2f unitVector(sf::Vector2f vector)
 	return vector / length(vector);
 }
 
-double adjustToZero(double i, double adjustment) {
+float adjustToZero(float i, float adjustment) {
 	if (i > -adjustment && i < adjustment) {
 		i = 0;
 	}
@@ -185,7 +185,7 @@ double adjustToZero(double i, double adjustment) {
 	return i;
 };
 
-double adjustToNumber(double i, double adjustment, double number) {
+float adjustToNumber(float i, float adjustment, float number) {
 	if (i > -adjustment + number && i < adjustment + number) {
 		i = number;
 	}

@@ -1,6 +1,4 @@
 #include "FallingPlatform.h"
-#include <iostream>
-
 
 FallingPlatform::FallingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type)
 : mAnimation(textureHolder.get(DATATABLE::fallingPlatformData[type].platform.texture))

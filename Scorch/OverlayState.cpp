@@ -8,7 +8,6 @@
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/View.hpp>
-#include <iostream>
 #include "Player_Entity.h"
 #include "Image.h"
 
@@ -46,7 +45,7 @@ OverlayState::OverlayState(StateStack& stack, Context context)
 
 	int i = 0;
 	for (Textures::ID x : player->weaponIcons()) {
-		std::cout << i << " " << x << "\n";
+		//std::cout << i << " " << x << "\n";
 		auto weapon = std::make_shared<GUI::Image>(*context.textures, x);
 		weapon->setRelativeRect(RelativeRect(sf::FloatRect(0.3f + 0.2f*i, 0.1f, 0.15f, 0.15f), RelativeWH::WBased, Anchor::TL));
 		mWeapons.push_back(weapon.get());
@@ -73,7 +72,7 @@ void OverlayState::draw()
 
 	//sf::RenderWindow& window = *getContext().window;
 
-	sf::View mView(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	sf::View mView(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 	//std::cout << window.getSize().x << " - " <<  mView.getSize().x << "\n";
 	window.setView(mView);
 
@@ -86,14 +85,19 @@ void OverlayState::draw()
 bool OverlayState::update(sf::Time)
 {
 	sf::RenderWindow& window = *getContext().window;
-	mGUIContainer.updateRect(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	mGUIContainer.updateRect(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 
 	Player_Entity* player = Player_Entity::getInstance();
 	mHealthText->setText("Health: " + std::to_string(player->getHitpoints()));
-	mHealthBar->setMessure(50, player->getHitpoints());
+	mHealthBar->setMessure(50.f, float(player->getHitpoints()));
 
-	for (int i = 0; i < mWeapons.size();  i++) {
-		mWeapons[i]->updateImage(*getContext().textures, player->weaponIcons()[i]);
+	// get icons once and iterate up to the smaller size to avoid out-of-range access
+	auto icons = player->weaponIcons();
+	const std::size_t count = std::min(mWeapons.size(), icons.size());
+	for (std::size_t i = 0; i < count; ++i) {
+		if (mWeapons[i]) {
+			mWeapons[i]->updateImage(*getContext().textures, icons[i]);
+		}
 	}
 
 	return true;

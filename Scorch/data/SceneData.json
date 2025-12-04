@@ -1,0 +1,26 @@
+[
+	{
+		"Type":"Normal_Platform",
+		"W":400,
+		"H":200,
+		"X":1200,
+		"Y":400,
+		"Texture":"Platform",
+		"Platform":
+			{
+			"Friction":20
+			}
+	},
+	{
+		"Type":"Normal_Platform",
+		"W":400,
+		"H":200,
+		"X":1200,
+		"Y":0,
+		"Texture":"Platform",
+		"Platform":
+			{
+			"Friction":20
+			}
+	}
+]

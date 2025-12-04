@@ -1,6 +1,5 @@
 #include "Platformer.h"
 #include "Utility.hpp"
-#include <iostream>
 
 Platformer::Platformer(int health) 
 : onPlatform(false) 
@@ -20,29 +19,29 @@ void Platformer::adust_for_platform(Platform& p) {
 	sf::Vector2f platformPos = p.getPosition();
 	sf::FloatRect Overlap = calculateOverlap(playerRect, platformRect);
 	
-	if (Overlap.size.x < Overlap.size.y) {
+	if (Overlap.width < Overlap.height) {
 		if (playerPos.x < platformPos.x) {
-			setPosition(platformPos.x - playerRect.size.x + playerRect.size.x / 2, playerPos.y);
+			setPosition(platformPos.x - playerRect.width + playerRect.width / 2, getPosition().y);
 			if (getVelocity().x > 0) {
 				setVelocity(0, getVelocity().y);
 			}
 		}
 		else {
-			setPosition(platformPos.x + platformRect.size.x + playerRect.size.x / 2, playerPos.y);
+			setPosition(platformPos.x + platformRect.width + playerRect.width / 2, getPosition().y);
 			if (getVelocity().x < 0) {
 				setVelocity(0, getVelocity().y);
 			}
 		}
 	} else {
 		if (playerPos.y < platformPos.y) {
-			setPosition(playerPos.x, platformPos.y - playerRect.size.y + playerRect.size.y / 2);
+			setPosition(getPosition().x, platformPos.y - playerRect.height + playerRect.height / 2);
 			if (getVelocity().y > 0) {
 				setVelocity(getVelocity().x, 0);
 				onPlatform = true;
 			}
 		}
 		else {
-			setPosition(playerPos.x, platformPos.y + platformRect.size.y + playerRect.size.y / 2);
+			setPosition(getPosition().x, platformPos.y + platformRect.height + playerRect.height / 2);
 			if (getVelocity().y < 0) {
 				setVelocity(getVelocity().x, 0);
 			}
@@ -103,7 +102,7 @@ void Platformer::move(bool left) {
 	}
 }
 
-void Platformer::setSpeed(double speed)
+void Platformer::setSpeed(float speed)
 {
 	mSpeed = speed;
 }
@@ -114,7 +113,7 @@ void Platformer::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 };
 
 sf::FloatRect Platformer::calculateOverlap(sf::FloatRect rect1, sf::FloatRect rect2) {
-	float overlapX = std::max(0.f, std::min(rect1.position.x + rect1.size.x, rect2.position.x + rect2.size.x) - std::max(rect1.position.x, rect2.position.x));
-	float overlapY = std::max(0.f, std::min(rect1.position.y + rect1.size.y, rect2.position.y + rect2.size.y) - std::max(rect1.position.y, rect2.position.y));
-	return sf::FloatRect({ 0, 0 }, { overlapX, overlapY });
+	float overlapX = std::max(0.f, std::min(rect1.getPosition().x + rect1.width, rect2.getPosition().x + rect2.width) - std::max(rect1.getPosition().x, rect2.getPosition().x));
+	float overlapY = std::max(0.f, std::min(rect1.getPosition().y + rect1.height, rect2.getPosition().y + rect2.height) - std::max(rect1.getPosition().y, rect2.getPosition().y));
+	return sf::FloatRect(0, 0, overlapX, overlapY);
 }

@@ -15,5 +15,5 @@ public:
 
 	static double FontScalar; //WindowPixels * FontScalar * DefaultFontSizeX = FontSizeX
 
-	static sf::Vector2f DefaultWindowSize;
+	static sf::Vector2u DefaultWindowSize;
 };

@@ -1,6 +1,10 @@
 #include "Platform.h"
-#include <iostream>
 
+
+Platform::Platform(json data)
+: mFriction(data["Friction"])
+{
+}
 
 Platform::Platform(int friction)
 : mFriction(friction)

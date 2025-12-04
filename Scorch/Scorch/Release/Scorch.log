@@ -1,0 +1,185 @@
+﻿  Actionable.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Actionable.cpp(68,27): warning C4018: '<': signed/unsigned mismatch
+  Actions.cpp
+  AnimatedPlatform.cpp
+  Animation.cpp
+  Application.cpp
+  Attack.cpp
+  Attacker.cpp
+  Bar.cpp
+  Button.cpp
+  ChangeableAnimation.cpp
+  ChasePlayer.cpp
+  Command.cpp
+  CommandQueue.cpp
+  Component.cpp
+  Container.cpp
+  DataTable.cpp
+  Door.cpp
+  Enemy.cpp
+  Entity.cpp
+  FallingPlatform.cpp
+  Compiling...
+  FleePlayer.cpp
+  GameState.cpp
+  Greatsword.cpp
+  Image.cpp
+  Interact.cpp
+  Interactable.cpp
+  Jump.cpp
+  Label.cpp
+  LoadingState.cpp
+  Lock.cpp
+  main.cpp
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\main.cpp(7,5): warning C4007: 'WinMain': must be '__stdcall'
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\main.cpp(14,25): warning C4101: 'e': unreferenced local variable
+  MakeAttack.cpp
+  MenuState.cpp
+  Movable.cpp
+  Move.cpp
+  MoveDis.cpp
+  MovingPlatform.cpp
+  NormalPlatform.cpp
+  OverlayState.cpp
+  Pause.cpp
+  Compiling...
+  PauseState.cpp
+  Platform.cpp
+  Platformer.cpp
+  Player.cpp
+  Player_Entity.cpp
+  Projectile.cpp
+  RelativeRect.cpp
+  SceneNode.cpp
+  Scene_Builder.cpp
+  Settings.cpp
+  SettingsState.cpp
+  Slash.cpp
+  SpriteNode.cpp
+  State.cpp
+  StateStack.cpp
+  TitleState.cpp
+  UseWeapon.cpp
+  Utility.cpp
+  ViewArea.cpp
+  ViewHandler.cpp
+  Compiling...
+  Weapon.cpp
+  WeaponInteractable.cpp
+  WeaponWielder.cpp
+  With.cpp
+  World.cpp
+  WorldCommand.cpp
+AnimatedPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Transformable::~Transformable(void)" (__imp_??1Transformable@sf@@UAE@XZ)
+AnimatedPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Rect<float> __thiscall sf::Transform::transformRect(class sf::Rect<float> const &)const " (__imp_?transformRect@Transform@sf@@QBE?AV?$Rect@M@2@ABV32@@Z)
+AnimatedPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::RenderTarget::draw(class sf::Drawable const &,class sf::RenderStates const &)" (__imp_?draw@RenderTarget@sf@@QAEXABVDrawable@2@ABVRenderStates@2@@Z)
+AnimatedPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Sprite::~Sprite(void)" (__imp_??1Sprite@sf@@UAE@XZ)
+AnimatedPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Drawable::~Drawable(void)" (__imp_??1Drawable@sf@@UAE@XZ)
+AnimatedPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) protected: __thiscall sf::NonCopyable::~NonCopyable(void)" (__imp_??1NonCopyable@sf@@IAE@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class sf::Time & __cdecl sf::operator+=(class sf::Time &,class sf::Time)" (__imp_??Ysf@@YAAAVTime@0@AAV10@V10@@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class sf::Time const sf::Time::Zero" (__imp_?Zero@Time@sf@@2V12@B)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Transform const & __thiscall sf::Transformable::getTransform(void)const " (__imp_?getTransform@Transformable@sf@@QBEABVTransform@2@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::scale(float,float)" (__imp_?scale@Transformable@sf@@QAEXMM@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::Transformable::getOrigin(void)const " (__imp_?getOrigin@Transformable@sf@@QBEABV?$Vector2@M@2@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::Transformable::getScale(void)const " (__imp_?getScale@Transformable@sf@@QBEABV?$Vector2@M@2@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Transformable::Transformable(void)" (__imp_??0Transformable@sf@@QAE@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class sf::Transform & __cdecl sf::operator*=(class sf::Transform &,class sf::Transform const &)" (__imp_??Xsf@@YAAAVTransform@0@AAV10@ABV10@@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<unsigned int> __thiscall sf::Texture::getSize(void)const " (__imp_?getSize@Texture@sf@@QBE?AV?$Vector2@I@2@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class sf::Time & __cdecl sf::operator-=(class sf::Time &,class sf::Time)" (__imp_??Zsf@@YAAAVTime@0@AAV10@V10@@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) bool __cdecl sf::operator>=(class sf::Time,class sf::Time)" (__imp_??Psf@@YA_NVTime@0@0@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class sf::Time __cdecl sf::operator/(class sf::Time,float)" (__imp_??Ksf@@YA?AVTime@0@V10@M@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Rect<int> const & __thiscall sf::Sprite::getTextureRect(void)const " (__imp_?getTextureRect@Sprite@sf@@QBEABV?$Rect@H@2@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Texture const * __thiscall sf::Sprite::getTexture(void)const " (__imp_?getTexture@Sprite@sf@@QBEPBVTexture@2@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Sprite::setTextureRect(class sf::Rect<int> const &)" (__imp_?setTextureRect@Sprite@sf@@QAEXABV?$Rect@H@2@@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Sprite::setTexture(class sf::Texture const &,bool)" (__imp_?setTexture@Sprite@sf@@QAEXABVTexture@2@_N@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Sprite::Sprite(void)" (__imp_??0Sprite@sf@@QAE@XZ)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Sprite::Sprite(class sf::Texture const &)" (__imp_??0Sprite@sf@@QAE@ABVTexture@1@@Z)
+Animation.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Drawable::Drawable(void)" (__imp_??0Drawable@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Time __thiscall sf::Clock::restart(void)" (__imp_?restart@Clock@sf@@QAE?AVTime@2@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Clock::Clock(void)" (__imp_??0Clock@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Time::Time(void)" (__imp_??0Time@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setPosition(float,float)" (__imp_?setPosition@Transformable@sf@@QAEXMM@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class sf::Time __cdecl sf::seconds(float)" (__imp_?seconds@sf@@YA?AVTime@1@M@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: bool __thiscall sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (__imp_?loadFromFile@Texture@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV?$Rect@H@2@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::~Texture(void)" (__imp_??1Texture@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Texture::Texture(void)" (__imp_??0Texture@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: bool __thiscall sf::Font::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (__imp_?loadFromFile@Font@sf@@QAE_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Font::~Font(void)" (__imp_??1Font@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Font::Font(void)" (__imp_??0Font@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::RenderWindow::~RenderWindow(void)" (__imp_??1RenderWindow@sf@@UAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::RenderWindow::RenderWindow(class sf::VideoMode,class sf::String const &,unsigned int,struct sf::ContextSettings const &)" (__imp_??0RenderWindow@sf@@QAE@VVideoMode@1@ABVString@1@IABUContextSettings@1@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Color::Color(unsigned char,unsigned char,unsigned char,unsigned char)" (__imp_??0Color@sf@@QAE@EEEE@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) bool __cdecl sf::operator>(class sf::Time,class sf::Time)" (__imp_??Osf@@YA_NVTime@0@0@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Window::display(void)" (__imp_?display@Window@sf@@QAEXXZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::WindowBase::setKeyRepeatEnabled(bool)" (__imp_?setKeyRepeatEnabled@WindowBase@sf@@QAEX_N@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: bool __thiscall sf::WindowBase::pollEvent(class sf::Event &)" (__imp_?pollEvent@WindowBase@sf@@QAE_NAAVEvent@2@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: bool __thiscall sf::WindowBase::isOpen(void)const " (__imp_?isOpen@WindowBase@sf@@QBE_NXZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::RenderTarget::clear(class sf::Color const &)" (__imp_?clear@RenderTarget@sf@@QAEXABVColor@2@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::String::String(char const *,class std::locale const &)" (__imp_??0String@sf@@QAE@PBDABVlocale@std@@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::String::String(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::locale const &)" (__imp_??0String@sf@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABVlocale@3@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::VideoMode::VideoMode(unsigned int,unsigned int,unsigned int)" (__imp_??0VideoMode@sf@@QAE@III@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Text::setCharacterSize(unsigned int)" (__imp_?setCharacterSize@Text@sf@@QAEXI@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Text::setFont(class sf::Font const &)" (__imp_?setFont@Text@sf@@QAEXABVFont@2@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Text::setString(class sf::String const &)" (__imp_?setString@Text@sf@@QAEXABVString@2@@Z)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Text::Text(void)" (__imp_??0Text@sf@@QAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::Text::~Text(void)" (__imp_??1Text@sf@@UAE@XZ)
+Application.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::String::~String(void)" (__imp_??1String@sf@@QAE@XZ)
+Attack.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) bool __cdecl sf::operator<=(class sf::Time,class sf::Time)" (__imp_??Nsf@@YA_NVTime@0@0@Z)
+Attacker.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::move(class sf::Vector2<float> const &)" (__imp_?move@Transformable@sf@@QAEXABV?$Vector2@M@2@@Z)
+Bar.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class sf::Color const sf::Color::Red" (__imp_?Red@Color@sf@@2V12@B)
+Bar.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class sf::Color const sf::Color::Green" (__imp_?Green@Color@sf@@2V12@B)
+Bar.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Shape::setFillColor(class sf::Color const &)" (__imp_?setFillColor@Shape@sf@@QAEXABVColor@2@@Z)
+Bar.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::RectangleShape::setSize(class sf::Vector2<float> const &)" (__imp_?setSize@RectangleShape@sf@@QAEXABV?$Vector2@M@2@@Z)
+Bar.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::RectangleShape::RectangleShape(class sf::Vector2<float> const &)" (__imp_??0RectangleShape@sf@@QAE@ABV?$Vector2@M@1@@Z)
+Bar.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall sf::RectangleShape::~RectangleShape(void)" (__imp_??1RectangleShape@sf@@UAE@XZ)
+Button.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setOrigin(float,float)" (__imp_?setOrigin@Transformable@sf@@QAEXMM@Z)
+Button.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Rect<float> __thiscall sf::Sprite::getGlobalBounds(void)const " (__imp_?getGlobalBounds@Sprite@sf@@QBE?AV?$Rect@M@2@XZ)
+Button.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Rect<float> __thiscall sf::Sprite::getLocalBounds(void)const " (__imp_?getLocalBounds@Sprite@sf@@QBE?AV?$Rect@M@2@XZ)
+Button.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Rect<float> __thiscall sf::Text::getLocalBounds(void)const " (__imp_?getLocalBounds@Text@sf@@QBE?AV?$Rect@M@2@XZ)
+Button.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Text::Text(class sf::String const &,class sf::Font const &,unsigned int)" (__imp_??0Text@sf@@QAE@ABVString@1@ABVFont@1@I@Z)
+Component.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Transformable::setPosition(class sf::Vector2<float> const &)" (__imp_?setPosition@Transformable@sf@@QAEXABV?$Vector2@M@2@@Z)
+Component.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) protected: __thiscall sf::NonCopyable::NonCopyable(void)" (__imp_??0NonCopyable@sf@@IAE@XZ)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class sf::RenderStates const sf::RenderStates::Default" (__imp_?Default@RenderStates@sf@@2V12@B)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Time __thiscall sf::Clock::getElapsedTime(void)const " (__imp_?getElapsedTime@Clock@sf@@QBE?AVTime@2@XZ)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::View::getSize(void)const " (__imp_?getSize@View@sf@@QBEABV?$Vector2@M@2@XZ)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::View const & __thiscall sf::RenderTarget::getDefaultView(void)const " (__imp_?getDefaultView@RenderTarget@sf@@QBEABVView@2@XZ)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::View const & __thiscall sf::RenderTarget::getView(void)const " (__imp_?getView@RenderTarget@sf@@QBEABVView@2@XZ)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::RenderTarget::setView(class sf::View const &)" (__imp_?setView@RenderTarget@sf@@QAEXABVView@2@@Z)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::String::operator class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(void)const " (__imp_??BString@sf@@QBE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
+LoadingState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::String const & __thiscall sf::Text::getString(void)const " (__imp_?getString@Text@sf@@QBEABVString@2@XZ)
+MenuState.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::View::View(class sf::Rect<float> const &)" (__imp_??0View@sf@@QAE@ABV?$Rect@M@1@@Z)
+Movable.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: float __thiscall sf::Time::asSeconds(void)const " (__imp_?asSeconds@Time@sf@@QBEMXZ)
+MovingPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::Transformable::getPosition(void)const " (__imp_?getPosition@Transformable@sf@@QBEABV?$Vector2@M@2@XZ)
+MovingPlatform.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::Sprite::Sprite(class sf::Texture const &,class sf::Rect<int> const &)" (__imp_??0Sprite@sf@@QAE@ABVTexture@1@ABV?$Rect@H@1@@Z)
+Player.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static bool __cdecl sf::Keyboard::isKeyPressed(enum sf::Keyboard::Key)" (__imp_?isKeyPressed@Keyboard@sf@@SA_NW4Key@12@@Z)
+SceneNode.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class sf::Transform const sf::Transform::Identity" (__imp_?Identity@Transform@sf@@2V12@B)
+SceneNode.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::RenderStates::RenderStates(class sf::Transform const &)" (__imp_??0RenderStates@sf@@QAE@ABVTransform@1@@Z)
+SceneNode.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class sf::Transform __cdecl sf::operator*(class sf::Transform const &,class sf::Transform const &)" (__imp_??Dsf@@YA?AVTransform@0@ABV10@0@Z)
+SceneNode.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) class sf::Vector2<float> __cdecl sf::operator*(class sf::Transform const &,class sf::Vector2<float> const &)" (__imp_??Dsf@@YA?AV?$Vector2@M@0@ABVTransform@0@ABV10@@Z)
+Scene_Builder.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::Texture::setRepeated(bool)" (__imp_?setRepeated@Texture@sf@@QAEX_N@Z)
+Slash.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Sprite & __thiscall sf::Sprite::operator=(class sf::Sprite const &)" (__imp_??4Sprite@sf@@QAEAAV01@ABV01@@Z)
+Slash.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Transformable & __thiscall sf::Transformable::operator=(class sf::Transformable const &)" (__imp_??4Transformable@sf@@QAEAAV01@ABV01@@Z)
+Slash.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Drawable & __thiscall sf::Drawable::operator=(class sf::Drawable const &)" (__imp_??4Drawable@sf@@QAEAAV01@ABV01@@Z)
+ViewHandler.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::View::move(float,float)" (__imp_?move@View@sf@@QAEXMM@Z)
+ViewHandler.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<float> const & __thiscall sf::View::getCenter(void)const " (__imp_?getCenter@View@sf@@QBEABV?$Vector2@M@2@XZ)
+ViewHandler.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::View::setViewport(class sf::Rect<float> const &)" (__imp_?setViewport@View@sf@@QAEXABV?$Rect@M@2@@Z)
+ViewHandler.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::View::setSize(float,float)" (__imp_?setSize@View@sf@@QAEXMM@Z)
+ViewHandler.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::View::setCenter(float,float)" (__imp_?setCenter@View@sf@@QAEXMM@Z)
+ViewHandler.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: class sf::Vector2<unsigned int> __thiscall sf::WindowBase::getSize(void)const " (__imp_?getSize@WindowBase@sf@@QBE?AV?$Vector2@I@2@XZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall sf::View::setCenter(class sf::Vector2<float> const &)" (__imp_?setCenter@View@sf@@QAEXABV?$Vector2@M@2@@Z)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::View::View(void)" (__imp_??0View@sf@@QAE@XZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) protected: virtual void __thiscall sf::RenderWindow::onResize(void)" (__imp_?onResize@RenderWindow@sf@@MAEXXZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) protected: virtual void __thiscall sf::RenderWindow::onCreate(void)" (__imp_?onCreate@RenderWindow@sf@@MAEXXZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual bool __thiscall sf::RenderWindow::setActive(bool)" (__imp_?setActive@RenderWindow@sf@@UAE_N_N@Z)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual bool __thiscall sf::RenderWindow::isSrgb(void)const " (__imp_?isSrgb@RenderWindow@sf@@UBE_NXZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual class sf::Vector2<unsigned int> __thiscall sf::RenderWindow::getSize(void)const " (__imp_?getSize@RenderWindow@sf@@UBE?AV?$Vector2@I@2@XZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall sf::RenderWindow::RenderWindow(void)" (__imp_??0RenderWindow@sf@@QAE@XZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual void __thiscall sf::Window::close(void)" (__imp_?close@Window@sf@@UAEXXZ)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual void __thiscall sf::Window::create(class sf::VideoMode,class sf::String const &,unsigned int)" (__imp_?create@Window@sf@@UAEXVVideoMode@2@ABVString@2@I@Z)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual void __thiscall sf::Window::create(class sf::VideoMode,class sf::String const &,unsigned int,struct sf::ContextSettings const &)" (__imp_?create@Window@sf@@UAEXVVideoMode@2@ABVString@2@IABUContextSettings@2@@Z)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual void __thiscall sf::Window::create(struct HWND__ *)" (__imp_?create@Window@sf@@UAEXPAUHWND__@@@Z)
+World.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual void __thiscall sf::Window::create(struct HWND__ *,struct sf::ContextSettings const &)" (__imp_?create@Window@sf@@UAEXPAUHWND__@@ABUContextSettings@2@@Z)
+MSVCRT.lib(exe_winmain.obj) : error LNK2001: unresolved external symbol _WinMain@16
+    Hint on symbols that are defined and could potentially match:
+      _WinMain@0
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Release\Scorch.exe : fatal error LNK1120: 110 unresolved externals

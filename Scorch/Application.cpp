@@ -9,14 +9,14 @@
 #include "Utility.hpp"
 #include "LoadingState.h"
 #include "Settings.h"
+#include "Logger.h"
 
-#include <iostream>
 #include "OverlayState.h"
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);
 
 Application::Application()
-: mWindow(sf::VideoMode({ Settings::DefaultWindowSize.x, Settings::DefaultWindowSize.y }), "Scorch", sf::Style::Default)
+: mWindow(sf::VideoMode(Settings::DefaultWindowSize.x, Settings::DefaultWindowSize.y), "Scorch", sf::Style::Default)
 , mTextures()
 , mFonts()
 , mPlayer()
@@ -37,11 +37,13 @@ Application::Application()
 	mTextures.load(Textures::Black,				"resources/Black.bmp");
 
 	mStatisticsText.setFont(mFonts.get(Fonts::Main));
-	mStatisticsText.setPosition({ 5.f, 5.f });
+	mStatisticsText.setPosition(5.f, 5.f);
 	mStatisticsText.setCharacterSize(10u);
 
 	registerStates();
 	mStateStack.pushState(States::Title);
+
+	Logger::Instance->LogData(Logger::Sys, "Application Initialized");
 }
 
 void Application::run()
@@ -51,12 +53,6 @@ void Application::run()
 
 	while (mWindow.isOpen())
 	{
-		//Window Size Management - Now handled in ViewHandler
-		/*if (mWindow.getSize().x*mScreenRatio.x != mWindow.getSize().y*mScreenRatio.y)
-		{
-			mWindow.setSize(sf::Vector2u(mWindow.getSize().x, mWindow.getSize().x/mScreenRatio.x*mScreenRatio.y)); 
-		}*/
-
 		sf::Time dt = clock.restart();
 		timeSinceLastUpdate += dt;
 		while (timeSinceLastUpdate > TimePerFrame)
@@ -74,6 +70,8 @@ void Application::run()
 		updateStatistics(dt);
 		render();
 	}
+
+	Logger::Instance->LogData(Logger::Sys, "Application Closed");
 }
 
 void Application::processInput()

@@ -6,6 +6,7 @@
 #include "States.hpp"
 #include "ResourceIdentifiers.hpp"
 
+#include <SFML/System/NonCopyable.hpp>
 #include <SFML/System/Time.hpp>
 
 #include <vector>
@@ -20,7 +21,7 @@ namespace sf
 	class RenderWindow;
 }
 
-class StateStack
+class StateStack : private sf::NonCopyable
 {
 	public:
 		enum Action

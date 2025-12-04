@@ -1,7 +1,6 @@
 #include "MakeAttack.h"
 #include "Player_Entity.h"
 #include "World.hpp"
-#include <iostream>
 
 
 MakeAttack::MakeAttack(std::string attack)
@@ -23,7 +22,7 @@ MakeAttack::MakeAttack(std::string attack, Action::Type runOnce)
 
 void MakeAttack::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 {
-	std::cout << "MAKEATTACK\n";
+	//std::cout << "MAKEATTACK\n";
 	Attacker* a = dynamic_cast<Attacker*>(&target);
 	if (a->canAttack()) {
 		a->makeAttack(mAttackCode, target);

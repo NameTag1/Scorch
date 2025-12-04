@@ -1,5 +1,4 @@
 #include "Actions.h"
-#include <iostream>
 #include "With.h"
 
 Action::Action(Type type)

@@ -1,0 +1,12 @@
+{
+"test":
+	{
+	"String":"afkshg",
+	"Int":4,
+	"Bool":true,
+	"test2":
+		{
+		"Bool":false
+		}	
+	}
+}

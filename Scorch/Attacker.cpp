@@ -1,6 +1,5 @@
 #include "Attacker.h"
 #include "World.hpp"
-#include <iostream>
 
 Attacker::Attacker()
 : mCooldown(sf::seconds(0))

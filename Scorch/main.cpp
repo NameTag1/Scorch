@@ -1,12 +1,13 @@
 
 #include "Application.hpp"
+#include "Logger.h"
 
 #include <stdexcept>
-#include <iostream>
 #include <fstream>
 
-int main()
+int WinMain()
 {
+	Logger l;
 	try
 	{
 		Application app;
@@ -14,6 +15,9 @@ int main()
 	}
 	catch (std::exception& e)
 	{
-		std::cout << "\nEXCEPTION: " << e.what() << std::endl;
+		l.LogData(Logger::Sys, "Error: " + std::string(e.what()));
+		//std::cout << "\nEXCEPTION: " << e.what() << std::endl;
 	}
+	l.WriteLog();
+	l.CloseLogger();
 }

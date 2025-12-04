@@ -8,7 +8,6 @@
 
 
 #include <thread>
-#include <iostream>
 
 #include <string>
 
@@ -32,8 +31,6 @@ LoadingState::~LoadingState()
 void LoadingState::BeginLoading()
 {
 	mThreadDone = false;
-	DATATABLE::prepareJsonFile();
-	DATATABLE::prepareData();
 	//builder->buildScene(world->requestSceneChange().scene, world->requestSceneChange().playerPos);
 	//world->prepareSceneForPlay(builder);
 	sf::Clock i;

@@ -3,7 +3,6 @@
 #include "MakeAttack.h"
 #include "With.h"
 #include "Jump.h"
-#include <iostream>
 
 Greatsword::Greatsword(const TextureHolder& textures, Category::Type type)
 	: mSprite(textures.get(Textures::Greatsword))
@@ -21,7 +20,7 @@ Greatsword::Greatsword(const TextureHolder& textures, Category::Type type)
 void Greatsword::flip()
 {
 	if (left != flipped) {
-		mSprite.scale({ -1.f, 1.f });
+		mSprite.scale(-1.f, 1.f);
 		flipped = left;
 	}
 	/*if (up) {

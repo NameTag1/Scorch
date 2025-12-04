@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <cassert>
 #include <cmath>
-#include <iostream>
+
 
 
 SceneNode::SceneNode()

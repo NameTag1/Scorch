@@ -17,20 +17,20 @@ SettingsState::SettingsState(StateStack& stack, Context context)
 	mBackgroundSprite.setTexture(context.textures->get(Textures::TitleScreen));
 	
 	// Build key binding buttons and labels
-	addButtonLabel(Player::MoveLeft,  0.1, "Left", context);
-	addButtonLabel(Player::MoveRight, 0.175, "Right", context);
-	addButtonLabel(Player::MoveDown, 0.25, "Down", context);
-	addButtonLabel(Player::JumpA, 0.325, "Up", context);
-	addButtonLabel(Player::InteractA, 0.4, "Interact", context);
-	addButtonLabel(Player::Attack1, 0.475, "Attack 1", context);
-	addButtonLabel(Player::Attack2, 0.55, "Attack 2", context);
-	addButtonLabel(Player::Attack3, 0.625, "Attack 3", context);
-	addButtonLabel(Player::Attack4, 0.7, "Attack 4", context);
+	addButtonLabel(Player::MoveLeft,  0.1f, "Left", context);
+	addButtonLabel(Player::MoveRight, 0.175f, "Right", context);
+	addButtonLabel(Player::MoveDown, 0.25f, "Down", context);
+	addButtonLabel(Player::JumpA, 0.325f, "Up", context);
+	addButtonLabel(Player::InteractA, 0.4f, "Interact", context);
+	addButtonLabel(Player::Attack1, 0.475f, "Attack 1", context);
+	addButtonLabel(Player::Attack2, 0.55f, "Attack 2", context);
+	addButtonLabel(Player::Attack3, 0.625f, "Attack 3", context);
+	addButtonLabel(Player::Attack4, 0.7f, "Attack 4", context);
 
 	updateLabels();
 
 	auto backButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-	backButton->setRelativeRect(RelativeRect(sf::FloatRect(0.7, 0.85, 0.2, 0.075)));
+	backButton->setRelativeRect(RelativeRect(sf::FloatRect(0.7f, 0.85f, 0.2f, 0.075f)));
 	backButton->setText("Back");
 	backButton->setCallback(std::bind(&SettingsState::requestStackPop, this));
 
@@ -48,7 +48,7 @@ void SettingsState::draw()
 bool SettingsState::update(sf::Time)
 {
 	sf::RenderWindow& window = *getContext().window;
-	mGUIContainer.updateRect(sf::FloatRect(0, 0, window.getSize().x, window.getSize().y));
+	mGUIContainer.updateRect(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 	return true;
 }
 
@@ -94,12 +94,12 @@ void SettingsState::updateLabels()
 void SettingsState::addButtonLabel(Player::PActions action, float y, const std::string& text, Context context)
 {
 	mBindingButtons[action] = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-	mBindingButtons[action]->setRelativeRect(RelativeRect(sf::FloatRect(0.1, y, 0.2,0.075)));
+	mBindingButtons[action]->setRelativeRect(RelativeRect(sf::FloatRect(0.1f, y, 0.2f, 0.075f)));
 	mBindingButtons[action]->setText(text);
 	mBindingButtons[action]->setToggle(true);
 
 	mBindingLabels[action] = std::make_shared<GUI::Label>("", *context.fonts);
-	mBindingLabels[action]->setRelativeRect(RelativeRect(sf::FloatRect(0.32, y, 0.05,0.075)));
+	mBindingLabels[action]->setRelativeRect(RelativeRect(sf::FloatRect(0.32f, y, 0.05f,0.075f)));
 
 	mGUIContainer.pack(mBindingButtons[action]);
 	mGUIContainer.pack(mBindingLabels[action]);

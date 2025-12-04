@@ -5,7 +5,6 @@
 
 #include <SFML/Graphics/View.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
-#include <iostream>
 #include "Image.h"
 
 MenuState::MenuState(StateStack& stack, Context context)
@@ -18,7 +17,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	background->setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 1, 1)));
 
 	auto playButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-	playButton->setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 0.2, 0.075)));
+	playButton->setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 0.2f, 0.075f)));
 	playButton->setText("Play");
 	playButton->setCallback([this] ()
 	{
@@ -28,7 +27,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	});
 
 	auto settingsButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-	settingsButton->setRelativeRect(RelativeRect(sf::FloatRect(0.5, 0.5, 0.2, 0.075), RelativeWH::Normal, Anchor::Center));
+	settingsButton->setRelativeRect(RelativeRect(sf::FloatRect(0.5f, 0.5f, 0.2f, 0.075f), RelativeWH::Normal, Anchor::Center));
 	settingsButton->setText("Settings");
 	settingsButton->setCallback([this] ()
 	{
@@ -36,7 +35,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	});
 
 	auto exitButton = std::make_shared<GUI::Button>(*context.fonts, *context.textures);
-	exitButton->setRelativeRect(RelativeRect(sf::FloatRect(1, 1, 0.2, 0.075), RelativeWH::Normal, Anchor::BR));
+	exitButton->setRelativeRect(RelativeRect(sf::FloatRect(1, 1, 0.2f, 0.075f), RelativeWH::Normal, Anchor::BR));
 	exitButton->setText("Exit");
 	exitButton->setCallback([this] ()
 	{
@@ -53,7 +52,7 @@ void MenuState::draw()
 {
 	sf::RenderWindow& window = *getContext().window;
 
-	sf::View mView(sf::FloatRect(0,0,window.getSize().x, window.getSize().y));
+	sf::View mView(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 	window.setView(mView); 
 
 	window.draw(mGUIContainer);
@@ -62,7 +61,7 @@ void MenuState::draw()
 bool MenuState::update(sf::Time)
 {
 	sf::RenderWindow& window = *getContext().window;
-	mGUIContainer.updateRect(sf::FloatRect(0,0, window.getSize().x, window.getSize().y));
+	mGUIContainer.updateRect(sf::FloatRect(0, 0, float(window.getSize().x), float(window.getSize().y)));
 	return true;
 }
 

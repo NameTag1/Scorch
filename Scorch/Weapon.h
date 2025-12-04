@@ -1,7 +1,5 @@
 #pragma once
 
-#include <map>
-
 #include "ResourceIdentifiers.hpp"
 #include "SceneNode.hpp"
 #include "Attack.h"

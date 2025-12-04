@@ -1,5 +1,4 @@
 #include "Slash.h"
-#include <iostream>
 
 Slash::Slash()
 : Attack()
@@ -11,12 +10,12 @@ Slash::Slash(int damage, unsigned int category, const TextureHolder& textures)
 : Attack(damage, category)
 , mAnimation(textures.get(Textures::Slash))
 {
-	mAnimation.setDuration(sf::seconds(0.1));
+	mAnimation.setDuration(sf::seconds(0.1f));
 	mAnimation.setFrameSize(sf::Vector2i(50, 120));
 	mAnimation.setNumFrames(4);
-	mCooldown = sf::seconds(0.1);
-	mDuration = sf::seconds(0.1);
-	mOffset = sf::Vector2f(30, -mAnimation.getFrameSize().y/2);
+	mCooldown = sf::seconds(0.1f);
+	mDuration = sf::seconds(0.1f);
+	mOffset = sf::Vector2f(30, float(-mAnimation.getFrameSize().y / 2));
 };
 
 sf::FloatRect Slash::getBoundingRect() const {

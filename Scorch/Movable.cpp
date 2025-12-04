@@ -44,10 +44,10 @@ void Movable::updateCurrent(sf::Time dt, CommandQueue& commands)
 {
 	move(mVelocity * dt.asSeconds());
 	if (mVelocity.x != 0) {
-		mLastDirection.x = mVelocity.x;
+		mLastDirection.x = int(mVelocity.x);
 	}
 	if (mVelocity.y != 0) {
-		mLastDirection.y = mVelocity.y;
+		mLastDirection.y = int(mVelocity.y);
 	}
 }
 

@@ -8,6 +8,7 @@
 class Animation : public sf::Drawable, public sf::Transformable
 {
 public:
+	Animation();
 	explicit 				Animation(const sf::Texture& texture);
 
 	void 					setTexture(const sf::Texture& texture);

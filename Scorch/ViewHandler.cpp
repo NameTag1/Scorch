@@ -1,7 +1,6 @@
 #include "ViewHandler.h"
 #include "World.hpp"
 #include "Utility.hpp"
-#include <iostream>
 
 ViewHandler* ViewHandler::instance = new ViewHandler();
 
@@ -73,12 +72,12 @@ void ViewHandler::adaptView(sf::View& view, Player_Entity* player, sf::FloatRect
 		mViewSize = mDefaultViewSize;
 	}
 
-	view.setSize(adjustToNumber(view.getSize().x, mViewSize.x / 50 + 0.00001, mViewSize.x), adjustToNumber(view.getSize().y, mViewSize.y / 50 + 0.00001, mViewSize.y));
+	view.setSize(adjustToNumber(view.getSize().x, mViewSize.x / 50 + 0.00001f, mViewSize.x), adjustToNumber(view.getSize().y, mViewSize.y / 50 + 0.00001f, mViewSize.y));
 
 
 	if (mLockViewScroll) {
 		//view.setCenter(mViewCenter);
-		view.setCenter(adjustToNumber(view.getCenter().x, mViewCenter.x / 50 + 0.00001, mViewCenter.x), adjustToNumber(view.getCenter().y, mViewCenter.y / 50 + 0.00001, mViewCenter.y));
+		view.setCenter(adjustToNumber(view.getCenter().x, mViewCenter.x / 50 + 0.00001f, mViewCenter.x), adjustToNumber(view.getCenter().y, mViewCenter.y / 50 + 0.00001f, mViewCenter.y));
 	}
 
 	mXViewScrollDistance = view.getSize().x / 2.f - 100;

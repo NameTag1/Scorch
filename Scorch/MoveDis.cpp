@@ -1,5 +1,4 @@
 #include "MoveDis.h"
-#include <iostream>
 
 MoveDis::MoveDis(int distance)
 : mLeft((distance < 0)? true : false)
@@ -17,7 +16,7 @@ void MoveDis::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 		mStart = platformer->getWorldPosition();
 	}
 	platformer->move(mLeft);
-	mDistanceTraveled += (platformer->getWorldPosition() - mStart).x;
+	mDistanceTraveled += int((platformer->getWorldPosition() - mStart).x);
 };
 
 bool MoveDis::isFinnished() {

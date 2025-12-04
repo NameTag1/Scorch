@@ -4,19 +4,10 @@
 #include "SceneNode.hpp"
 #include "ResourceHolder.hpp"
 #include "ResourceIdentifiers.hpp"
+#include "Scenes.h"
 
 #include "Player_Entity.h"
 
-enum Scenes {
-	Null,
-	Test,
-	Test2,
-	Sietch,
-	Home,
-	Dunes,
-	MagmaFields,
-	Canyons
-};
 
 enum Layer
 {
