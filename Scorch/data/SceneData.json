@@ -2,7 +2,7 @@
 	{
 		"Type":"Normal_Platform",
 		"W":400,
-		"H":200,
+		"H":100,
 		"X":1200,
 		"Y":400,
 		"Texture":"Platform",
@@ -14,7 +14,7 @@
 	{
 		"Type":"Normal_Platform",
 		"W":400,
-		"H":200,
+		"H":100,
 		"X":1200,
 		"Y":0,
 		"Texture":"Platform",
@@ -22,5 +22,118 @@
 			{
 			"Friction":20
 			}
+	},
+	{
+		"Type":"Sprite_Node",
+		"W":50000,
+		"H":50000,
+		"X":-25000,
+		"Y":-25000,
+		"Texture":"Background",
+		"Layer":"Background",
+		"Repeated":true
+	},
+	{
+		"Type":"Sprite_Node",
+		"W":100,
+		"H":100,
+		"X":400,
+		"Y":400,
+		"Texture":"Background2",
+		"Layer":"Moving_Background",
+		"Repeated":true
+	},
+	{
+		"Type":"Sprite_Node",
+		"W":100,
+		"H":100,
+		"X":400,
+		"Y":600,
+		"Texture":"Background2",
+		"Layer":"Forground",
+		"Repeated":true
+	},
+	{
+		"Type":"Normal_Platform",
+		"W":4000,
+		"H":200,
+		"X":-1200,
+		"Y":800,
+		"Texture":"Platform",
+		"Platform":
+			{
+			"Friction":20
+			}
+	},
+	{
+		"Type":"Normal_Platform",
+		"W":200,
+		"H":150,
+		"X":200,
+		"Y":600,
+		"Texture":"Platform",
+		"Platform":
+			{
+			"Friction":20
+			}
+	},
+	{
+		"Type":"Normal_Platform",
+		"W":200,
+		"H":50,
+		"X":800,
+		"Y":400,
+		"Texture":"Platform",
+		"Platform":
+			{
+			"Friction":20
+			}
+	},
+	{
+		"Type":"Animated_Platform",
+		"X":800,
+		"Y":150,
+		"Platform":
+			{
+			"Friction":20
+			},
+		"Animation":
+			{
+			"Texture":"TestAnimation",
+			"Frame_W":80,
+			"Frame_H":80,
+			"Number_of_Frames":3,
+			"Duration":6,
+			"Repeated":true
+			}
+	},
+	{
+		"Type":"Falling_Platform",
+		"X":800,
+		"Y":-200,
+		"Duration":5,
+		"Platform":
+			{
+			"Friction":20
+			},
+		"Animation":
+			{
+			"Texture":"FallingSand",
+			"Frame_W":160,
+			"Frame_H":40,
+			"Number_of_Frames":5,
+			"Duration":0.2,
+			"Repeated":false
+			}
+	},
+	{
+		"Type":"Door",
+		"X":800,
+		"Y":650,
+		"PX":800,
+		"PY":650,
+		"Texture":"Door",
+		"TextureArrow":"DoorArrow",
+		"Scene":"Test2"
 	}
 ]

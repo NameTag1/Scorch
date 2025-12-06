@@ -9,7 +9,7 @@
 class Door : public Interactable
 {
 public:
-	Door(TextureHolder& textureHolder, DataRetrivalType::Doors type, Scenes scene);
+	Door(TextureHolder& textureHolder, json data);
 	void setBounds(sf::IntRect newBounds);
 	virtual sf::FloatRect getBoundingRect() const;
 	virtual std::vector<unsigned int> getCategory() const;

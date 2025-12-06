@@ -1,4 +1,23 @@
-2025-12-03
-14:52:32 - Loaded: data/SceneData.json
-14:52:32 - Created Normal_Platform
-14:52:32 - Created Normal_Platform
+2025-12-05
+19:49:40 - Loaded: data/ResourceLocations.json
+19:49:41 -  -------- Loading Scene --------
+19:49:41 - Loaded: data/SceneData.json
+19:49:41 - Scenebuilder loaded: DoorArrow from resources/DoorArrow.png
+19:49:41 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+19:49:41 - Scenebuilder loaded: Platform from resources/Platform.jpg
+19:49:41 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+19:49:41 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+19:49:41 - Scenebuilder loaded: Background from resources/Background.jpg
+19:49:41 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+19:49:41 - Created Normal_Platform
+19:49:41 - Created Normal_Platform
+19:49:41 - Created Sprite_Node
+19:49:41 - Created Sprite_Node
+19:49:41 - Created Sprite_Node
+19:49:41 - Created Normal_Platform
+19:49:41 - Created Normal_Platform
+19:49:41 - Created Normal_Platform
+19:49:41 - Created Animated_Platform
+19:49:41 - Created Falling_Platform
+19:49:41 - Created Door
+19:49:41 -  -------- Scene Built --------

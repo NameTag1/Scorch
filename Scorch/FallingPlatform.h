@@ -14,7 +14,7 @@ class Platformer;
 class FallingPlatform : public Platform
 {
 public:
-	FallingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type);
+	FallingPlatform(TextureHolder& textureHolder, json data);
 	virtual void adust_for_platformer(Platformer& platformer);
 	virtual std::vector<unsigned int> getCategory() const;
 	virtual sf::FloatRect getBoundingRect() const;
@@ -26,7 +26,8 @@ private:
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 
 private:
-	sf::Time mReset;
+	sf::Time mResetDuration;
+	sf::Time mResetTimer;
 	bool mActivated;
 	Animation mAnimation;
 };

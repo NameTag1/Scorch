@@ -13,6 +13,39 @@
 #include "Greatsword.h"
 
 #include "Logger.h"
+#include <unordered_set>
+
+// Recursively collect texture ids from a json value
+namespace {
+	using json = nlohmann::json;
+
+	void collectTextures(const json& j, std::unordered_set<std::string>& out)
+	{
+		if (j.is_object())
+		{
+			for (auto it = j.begin(); it != j.end(); ++it)
+			{
+				const std::string key = it.key();
+				const json& value = it.value();
+
+				// match exact "Texture" or keys that contain "Texture" (e.g. "TextureArrow", "TextureFoo")
+				if ((key == "Texture" || key.find("Texture") != std::string::npos) && value.is_string())
+				{
+					out.insert(value.get<std::string>());
+				}
+
+				// recurse into nested objects / arrays
+				if (value.is_object() || value.is_array())
+					collectTextures(value, out);
+			}
+		}
+		else if (j.is_array())
+		{
+			for (const auto& el : j)
+				collectTextures(el, out);
+		}
+	}
+}
 
 Scene_Builder* Scene_Builder::instance = new Scene_Builder();
 
@@ -32,116 +65,84 @@ Scene_Builder::Scene_Builder(SceneNode& sceneGraph, TextureHolder* Textures, Fon
 
 void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 	try {
+		Logger::Instance->LogData(Logger::Action, " -------- Loading Scene --------");
 
 		clearLayers();
-		loadTextures();
 
 		DATATABLE::loadScene(scene);
 		
+		loadTextures(scene);
+
 		for (auto& i : DATATABLE::SCENE_DATA[scene]) {
 			std::string s = i["Type"];
-			if (s == "Normal_Platform") {
-				sf::IntRect platformARect(0, 0, i["W"], i["H"]);
-				std::unique_ptr<NormalPlatform> platform(new NormalPlatform(*mTextures, i));
+			if (s == "Sprite_Node") {
+				sf::Texture& backgroundTexture = mTextures->get(std::string(i["Texture"]));
+				sf::IntRect backgroundTextureRect(0, 0, i["W"], i["H"]);
+				if (i["Repeated"]) {
+					backgroundTexture.setRepeated(true);
+				}
+				std::unique_ptr<SpriteNode> sprite(new SpriteNode(backgroundTexture, backgroundTextureRect));
+				sprite->setPosition(i["X"], i["Y"]);
+				if (i["Layer"] == "Moving_Background") {
+					mSceneLayers[MovingBackground]->attachChild(std::move(sprite));
+				}
+				else if (i["Layer"] == "Background") {
+					mSceneLayers[Background]->attachChild(std::move(sprite));
+				}
+				else if (i["Layer"] == "Forground") {
+					mSceneLayers[Forground]->attachChild(std::move(sprite));
+				}
+			}
+			else if (s == "Normal_Platform") {
+				sf::IntRect platformRect(0, 0, i["W"], i["H"]);
+				std::unique_ptr<NormalPlatform> platform(new NormalPlatform(*mTextures, i, platformRect));
 				platform->setPosition(i["X"], i["Y"]);
 				mSceneLayers[Play]->attachChild(std::move(platform));
+			}
+			else if (s == "Animated_Platform") {
+				std::unique_ptr<AnimatedPlatform> platform(new AnimatedPlatform(*mTextures, i));
+				platform->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(platform));
+			}
+			else if (s == "Falling_Platform") {
+				std::unique_ptr<FallingPlatform> platform(new FallingPlatform(*mTextures, i));
+				platform->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(platform));
+			}
+			else if (s == "Moving_Platform") {
+				sf::IntRect movingPlatformRect(0, 0, i["W"], i["H"]);
+				std::unique_ptr<MovingPlatform> movingPlatform(new MovingPlatform(*mTextures, i, movingPlatformRect));
+				movingPlatform->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(movingPlatform));
+			}
+			else if (s == "Door") {
+				std::unique_ptr<Door> door(new Door(*mTextures, i));
+				door->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(door));
+			}
+			else if (s == "ViewArea") {
+				std::unique_ptr<ViewArea> viewArea(new ViewArea(i));
+				viewArea->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(viewArea));
+			}
+			else {
+				Logger::Instance->LogData(Logger::Action, "Unknown Type " + s + " was Skipped!");
 			}
 			Logger::Instance->LogData(Logger::Action, "Created " + s);
 		}
 
-		if (scene == Scenes::Test) {			
-			sf::Texture& backgroundTexture = mTextures->get(Textures::Background);
-			sf::IntRect backgroundTextureRect(0, 0, 50000, 50000);
-			backgroundTexture.setRepeated(true);
-			std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(backgroundTexture, backgroundTextureRect));
-			backgroundSprite->setPosition(-25000, -25000);
-			mSceneLayers[Background]->attachChild(std::move(backgroundSprite));
-			
-			sf::Texture& moveBackgroundTexture = mTextures->get(Textures::Platform);
-			sf::IntRect moveBackgroundTextureRect(0, 0, 100, 100);
-			moveBackgroundTexture.setRepeated(true);
-			std::unique_ptr<SpriteNode> movingBackgroundSprite(new SpriteNode(moveBackgroundTexture, moveBackgroundTextureRect));
-			movingBackgroundSprite->setPosition(200, 400);
-			mSceneLayers[MovingBackground]->attachChild(std::move(movingBackgroundSprite));
-			
-			sf::Texture& forgroundTexture = mTextures->get(Textures::Platform);
-			sf::IntRect forgroundTextureRect(0, 0, 100, 100);
-			forgroundTexture.setRepeated(true);
-			std::unique_ptr<SpriteNode> forgroundSprite(new SpriteNode(forgroundTexture, forgroundTextureRect));
-			forgroundSprite->setPosition(200, 400);
-			mSceneLayers[Forground]->attachChild(std::move(forgroundSprite));
-			
-			sf::IntRect platformARect(0, 0, 3000, 200);
-			std::unique_ptr<NormalPlatform> platformA(new NormalPlatform(*mTextures, DataRetrivalType::Platform, platformARect));
-			platformA->setPosition(-1200, 800);
-			mSceneLayers[Play]->attachChild(std::move(platformA));
-			
-			sf::IntRect platformBRect(0, 0, 200, 150);
-			std::unique_ptr<NormalPlatform> platformB(new NormalPlatform(*mTextures, DataRetrivalType::Platform, platformBRect));
-			platformB->setPosition(200, 600);
-			mSceneLayers[Play]->attachChild(std::move(platformB));
-			
-			sf::IntRect platformCRect(0, 0, 200, 50);
-			std::unique_ptr<NormalPlatform> platformC(new NormalPlatform(*mTextures, DataRetrivalType::Platform, platformCRect));
-			platformC->setPosition(800, 400);
-			mSceneLayers[Play]->attachChild(std::move(platformC));
-			
-			std::unique_ptr<AnimatedPlatform> animatedPlatform(new AnimatedPlatform(*mTextures, DataRetrivalType::Animated));
-			animatedPlatform->setPosition(400, 200);
-			mSceneLayers[Play]->attachChild(std::move(animatedPlatform));
-			
-			std::unique_ptr<FallingPlatform> fallingPlatform(new FallingPlatform(*mTextures, DataRetrivalType::SandAnimatedFalling));
-			fallingPlatform->setPosition(100, 300);
-			mSceneLayers[Play]->attachChild(std::move(fallingPlatform));
-			
-			std::unique_ptr<Door> door(new Door(*mTextures, DataRetrivalType::DoorToHome, Scenes::Test2));
-			door->setPosition(800, 650);
-			mSceneLayers[Play]->attachChild(std::move(door));
-
+		if (scene == Scenes::Test) {												
 			std::unique_ptr<Enemy> enemy(new Enemy(*mTextures));
 			enemy->setPosition(1000, 600);
 			mSceneLayers[Play]->attachChild(std::move(enemy));
-		}
-		else if (scene == Scenes::Test2) {
-			sf::Texture& backgroundTexture = mTextures->get(Textures::Background2);
-			sf::IntRect backgroundTextureRect(0, 0, 2560, 1440);
-			backgroundTexture.setRepeated(false);
-			std::unique_ptr<SpriteNode> backgroundSprite(new SpriteNode(backgroundTexture, backgroundTextureRect));
-			backgroundSprite->setPosition(0, 0);
-			mSceneLayers[Background]->attachChild(std::move(backgroundSprite)); 
-			
-			sf::IntRect platformARect(0, 0, 1500, 20);
-			std::unique_ptr<NormalPlatform> platformA(new NormalPlatform(*mTextures, DataRetrivalType::Platform, platformARect));
-			platformA->setPosition(0, 800);
-			mSceneLayers[Play]->attachChild(std::move(platformA));
-
-			std::unique_ptr<Door> door(new Door(*mTextures, DataRetrivalType::DoorOutHome, Scenes::Test));
-			door->setPosition(800, 650);
-			mSceneLayers[Play]->attachChild(std::move(door));
-
-			std::unique_ptr<ViewArea> viewAreaA(new ViewArea(DataRetrivalType::TestViewArea));
-			viewAreaA->setPosition(200, 450);
-			mSceneLayers[Play]->attachChild(std::move(viewAreaA));
-
-			std::unique_ptr<ViewArea> viewAreaB(new ViewArea(DataRetrivalType::Test2ViewArea));
-			viewAreaB->setPosition(1200, 450);
-			mSceneLayers[Play]->attachChild(std::move(viewAreaB));
-
-			sf::IntRect movingPlatformRect(0, 0, 200, 50);
-			std::unique_ptr<MovingPlatform> movingPlatform(new MovingPlatform(*mTextures, DataRetrivalType::Moving, movingPlatformRect));
-			movingPlatform->setPosition(800, 400);
-			mSceneLayers[Play]->attachChild(std::move(movingPlatform));
-
-			/*sf::IntRect movingPlatformRect2(0, 0, 200, 50);
-			std::unique_ptr<MovingPlatform> movingPlatform2(new MovingPlatform(*mTextures, DataRetrivalType::Moving2, movingPlatformRect2));
-			movingPlatform2->setPosition(800, 200);
-			mSceneLayers[Play]->attachChild(std::move(movingPlatform2));*/
 		}
 
 		std::unique_ptr<Player_Entity> player(new Player_Entity(*mTextures));
 		mPlayer = Player_Entity::getInstance();
 		player->setPosition(PlayerPos.x, PlayerPos.y);
 		mSceneLayers[Play]->attachChild(std::move(player));
+
+		Logger::Instance->LogData(Logger::Action, " -------- Scene Built --------");
 	}
 	catch (...) {
 		Logger::Instance->LogData(Logger::Action, "Scenebuilder Exception");
@@ -161,29 +162,38 @@ Scene_Builder* Scene_Builder::getInstance()
 	return instance;
 }
 
-void Scene_Builder::loadTextures() {
-	mTextures->load(Textures::Background, "resources/Background.jpg");
-	mTextures->load("Background", "resources/Background.jpg");
-	mTextures->load(Textures::Background2, "resources/Background2.jpg");
-	mTextures->load("Background2", "resources/Background2.jpg");
+void Scene_Builder::loadTextures(Scenes scene) {
+
+	// collect all texture ids referenced by scene json (including nested objects)
+	std::unordered_set<std::string> texturesToLoad;
+	for (auto& element : DATATABLE::SCENE_DATA[scene]) {
+		// element is assumed to be a nlohmann::json object
+		collectTextures(element, texturesToLoad);
+	}
+
+	for (const auto& x : texturesToLoad) {
+		auto it = DATATABLE::RESOURCE_LOCATIONS.find(x);
+		if (it != DATATABLE::RESOURCE_LOCATIONS.end()) {
+			mTextures->load(x, it->second);
+			Logger::Instance->LogData(Logger::Action, "Scenebuilder loaded: " + x + " from " + it->second);
+		}
+		else {
+			Logger::Instance->LogData(Logger::Action, "Texture id not found in RESOURCE_LOCATIONS: " + x);
+		}
+	}
+
+	//mTextures->load(Textures::Background, "resources/Background.jpg");
+	//mTextures->load(Textures::Background2, "resources/Background2.jpg");
 	mTextures->load(Textures::Player, "resources/Player.png");
-	mTextures->load("Player", "resources/Player.png");
 	mTextures->load(Textures::Enemy, "resources/Enemy.png");
-	mTextures->load("Enemy", "resources/Enemy.png");
 	mTextures->load(Textures::Platform, "resources/Platform.jpg");
 	mTextures->get(Textures::Platform).setRepeated(true);
-	mTextures->load("Platform", "resources/Platform.jpg");
 	mTextures->get("Platform").setRepeated(true);
 	mTextures->load(Textures::TestAnimation, "resources/TestAnimated.bmp");
-	mTextures->load("TestAnimation", "resources/TestAnimated.bmp");
 	mTextures->load(Textures::FallingSand, "resources/FallingSand.png");
-	mTextures->load("FallingSand", "resources/FallingSand.png");
 	mTextures->load(Textures::Door, "resources/DefaultDoor.bmp");
-	mTextures->load("Door", "resources/DefaultDoor.bmp");
 	mTextures->load(Textures::DoorArrow, "resources/DoorArrow.png");
-	mTextures->load("DoorArrow", "resources/DoorArrow.png");
 	mTextures->load(Textures::Slash, "resources/Slash.png");
-	mTextures->load("Slash", "resources/Slash.png");
 	//mTextures->load(Textures::Greatsword, "resources/Greatsword.bmp");
 	//mTextures->load(Textures::Default, "resources/Default.bmp");
 };

@@ -16,8 +16,6 @@ class Platform : public SceneNode
 {
 public:
 	Platform(json data);
-	Platform(int friction);
-	Platform(int friction, DataRetrivalType::Platforms type);
 	virtual void adust_for_platformer(Platformer& platformer);
 	virtual std::vector<unsigned int> getCategory() const;
 	virtual unsigned int getPlatformType() const;

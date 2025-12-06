@@ -14,7 +14,7 @@ class Platformer;
 class AnimatedPlatform : public Platform
 {
 public:
-	AnimatedPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type);
+	AnimatedPlatform(TextureHolder& textureHolder, json data);
 	virtual void adust_for_platformer(Platformer& platformer);
 	virtual sf::FloatRect getBoundingRect() const;
 

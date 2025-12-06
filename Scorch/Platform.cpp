@@ -6,17 +6,6 @@ Platform::Platform(json data)
 {
 }
 
-Platform::Platform(int friction)
-: mFriction(friction)
-{
-};
-
-Platform::Platform(int friction, DataRetrivalType::Platforms type)
-: mFriction(friction)
-, mType(type)
-{
-};
-
 void Platform::adust_for_platformer(Platformer& platformer){
 
 };

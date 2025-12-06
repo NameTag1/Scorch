@@ -1,7 +1,41 @@
-﻿  Scene_Builder.cpp
+﻿  AnimatedPlatform.cpp
+  Animation.cpp
+  Attacker.cpp
+  Bar.cpp
+  Button.cpp
+  ChangeableAnimation.cpp
+  DataTable.cpp
+  Door.cpp
+  Enemy.cpp
+  FallingPlatform.cpp
+  FleePlayer.cpp
+  GameState.cpp
+  Greatsword.cpp
+  Image.cpp
+  Interact.cpp
+  Label.cpp
+  LoadingState.cpp
+  MakeAttack.cpp
+  MenuState.cpp
+  MovingPlatform.cpp
+  Compiling...
+  NormalPlatform.cpp
+  OverlayState.cpp
+  PauseState.cpp
+  Player.cpp
+  Player_Entity.cpp
+  Scene_Builder.cpp
+  SettingsState.cpp
+  Slash.cpp
+  TitleState.cpp
+  ViewArea.cpp
+  ViewHandler.cpp
+  Weapon.cpp
+  World.cpp
+  main.cpp
   Generating code
-  1 of 4865 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+  0 of 5282 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
+    132 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Scorch.vcxproj -> C:\Users\natha\Documents\GitHub\Scorch\Scorch\x64\Release\Scorch.exe

@@ -1,15 +1,11 @@
 #include "AnimatedPlatform.h"
 
 
-AnimatedPlatform::AnimatedPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type)
-: mAnimation(textureHolder.get(DATATABLE::animatedPlatformData[type].platform.texture))
-, Platform(DATATABLE::animatedPlatformData[type].platform.friction, type)
+AnimatedPlatform::AnimatedPlatform(TextureHolder& textureHolder, json data)
+: mAnimation(textureHolder, data["Animation"])
+, Platform(data["Platform"])
 {
-	mAnimation.setFrameSize(DATATABLE::animatedPlatformData[type].animation.mFrameSize);
-	mAnimation.setNumFrames(DATATABLE::animatedPlatformData[type].animation.mNumFrames);
-	mAnimation.setDuration(DATATABLE::animatedPlatformData[type].animation.mDuration);
-	mAnimation.setRepeating(DATATABLE::animatedPlatformData[type].animation.mRepeat);
-};
+}
 
 void AnimatedPlatform::adust_for_platformer(Platformer& platformer) {
 

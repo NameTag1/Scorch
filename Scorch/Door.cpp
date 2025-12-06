@@ -1,12 +1,12 @@
 #include "Door.h"
 
-Door::Door(TextureHolder& textureHolder, DataRetrivalType::Doors type, Scenes scene)
-: mSprite(textureHolder.get(DATATABLE::doorData[type].texture))
-, mScene(scene)
-, mPlayerPos(DATATABLE::doorData[type].playerPos)
-, mArrow(textureHolder.get(DATATABLE::doorData[type].texture))
+Door::Door(TextureHolder& textureHolder, json data)
+: mSprite(textureHolder.get(std::string(data["Texture"])))
+, mScene(stringToScene(std::string(data["Scene"])))
+, mPlayerPos({data["PX"], data["PY"]})
+, mArrow(textureHolder.get(std::string(data["TextureArrow"])))
 {
-};
+}
 
 void Door::setBounds(sf::IntRect newBounds) {
 	mSprite.setTextureRect(newBounds);

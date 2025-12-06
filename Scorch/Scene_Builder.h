@@ -33,7 +33,7 @@ public:
 	static Scene_Builder* getInstance();
 
 private:
-	void loadTextures();
+	void loadTextures(Scenes scene);
 	void addLayers();
 
 private:

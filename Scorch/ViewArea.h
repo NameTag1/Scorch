@@ -9,7 +9,7 @@
 class ViewArea : public SceneNode
 {
 public:
-	ViewArea(DataRetrivalType::ViewAreas type);
+	ViewArea(json data);
 	void setBounds(sf::IntRect newBounds);
 	virtual sf::FloatRect getBoundingRect() const;
 	virtual std::vector<unsigned int> getCategory() const;

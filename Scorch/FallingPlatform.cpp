@@ -1,17 +1,15 @@
 #include "FallingPlatform.h"
+#include "Logger.h"
 
-FallingPlatform::FallingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type)
-: mAnimation(textureHolder.get(DATATABLE::fallingPlatformData[type].platform.texture))
-, Platform(DATATABLE::fallingPlatformData[type].platform.friction, type)
+FallingPlatform::FallingPlatform(TextureHolder& textureHolder, json data)
+: mAnimation(textureHolder, data["Animation"])
+, Platform(data["Platform"])
 , mActivated(false)
-, mReset(DATATABLE::fallingPlatformData[type].resetTime)
+, mResetDuration(sf::seconds(data["Duration"]))
+, mResetTimer(mResetDuration)
 {
-	mAnimation.setFrameSize(DATATABLE::fallingPlatformData[type].animation.mFrameSize);
-	mAnimation.setNumFrames(DATATABLE::fallingPlatformData[type].animation.mNumFrames);
-	mAnimation.setDuration(DATATABLE::fallingPlatformData[type].animation.mDuration);
-	mAnimation.setRepeating(DATATABLE::fallingPlatformData[type].animation.mRepeat);
 	mAnimation.update(sf::seconds(0));
-};
+}
 
 
 void FallingPlatform::adust_for_platformer(Platformer& platformer) {
@@ -20,15 +18,16 @@ void FallingPlatform::adust_for_platformer(Platformer& platformer) {
 
 void FallingPlatform::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 	if (mActivated) {
-		mReset -= dt;
+		mResetTimer -= dt;
 		if (!mAnimation.isFinished()) {
 			mAnimation.update(dt);
 		}
-		if (mReset <= sf::seconds(0)) {
-			mReset = DATATABLE::fallingPlatformData[Platform::getPlatformType()].resetTime;
+		if (mResetTimer <= sf::seconds(0)) {
+			mResetTimer = mResetDuration;
 			mAnimation.restart();
 			mAnimation.update(sf::seconds(0));
 			mActivated = false;
+			Logger::Instance->LogData(Logger::Action, "Falling Reset");
 		}
 	}
 };

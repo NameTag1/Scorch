@@ -28,6 +28,8 @@ Application::Application()
 {
 	mWindow.setKeyRepeatEnabled(false);
 
+	DATATABLE::loadResourceLocations();
+
 	mFonts.load(Fonts::Main, "resources/montserrat/Montserrat-Regular.ttf");
 
 	mTextures.load(Textures::TitleScreen,		"resources/Title_Screen.jpg");

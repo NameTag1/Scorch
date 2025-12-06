@@ -27,6 +27,7 @@
 #include "Door.h"
 #include "ViewArea.h"
 #include "Enemy.h"
+#include "Logger.h"
 
 struct EntityMover
 {

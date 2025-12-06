@@ -1,0 +1,12 @@
+{
+    "Background":"Background.jpg",
+    "Background2":"Background2.jpg",
+    "Player":"Player.png",
+    "Enemy":"Enemy.png",
+    "Platform":"Platform.jpg",
+    "TestAnimation":"TestAnimated.bmp",
+    "FallingSand":"FallingSand.png",
+    "Door":"DefaultDoor.bmp",
+    "DoorArrow":"DoorArrow.png",
+    "Slash":"Slash.png"
+}

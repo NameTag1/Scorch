@@ -27,6 +27,17 @@ Animation::Animation(const sf::Texture& texture)
 {
 }
 
+Animation::Animation(TextureHolder& textureHolder, json data)
+	: mSprite(textureHolder.get(std::string(data["Texture"])))
+	, mFrameSize({data["Frame_W"], data["Frame_H"]})
+	, mNumFrames(data["Number_of_Frames"])
+	, mCurrentFrame(0)
+	, mDuration(sf::seconds(data["Duration"]))
+	, mElapsedTime(sf::Time::Zero)
+	, mRepeat(data["Repeated"])
+{
+}
+
 void Animation::setTexture(const sf::Texture& texture)
 {
 	mSprite.setTexture(texture);

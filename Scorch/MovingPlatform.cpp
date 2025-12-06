@@ -1,32 +1,17 @@
 #include "MovingPlatform.h"
 #include "Utility.hpp"
 
-
-MovingPlatform::MovingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type)
-: mSprite(textureHolder.get(DATATABLE::movingPlatformData[type].platform.texture))
-, Platform(DATATABLE::movingPlatformData[type].platform.friction, type)
-, mStartingPoint(DATATABLE::movingPlatformData[type].startingPoint)
-, mEndPoint(DATATABLE::movingPlatformData[type].endPoint)
-, mSpeed(DATATABLE::movingPlatformData[type].speed)
-, mCushion(DATATABLE::movingPlatformData[type].cushion)
-, mReturning(false)
-, mSpritePosition(0,0)
-, mStartingPosition(getPosition())
-, mRunOnce(false)
-{
-};
-
-MovingPlatform::MovingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type, sf::IntRect bounds)
-: mSprite(textureHolder.get(DATATABLE::platformData[type].texture), bounds)
-, Platform(DATATABLE::platformData[type].friction, type)
-, mStartingPoint(DATATABLE::movingPlatformData[type].startingPoint)
-, mEndPoint(DATATABLE::movingPlatformData[type].endPoint)
-, mSpeed(DATATABLE::movingPlatformData[type].speed)
-, mCushion(DATATABLE::movingPlatformData[type].cushion)
-, mReturning(false)
-, mSpritePosition(0, 0)
-, mStartingPosition(getPosition())
-, mRunOnce(false)
+MovingPlatform::MovingPlatform(TextureHolder& textureHolder, json data, sf::IntRect bounds)
+	: mSprite(textureHolder.get(std::string(data["Texture"])), bounds)
+	, Platform(data["Platform"])
+	, mStartingPoint(data["StartingX"], data["StartingY"])
+	, mEndPoint(data["EndX"], data["EndY"])
+	, mSpeed(data["SpeedX"], data["SpeedY"])
+	, mCushion(data["Cushion"])
+	, mReturning(false)
+	, mSpritePosition(0, 0)
+	, mStartingPosition(getPosition())
+	, mRunOnce(false)
 {
 };
 

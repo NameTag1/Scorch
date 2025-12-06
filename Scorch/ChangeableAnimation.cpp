@@ -1,43 +1,114 @@
 #include "ChangeableAnimation.h"
 
 ChangeableAnimation::ChangeableAnimation()
-: mCurrentAnimation(0)
-, mDefaultAnimation(0)
+: mCurrentAnimation()
+, mDefaultAnimation()
 {
 }
 
 void ChangeableAnimation::update(sf::Time dt)
 {
-	if (mAnimations[mCurrentAnimation].isFinished()) {
-		mCurrentAnimation = mDefaultAnimation;
+	// Nothing to do if we have no animations
+	if (mAnimations.empty())
+		return;
+
+	// Find current animation; fall back to default if needed
+	auto it = mAnimations.find(mCurrentAnimation);
+	if (it == mAnimations.end())
+		it = mAnimations.find(mDefaultAnimation);
+
+	// If still not found, nothing to update
+	if (it == mAnimations.end())
+		return;
+
+	// If finished, switch to default (if available)
+	if (it->second.isFinished()) {
+		if (!mDefaultAnimation.empty()) {
+			mCurrentAnimation = mDefaultAnimation;
+			it = mAnimations.find(mCurrentAnimation);
+		}
+		// if default not found, keep using `it` (which may be finished) — safe guard below will handle update
 	}
-	mAnimations[mCurrentAnimation].update(dt);
+
+	// Re-check iterator validity (default might not exist)
+	if (it != mAnimations.end())
+		it->second.update(dt);
 }
 
-void ChangeableAnimation::setAnimation(unsigned int Animation, sf::Time Duration)
+void ChangeableAnimation::changeAnimation(std::string Animation, sf::Time mResetDuration)
 {
-	mCurrentAnimation = Animation;
-	mAnimations[mCurrentAnimation].setDuration(Duration);
-	mAnimations[mCurrentAnimation].restart();
+	// Ensure an entry exists (operator[] will default-construct if missing),
+	// then configure and set current.
+	auto &anim = mAnimations[Animation];
+	anim.setDuration(mResetDuration);
+	anim.restart();
+	mCurrentAnimation = std::move(Animation);
+}
+
+void ChangeableAnimation::pushAnimation(std::string animation, TextureHolder& textureHolder, json animationData)
+{
+	Animation anim(textureHolder, animationData);
+	mAnimations.emplace(std::move(animation), std::move(anim));
+	// If this is the first animation added, set as default
+	if (mAnimations.size() == 1) {
+		mDefaultAnimation = mAnimations.begin()->first;
+		mCurrentAnimation = mDefaultAnimation;
+	}
 }
 
 void ChangeableAnimation::setToDefault()
 {
-	mCurrentAnimation = mDefaultAnimation;
-	mAnimations[mCurrentAnimation].restart();
+	if (mDefaultAnimation.empty())
+		return;
+
+	auto it = mAnimations.find(mDefaultAnimation);
+	if (it != mAnimations.end()) {
+		mCurrentAnimation = mDefaultAnimation;
+		it->second.restart();
+	}
 }
 
 sf::FloatRect ChangeableAnimation::getLocalBounds() const
 {
-	return mAnimations[mCurrentAnimation].getLocalBounds();
+	if (mAnimations.empty())
+		return sf::FloatRect();
+
+	auto it = mAnimations.find(mCurrentAnimation);
+	if (it == mAnimations.end())
+		it = mAnimations.find(mDefaultAnimation);
+
+	if (it == mAnimations.end())
+		return sf::FloatRect();
+
+	return it->second.getLocalBounds();
 }
 
 sf::FloatRect ChangeableAnimation::getGlobalBounds() const
 {
-	return mAnimations[mCurrentAnimation].getGlobalBounds();
+	if (mAnimations.empty())
+		return sf::FloatRect();
+
+	auto it = mAnimations.find(mCurrentAnimation);
+	if (it == mAnimations.end())
+		it = mAnimations.find(mDefaultAnimation);
+
+	if (it == mAnimations.end())
+		return sf::FloatRect();
+
+	return it->second.getGlobalBounds();
 }
 
 void ChangeableAnimation::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	target.draw(mAnimations[mCurrentAnimation], states);
+	if (mAnimations.empty())
+		return;
+
+	auto it = mAnimations.find(mCurrentAnimation);
+	if (it == mAnimations.end())
+		it = mAnimations.find(mDefaultAnimation);
+
+	if (it == mAnimations.end())
+		return;
+
+	target.draw(it->second, states);
 }

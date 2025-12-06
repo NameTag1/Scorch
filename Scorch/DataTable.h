@@ -108,7 +108,9 @@ class DATATABLE {
 public:
 	static void loadScene(Scenes s);
 	static void offloadScene(Scenes s);
+	static void loadResourceLocations();
 
+	static std::map<Scenes, std::string> SCENE_FILE_NAMES;
 	static std::map<Scenes, json> SCENE_DATA;
 	static std::map<std::string, std::string> RESOURCE_LOCATIONS;
 
@@ -123,7 +125,6 @@ public:
 	static std::map<Scenes, std::vector<SceneElement*>> SceneData;
 
 private:
-	static std::map<Scenes, std::string> SCENE_FILE_NAMES;
 	static std::vector<EntityData>	initializeEntityData();
 	static std::vector<PlatformData> initializePlatformData();
 	static std::vector<AnimationData> initializeAnimationData();

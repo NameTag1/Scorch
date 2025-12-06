@@ -4,12 +4,14 @@
 #include "SceneNode.hpp"
 #include "Animation.h"
 #include <SFML/Graphics/RenderTarget.hpp>
+#include <map>
 
 class ChangeableAnimation : public sf::Drawable, public sf::Transformable
 {
 public:
 	ChangeableAnimation();
-	void setAnimation(unsigned int Animation, sf::Time Duration);
+	void changeAnimation(std::string animation, sf::Time mResetDuration);
+	void pushAnimation(std::string animation, TextureHolder& textureHolder, json animationData);
 	void setToDefault();
 
 	sf::FloatRect 			getLocalBounds() const;
@@ -20,9 +22,9 @@ public:
 private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
-	std::vector<Animation> mAnimations;
-	unsigned int mDefaultAnimation;
-	unsigned int mCurrentAnimation;
+	std::map<std::string, Animation> mAnimations;
+	std::string mDefaultAnimation;
+	std::string mCurrentAnimation;
 
 };
 

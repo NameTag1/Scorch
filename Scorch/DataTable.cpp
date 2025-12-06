@@ -11,6 +11,8 @@ using json = nlohmann::json;
 std::map<Scenes, json> DATATABLE::SCENE_DATA;
 std::map<Scenes, std::string> DATATABLE::SCENE_FILE_NAMES;
 
+std::map<std::string, std::string> DATATABLE::RESOURCE_LOCATIONS;
+
 std::vector<EntityData> DATATABLE::entityData = initializeEntityData();
 std::vector<PlatformData> DATATABLE::platformData = initializePlatformData();
 std::vector<AnimationData> DATATABLE::animationData = initializeAnimationData();
@@ -28,7 +30,7 @@ void DATATABLE::loadScene(Scenes s)
 {
 	SCENE_FILE_NAMES.clear();
 	SCENE_FILE_NAMES.insert({ Scenes::Test, "data/SceneData.json" });
-	SCENE_FILE_NAMES.insert({ Scenes::Test2, "data/SceneData.json" });	
+	SCENE_FILE_NAMES.insert({ Scenes::Test2, "data/SceneData2.json" });	
 
 	std::ifstream JsonFileWrapper(SCENE_FILE_NAMES[s]);
 	if (!JsonFileWrapper) {
@@ -44,6 +46,24 @@ void DATATABLE::loadScene(Scenes s)
 void DATATABLE::offloadScene(Scenes s)
 {
 	//SCENE_DATA.erase(s);
+}
+
+void DATATABLE::loadResourceLocations()
+{
+	std::ifstream JsonFileWrapper("data/ResourceLocations.json");
+	if (!JsonFileWrapper) {
+		Logger::Instance->LogData(Logger::Action, "Failed to Load: data/ResourceLocations.json");
+		return;
+	}
+	else {
+		Logger::Instance->LogData(Logger::Action, "Loaded: data/ResourceLocations.json");
+	}
+	json doc;
+	JsonFileWrapper >> doc;
+
+	for (auto& item : doc.items()) {
+		RESOURCE_LOCATIONS[std::string(item.key())] = "resources/" + std::string(item.value());
+	}
 }
 
 std::vector<EntityData> DATATABLE::initializeEntityData()

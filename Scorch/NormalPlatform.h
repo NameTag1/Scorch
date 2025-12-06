@@ -14,10 +14,7 @@ class Platformer; //Psuedo def
 class NormalPlatform : public Platform
 {
 public:
-	NormalPlatform(TextureHolder& textureHolder, json data);
-	NormalPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type);
-	NormalPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type, sf::IntRect bounds);
-	NormalPlatform(TextureHolder& textureHolder, NormalPlatformData data);
+	NormalPlatform(TextureHolder& textureHolder, json data, sf::IntRect bounds);
 	void setBounds(sf::IntRect newBounds);
 	virtual sf::FloatRect getBoundingRect() const;
 

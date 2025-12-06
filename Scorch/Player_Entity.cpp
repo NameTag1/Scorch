@@ -25,7 +25,7 @@ Player_Entity::Player_Entity(const TextureHolder& resources)
 , mSprite(resources.get(Textures::Player))
 {
 	centerOrigin(mSprite);
-	//WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
+	WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
 	//Attacker::pushAttack("Slot 1", new Slash(15, (unsigned int)Category::Enemy, resources));
 	instance = this;
 }

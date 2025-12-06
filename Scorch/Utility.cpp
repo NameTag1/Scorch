@@ -237,3 +237,29 @@ bool matchesCategory(std::vector<unsigned int> category, Category::Type type)
 	return false;
 }
 
+Scenes stringToScene(std::string i) {
+	if (i == "Null") {
+		return Null;
+	}
+	if (i == "Test") {
+		return Test;
+	}
+	if (i == "Test2") {
+		return Test2;
+	}
+	if (i == "Sietch") {
+		return Sietch;
+	}
+	if (i == "Home") {
+		return Home;
+	}
+	if (i == "Dunes") {
+		return Dunes;
+	}
+	if (i == "MagmaFields") {
+		return MagmaFields;
+	}
+	if (i == "Canyons") {
+		return Canyons;
+	}
+}

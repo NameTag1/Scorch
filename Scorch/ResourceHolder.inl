@@ -89,11 +89,12 @@ template<typename Resource, typename Identifier>
 Resource& ResourceHolder<Resource, Identifier>::get(std::string id)
 {
 	auto found = mResourceMap.find(id);
-	/*if (found != resourceMap.end()) {
-		load(id, DATATABLE::RESOURCE_LOCATIONS["id"]);
+	
+	/*if (found == mResourceMap.end()) {
+		ResourceHolder::load(id, DATATABLE::RESOURCE_LOCATIONS["id"]);
 
 		found = mResourceMap.find(id);
-		assert(found != resourceMap.end());
+		assert(found != mResourceMap.end());
 	}*/
 
 	return *found->second;

@@ -1,11 +1,11 @@
 #include "ViewArea.h"
 #include "DataTable.h"
 
-ViewArea::ViewArea(DataRetrivalType::ViewAreas type)
-: mArea(DATATABLE::viewData[type].area)
-, mViewSize(DATATABLE::viewData[type].viewSize)
-, mLockView(DATATABLE::viewData[type].lockView)
-, mViewCenter(DATATABLE::viewData[type].viewCenter)
+ViewArea::ViewArea(json data)
+	: mArea(0,0,data["W"], data["H"])
+	, mViewSize(data["ViewW"], data["ViewH"])
+	, mLockView(data["ViewLock"])
+	, mViewCenter(data["ViewX"],data["ViewY"])
 {
 };
 

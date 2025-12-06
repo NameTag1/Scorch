@@ -10,8 +10,7 @@ class Platformer;
 class MovingPlatform : public Platform
 {
 public:
-	MovingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type);
-	MovingPlatform(TextureHolder& textureHolder, DataRetrivalType::Platforms type, sf::IntRect bounds);
+	MovingPlatform(TextureHolder& textureHolder, json data, sf::IntRect bounds);
 	virtual void adust_for_platformer(Platformer& platformer);
 	void setBounds(sf::IntRect newBounds);
 	virtual sf::FloatRect getBoundingRect() const;
