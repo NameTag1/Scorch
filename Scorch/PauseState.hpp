@@ -22,7 +22,7 @@ class PauseState : public State
 	private:
 		sf::Sprite			mBackgroundSprite;
 		GUI::Container 		mGUIContainer;
-		GUI::Container 		mPlayerGUIContainer;
+		GUI::Container 		mPlayerWeaponGUIContainer;
 		Context				mSavedContext;
 };
 

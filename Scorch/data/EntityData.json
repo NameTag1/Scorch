@@ -1,8 +1,20 @@
 {
     "Player":
     {
-        
-            
-        
+        "Animatable":
+        {
+            "Default":"idle",
+            "Animations":{
+               "idle":{
+                    "Texture":"PlayerAni",
+                    "Frame_W":80,
+                    "Frame_H":80,
+                    "Number_of_Frames":3,
+                    "Duration":0.6,
+                    "Repeated":false,
+                    "Centered":true
+                }
+            }
+        }    
     }
 }

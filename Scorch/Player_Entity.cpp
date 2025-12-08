@@ -4,17 +4,7 @@
 #include "Greatsword.h"
 #include "Slash.h"
 
-Player_Entity* Player_Entity::instance = new Player_Entity();
-
-Player_Entity::Player_Entity()
-: Platformer(0)
-, isAttacking(false)
-, isInteracting(false)
-, isMarkedForRemoval(false)
-, suppressInteracting(false)
-{
-
-} //Only used by static instance creator
+Player_Entity* Player_Entity::instance = nullptr;
 
 Player_Entity::Player_Entity(const TextureHolder& resources)
 : Platformer(50)
@@ -40,13 +30,13 @@ Player_Entity::Player_Entity(const TextureHolder& resources)
 	mAnimations.setAnimation("Idle", sf::seconds(1.8f));
 
 	// push starting weapon
-	//WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
+	WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
 	instance = this;
 }
 
 Player_Entity::Player_Entity(const TextureHolder& resources, json data)
 : Platformer(50)
-, Animatable(resources, json(data["Animatable"]))
+, Animatable(resources, data["Animatable"])
 , isMarkedForRemoval(false)
 , isAttacking(false)
 , isInteracting(false)
@@ -56,7 +46,7 @@ Player_Entity::Player_Entity(const TextureHolder& resources, json data)
 
 
 	// push starting weapon
-	//WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
+	WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
 	instance = this;
 }
 

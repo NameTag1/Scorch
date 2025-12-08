@@ -1,23 +1,40 @@
 #include "ChangeableAnimation.h"
+#include "Logger.h"
 
 ChangeableAnimation::ChangeableAnimation()
-: mCurrentAnimation()
-, mDefaultAnimation()
+: mCurrentAnimation("")
+, mDefaultAnimation("")
 {
 }
 
 ChangeableAnimation::ChangeableAnimation(const TextureHolder& textures, json data)
-: mCurrentAnimation()
-, mDefaultAnimation()
+: mCurrentAnimation("")
+, mDefaultAnimation("")
 {
-	for (auto& i : data) {
-		Animation anim(textures, i);
+	// Expecting either:
+	// - data["Animations"] is an object { "Idle": { ... }, "Run": { ... } }
+	// - OR data["Animations"] is an array [ { "Name":"Idle", ... }, { "Name":"Run", ... } ]
+	if (!data.contains("Animations"))
+		return;
 
-		addAnimation(data["Name"], anim);
-		if (i["Default"] == true) {
-			mDefaultAnimation = i["Name"];
+	const json& animations = data["Animations"];
+
+	if (animations.is_object())
+	{
+		// Keys are animation names
+		for (auto it = animations.begin(); it != animations.end(); ++it)
+		{
+			std::string name = it.key();
+			const json& animJson = it.value();
+			Animation anim(textures, animJson);
+			Logger::Instance->LogData(Logger::Action, "Creating ChangeableAnimation \"" + name + "\" from JSON");
+			addAnimation(name, std::move(anim));
 		}
 	}
+
+	// default animation name (optional)
+	if (data.contains("Default"))
+		mDefaultAnimation = data["Default"];
 }
 
 void ChangeableAnimation::setAnimation(std::string Animation)

@@ -10,6 +10,7 @@ using json = nlohmann::json;
 
 std::map<Scenes, json> DATATABLE::SCENE_DATA;
 std::map<Scenes, std::string> DATATABLE::SCENE_FILE_NAMES;
+json DATATABLE::ENTITY_DATA;
 
 std::map<std::string, std::string> DATATABLE::RESOURCE_LOCATIONS;
 
@@ -64,6 +65,19 @@ void DATATABLE::loadResourceLocations()
 	for (auto& item : doc.items()) {
 		RESOURCE_LOCATIONS[std::string(item.key())] = "resources/" + std::string(item.value());
 	}
+}
+
+void DATATABLE::loadEntityData()
+{
+	std::ifstream JsonFileWrapper("data/EntityData.json");
+	if (!JsonFileWrapper) {
+		Logger::Instance->LogData(Logger::Action, "Failed to Load: data/EntityData.json");
+		return;
+	}
+	else {
+		Logger::Instance->LogData(Logger::Action, "Loaded: data/EntityData.json");
+	}
+	JsonFileWrapper >> ENTITY_DATA;
 }
 
 std::vector<EntityData> DATATABLE::initializeEntityData()

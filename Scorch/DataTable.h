@@ -109,7 +109,9 @@ public:
 	static void loadScene(Scenes s);
 	static void offloadScene(Scenes s);
 	static void loadResourceLocations();
+	static void loadEntityData();
 
+	static json ENTITY_DATA;
 	static std::map<Scenes, std::string> SCENE_FILE_NAMES;
 	static std::map<Scenes, json> SCENE_DATA;
 	static std::map<std::string, std::string> RESOURCE_LOCATIONS;

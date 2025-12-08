@@ -18,7 +18,6 @@
 class Player_Entity : public Platformer, public WeaponWielder, public Attacker, public Actionable, public Animatable
 {
 public:
-	Player_Entity();
 	Player_Entity(const TextureHolder& textures);
 	Player_Entity(const TextureHolder& textures, json data);
 	virtual std::vector<unsigned int> getCategory() const;

@@ -26,6 +26,6 @@ private:
 	GUI::Bar*			mHealthBar;
 	std::vector<GUI::Image*> mWeapons;
 	GUI::Container 		mGUIContainer;
-	GUI::Container 		mPlayerGUIContainer;
+	GUI::Container 		mPlayerWeaponGUIContainer;
 	Context				mSavedContext;
 };

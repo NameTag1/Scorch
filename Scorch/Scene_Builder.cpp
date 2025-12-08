@@ -47,11 +47,7 @@ namespace {
 	}
 }
 
-Scene_Builder* Scene_Builder::instance = new Scene_Builder();
-
-Scene_Builder::Scene_Builder()
-{
-}
+Scene_Builder* Scene_Builder::instance = nullptr;
 
 Scene_Builder::Scene_Builder(SceneNode& sceneGraph, TextureHolder* Textures, FontHolder* Fonts)
 : mSceneGraph(&sceneGraph)
@@ -70,6 +66,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 		clearLayers();
 
 		DATATABLE::loadScene(scene);
+		DATATABLE::loadEntityData();
 		
 		loadTextures(scene);
 
@@ -137,7 +134,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 			mSceneLayers[Play]->attachChild(std::move(enemy));
 		}
 
-		std::unique_ptr<Player_Entity> player(new Player_Entity(*mTextures));
+		std::unique_ptr<Player_Entity> player(new Player_Entity(*mTextures, DATATABLE::ENTITY_DATA["Player"]));
 		mPlayer = Player_Entity::getInstance();
 		player->setPosition(PlayerPos.x, PlayerPos.y);
 		mSceneLayers[Play]->attachChild(std::move(player));
@@ -185,6 +182,7 @@ void Scene_Builder::loadTextures(Scenes scene) {
 	//mTextures->load(Textures::Background, "resources/Background.jpg");
 	//mTextures->load(Textures::Background2, "resources/Background2.jpg");
 	mTextures->load(Textures::Player, "resources/Player.png");
+	mTextures->load("Player", "resources/Player.png");
 	mTextures->load("PlayerAni", "resources/PlayerAnimation.png");
 	mTextures->load(Textures::Enemy, "resources/Enemy.png");
 	mTextures->load(Textures::Platform, "resources/Platform.jpg");

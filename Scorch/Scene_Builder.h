@@ -22,7 +22,6 @@ enum Layer
 class Scene_Builder
 {
 public:
-	Scene_Builder();
 	Scene_Builder(SceneNode& sceneGraph, TextureHolder* textures, FontHolder* founts);
 	void buildScene(Scenes scene, sf::Vector2f PlayerPos);
 
