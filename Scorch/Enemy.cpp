@@ -26,9 +26,6 @@ Enemy::Enemy(const TextureHolder& resources)
 	Actionable::pushAction(new Pause(sf::seconds(1)));
 	
 	Attacker::pushAttack("Slash", new Slash(500, (unsigned int)Category::Player, resources));
-	/*Actionable::pushAction(*new Move(-500));
-	Actionable::pushAction(*new Jump());
-	Actionable::pushAction(*new Move(250));*/
 }
 
 std::vector<unsigned int> Enemy::getCategory() const {
@@ -42,7 +39,7 @@ sf::FloatRect Enemy::getBoundingRect() const {
 };
 
 bool Enemy::markedForRemoval() {
-	return isMarkedForRemoval;
+	return true;
 };
 
 void Enemy::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {

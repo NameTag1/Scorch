@@ -6,34 +6,6 @@
 
 Player_Entity* Player_Entity::instance = nullptr;
 
-Player_Entity::Player_Entity(const TextureHolder& resources)
-: Platformer(50)
-, isMarkedForRemoval(false)
-, isAttacking(false)
-, isInteracting(false)
-, suppressInteracting(false)
-, mSprite(resources.get(Textures::Player))
-{
-	//centerOrigin(mSprite);
-	
-	// Example: create a simple Animation and register it with ChangeableAnimation.
-	// Adjust frame size, frame count and duration to match your sprite sheet.
-	Animation idleAnim(resources.get("PlayerAni"));
-	idleAnim.setFrameSize(sf::Vector2i(80,80));    // example frame size
-	idleAnim.setNumFrames(3);                     // example frame count
-	idleAnim.setDuration(sf::seconds(0.6f));
-	idleAnim.setRepeating(true);
-	idleAnim.setCentered(true);
-
-	mAnimations.addAnimation("Idle", std::move(idleAnim));
-	mAnimations.setDefaultAnimation("Idle");
-	mAnimations.setAnimation("Idle", sf::seconds(1.8f));
-
-	// push starting weapon
-	WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
-	instance = this;
-}
-
 Player_Entity::Player_Entity(const TextureHolder& resources, json data)
 : Platformer(50)
 , Animatable(resources, data["Animatable"])

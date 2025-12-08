@@ -1,86 +1,25 @@
-2025-12-07
-22:01:40 - Loaded: data/ResourceLocations.json
-22:01:47 -  -------- Loading Scene --------
-22:01:47 - Loaded: data/SceneData.json
-22:01:47 - Loaded: data/EntityData.json
-22:01:47 - Scenebuilder loaded: DoorArrow from resources/DoorArrow.png
-22:01:47 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-22:01:47 - Scenebuilder loaded: Platform from resources/Platform.jpg
-22:01:47 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-22:01:47 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-22:01:47 - Scenebuilder loaded: Background from resources/Background.jpg
-22:01:47 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-22:01:47 - Created Normal_Platform
-22:01:47 - Created Normal_Platform
-22:01:47 - Created Sprite_Node
-22:01:47 - Created Sprite_Node
-22:01:47 - Created Sprite_Node
-22:01:47 - Created Normal_Platform
-22:01:47 - Created Normal_Platform
-22:01:47 - Created Normal_Platform
-22:01:47 - Created Animated_Platform
-22:01:47 - Created Falling_Platform
-22:01:47 - Created Door
-22:01:47 - Creating ChangeableAnimation "idle" from JSON
-22:01:47 -  -------- Scene Built --------
-22:01:59 -  -------- Loading Scene --------
-22:01:59 - Loaded: data/SceneData2.json
-22:01:59 - Loaded: data/EntityData.json
-22:01:59 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-22:01:59 - Scenebuilder loaded: DoorArrow from resources/DoorArrow.png
-22:01:59 - Scenebuilder loaded: Platform from resources/Platform.jpg
-22:01:59 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-22:01:59 - Created Sprite_Node
-22:01:59 - Created Normal_Platform
-22:01:59 - Created Moving_Platform
-22:01:59 - Created Door
-22:01:59 - Created ViewArea
-22:01:59 - Created ViewArea
-22:01:59 - Creating ChangeableAnimation "idle" from JSON
-22:01:59 -  -------- Scene Built --------
-22:02:03 -  -------- Loading Scene --------
-22:02:03 - Loaded: data/SceneData.json
-22:02:03 - Loaded: data/EntityData.json
-22:02:03 - Scenebuilder loaded: DoorArrow from resources/DoorArrow.png
-22:02:03 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-22:02:03 - Scenebuilder loaded: Platform from resources/Platform.jpg
-22:02:03 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-22:02:03 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-22:02:03 - Scenebuilder loaded: Background from resources/Background.jpg
-22:02:03 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-22:02:03 - Created Normal_Platform
-22:02:03 - Created Normal_Platform
-22:02:03 - Created Sprite_Node
-22:02:03 - Created Sprite_Node
-22:02:03 - Created Sprite_Node
-22:02:03 - Created Normal_Platform
-22:02:03 - Created Normal_Platform
-22:02:03 - Created Normal_Platform
-22:02:03 - Created Animated_Platform
-22:02:03 - Created Falling_Platform
-22:02:03 - Created Door
-22:02:03 - Creating ChangeableAnimation "idle" from JSON
-22:02:03 -  -------- Scene Built --------
-22:02:09 -  -------- Loading Scene --------
-22:02:09 - Loaded: data/SceneData.json
-22:02:09 - Loaded: data/EntityData.json
-22:02:09 - Scenebuilder loaded: DoorArrow from resources/DoorArrow.png
-22:02:09 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-22:02:09 - Scenebuilder loaded: Platform from resources/Platform.jpg
-22:02:09 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-22:02:09 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-22:02:09 - Scenebuilder loaded: Background from resources/Background.jpg
-22:02:09 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-22:02:09 - Created Normal_Platform
-22:02:09 - Created Normal_Platform
-22:02:09 - Created Sprite_Node
-22:02:09 - Created Sprite_Node
-22:02:09 - Created Sprite_Node
-22:02:09 - Created Normal_Platform
-22:02:09 - Created Normal_Platform
-22:02:09 - Created Normal_Platform
-22:02:09 - Created Animated_Platform
-22:02:09 - Created Falling_Platform
-22:02:09 - Created Door
-22:02:09 - Creating ChangeableAnimation "idle" from JSON
-22:02:09 -  -------- Scene Built --------
+2025-12-08
+14:38:42 - Loaded: data/ResourceLocations.json
+14:38:47 -  -------- Loading Scene --------
+14:38:47 - Loaded: data/SceneData.json
+14:38:47 - Loaded: data/EntityData.json
+14:38:47 - Scenebuilder loaded: DoorArrow from resources/DoorArrow.png
+14:38:47 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+14:38:47 - Scenebuilder loaded: Platform from resources/Platform.jpg
+14:38:47 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+14:38:47 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+14:38:47 - Scenebuilder loaded: Background from resources/Background.jpg
+14:38:47 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+14:38:47 - Created Normal_Platform
+14:38:47 - Created Normal_Platform
+14:38:47 - Created Sprite_Node
+14:38:47 - Created Sprite_Node
+14:38:47 - Created Sprite_Node
+14:38:47 - Created Normal_Platform
+14:38:47 - Created Normal_Platform
+14:38:47 - Created Normal_Platform
+14:38:47 - Created Animated_Platform
+14:38:47 - Created Falling_Platform
+14:38:47 - Created Door
+14:38:47 - Creating ChangeableAnimation "idle" from JSON
+14:38:47 -  -------- Scene Built --------

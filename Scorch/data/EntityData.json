@@ -11,7 +11,7 @@
                     "Frame_H":80,
                     "Number_of_Frames":3,
                     "Duration":0.6,
-                    "Repeated":false,
+                    "Repeated":true,
                     "Centered":true
                 }
             }
