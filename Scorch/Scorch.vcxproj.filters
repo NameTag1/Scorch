@@ -345,6 +345,9 @@
     <ClInclude Include="Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Animatable.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHolder.inl">
@@ -555,6 +558,9 @@
     </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Animatable.cpp">
+      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -13,6 +13,7 @@ Animation::Animation()
 	, mDuration(sf::Time::Zero)
 	, mElapsedTime(sf::Time::Zero)
 	, mRepeat(false)
+	, mCentered(false)
 {
 }
 
@@ -24,10 +25,11 @@ Animation::Animation(const sf::Texture& texture)
 	, mDuration(sf::Time::Zero)
 	, mElapsedTime(sf::Time::Zero)
 	, mRepeat(false)
+	, mCentered(false)
 {
 }
 
-Animation::Animation(TextureHolder& textureHolder, json data)
+Animation::Animation(const TextureHolder& textureHolder, json data)
 	: mSprite(textureHolder.get(std::string(data["Texture"])))
 	, mFrameSize({data["Frame_W"], data["Frame_H"]})
 	, mNumFrames(data["Number_of_Frames"])
@@ -35,6 +37,7 @@ Animation::Animation(TextureHolder& textureHolder, json data)
 	, mDuration(sf::seconds(data["Duration"]))
 	, mElapsedTime(sf::Time::Zero)
 	, mRepeat(data["Repeated"])
+	, mCentered(data["Centered"])
 {
 }
 
@@ -93,6 +96,11 @@ bool Animation::isRepeating() const
 	return mRepeat;
 }
 
+void Animation::setCentered(bool centered)
+{
+	mCentered = centered;
+}
+
 void Animation::flip(bool x, bool y)
 {
 	if (x) {
@@ -101,6 +109,11 @@ void Animation::flip(bool x, bool y)
 	if (y) {
 		mSprite.scale(1.f, -1.f);
 	}
+}
+
+void Animation::mCenterOrigin()
+{
+	centerOrigin(mSprite);
 }
 
 void Animation::restart()
@@ -115,19 +128,25 @@ bool Animation::isFinished() const
 
 sf::FloatRect Animation::getLocalBounds() const
 {
-	sf::Vector2i frameSize = getFrameSize();
-	if (mSprite.getScale().x < 0) {
-		frameSize.x = -frameSize.x;
-	}
-	if (mSprite.getScale().y < 0) {
-		frameSize.y = -frameSize.y;
-	}
-	return sf::FloatRect(getOrigin(), static_cast<sf::Vector2f>(frameSize));
+	// Use sprite's local bounds and account for sprite origin so local rect
+	// is correctly centered when the sprite's origin is moved (e.g. centerOrigin).
+	// This returns bounds in the Animation's local coordinate space.
+	sf::FloatRect spriteLocal = mSprite.getLocalBounds(); // typically (0,0,width,height)
+	sf::Vector2f origin = mSprite.getOrigin();
+
+	// shift by origin so local coords are relative to the Animation (sprite at 0,0 with its origin applied)
+	spriteLocal.left -= origin.x;
+	spriteLocal.top -= origin.y;
+
+	return spriteLocal;
 }
 
 sf::FloatRect Animation::getGlobalBounds() const
 {
-	return getTransform().transformRect(getLocalBounds());
+	// Compute sprite's bounds in its own coordinate space then transform by the Animation's transform.
+	// This properly composes the sprite's local transform (origin/scale) with the Animation's transform.
+	sf::FloatRect spriteGlobal = mSprite.getGlobalBounds(); // respects mSprite origin/scale/textureRect
+	return getTransform().transformRect(spriteGlobal);
 }
 
 void Animation::update(sf::Time dt)
@@ -172,6 +191,10 @@ void Animation::update(sf::Time dt)
 	}
 
 	mSprite.setTextureRect(textureRect);
+
+	if (mCentered) {
+		centerOrigin(mSprite);
+	}
 }
 
 void Animation::draw(sf::RenderTarget& target, sf::RenderStates states) const

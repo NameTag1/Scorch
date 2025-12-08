@@ -13,7 +13,7 @@ class Animation : public sf::Drawable, public sf::Transformable
 public:
 	Animation();
 	explicit 				Animation(const sf::Texture& texture);
-			 				Animation(TextureHolder& textureHolder, json data);
+			 				Animation(const TextureHolder& textureHolder, json data);
 
 	void 					setTexture(const sf::Texture& texture);
 	const sf::Texture*		getTexture() const;
@@ -32,7 +32,10 @@ public:
 	void 					setRepeating(bool flag);
 	bool 					isRepeating() const;
 
+	void					setCentered(bool centered);
+
 	void					flip(bool x, bool y);
+	void					mCenterOrigin();
 
 	void 					restart();
 	bool 					isFinished() const;
@@ -54,6 +57,7 @@ private:
 	sf::Time 				mDuration;
 	sf::Time 				mElapsedTime;
 	bool 					mRepeat;
+	bool					mCentered;
 };
 
 #endif

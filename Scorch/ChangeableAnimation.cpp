@@ -6,6 +6,39 @@ ChangeableAnimation::ChangeableAnimation()
 {
 }
 
+ChangeableAnimation::ChangeableAnimation(const TextureHolder& textures, json data)
+: mCurrentAnimation()
+, mDefaultAnimation()
+{
+	for (auto& i : data) {
+		Animation anim(textures, i);
+
+		addAnimation(data["Name"], anim);
+		if (i["Default"] == true) {
+			mDefaultAnimation = i["Name"];
+		}
+	}
+}
+
+void ChangeableAnimation::setAnimation(std::string Animation)
+{
+	auto it = mAnimations.find(Animation);
+	if (it != mAnimations.end()) {
+		mCurrentAnimation = Animation;
+		it->second.restart();
+	}
+}
+
+void ChangeableAnimation::setAnimation(std::string Animation, sf::Time mResetDuration)
+{
+	auto it = mAnimations.find(Animation);
+	if (it != mAnimations.end()) {
+		mCurrentAnimation = Animation;
+		it->second.setDuration(mResetDuration);
+		it->second.restart();
+	}
+}
+
 void ChangeableAnimation::update(sf::Time dt)
 {
 	// Nothing to do if we have no animations
@@ -33,27 +66,6 @@ void ChangeableAnimation::update(sf::Time dt)
 	// Re-check iterator validity (default might not exist)
 	if (it != mAnimations.end())
 		it->second.update(dt);
-}
-
-void ChangeableAnimation::changeAnimation(std::string Animation, sf::Time mResetDuration)
-{
-	// Ensure an entry exists (operator[] will default-construct if missing),
-	// then configure and set current.
-	auto &anim = mAnimations[Animation];
-	anim.setDuration(mResetDuration);
-	anim.restart();
-	mCurrentAnimation = std::move(Animation);
-}
-
-void ChangeableAnimation::pushAnimation(std::string animation, TextureHolder& textureHolder, json animationData)
-{
-	Animation anim(textureHolder, animationData);
-	mAnimations.emplace(std::move(animation), std::move(anim));
-	// If this is the first animation added, set as default
-	if (mAnimations.size() == 1) {
-		mDefaultAnimation = mAnimations.begin()->first;
-		mCurrentAnimation = mDefaultAnimation;
-	}
 }
 
 void ChangeableAnimation::setToDefault()
@@ -111,4 +123,22 @@ void ChangeableAnimation::draw(sf::RenderTarget& target, sf::RenderStates states
 		return;
 
 	target.draw(it->second, states);
+}
+
+void ChangeableAnimation::addAnimation(const std::string& name, Animation animation)
+{
+	// store (move) animation into map
+	mAnimations[name] = std::move(animation);
+
+	// if no default/current set, use first added
+	if (mDefaultAnimation.empty())
+		mDefaultAnimation = name;
+	if (mCurrentAnimation.empty())
+		mCurrentAnimation = name;
+}
+
+void ChangeableAnimation::setDefaultAnimation(const std::string& name)
+{
+	if (mAnimations.find(name) != mAnimations.end())
+		mDefaultAnimation = name;
 }

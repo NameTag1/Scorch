@@ -8,7 +8,7 @@ GameState::GameState(StateStack& stack, Context context)
 , mPlayer(*context.player)
 , mBuilder(*mWorld.getSceneGraph(), context.textures, context.fonts)
 {
-
+	
 }
 
 void GameState::draw()
@@ -41,6 +41,7 @@ bool GameState::handleEvent(const sf::Event& event)
 	// Escape pressed, trigger the pause screen
 	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
 		requestStackPush(States::Pause);
+
 
 	return true;
 }

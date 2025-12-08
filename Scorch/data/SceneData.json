@@ -104,7 +104,8 @@
 			"Frame_H":80,
 			"Number_of_Frames":3,
 			"Duration":6,
-			"Repeated":true
+			"Repeated":true,
+			"Centered":false
 			}
 	},
 	{
@@ -123,7 +124,8 @@
 			"Frame_H":40,
 			"Number_of_Frames":5,
 			"Duration":0.2,
-			"Repeated":false
+			"Repeated":false,
+			"Centered":false
 			}
 	},
 	{

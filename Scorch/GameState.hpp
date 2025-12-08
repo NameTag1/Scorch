@@ -21,7 +21,7 @@ class GameState : public State
 
 	private:
 		World				mWorld;
-		Player&				mPlayer;
+		Player				mPlayer;
 		Scene_Builder		mBuilder;
 };
 

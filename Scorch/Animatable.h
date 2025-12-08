@@ -3,14 +3,15 @@
 #include "DataRetrivalTypes.h"
 #include "SceneNode.hpp"
 #include "Animation.h"
+#include "ChangeableAnimation.h"
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <map>
 
-class ChangeableAnimation : public sf::Drawable, public sf::Transformable
+class Animatable : public sf::Drawable
 {
 public:
-	ChangeableAnimation();
-	ChangeableAnimation(const TextureHolder& textures, json data);
+	Animatable();
+	Animatable(const TextureHolder& textures, json data);
 	void setAnimation(std::string Animation);
 	void setAnimation(std::string Animation, sf::Time mResetDuration);
 	void setToDefault();
@@ -23,12 +24,11 @@ public:
 
 	void 					update(sf::Time dt);
 
+protected:
+	ChangeableAnimation mAnimations;
+
 private:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-
-	std::map<std::string, Animation> mAnimations;
-	std::string mDefaultAnimation;
-	std::string mCurrentAnimation;
-
 };
+
 

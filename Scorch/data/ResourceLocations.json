@@ -2,6 +2,7 @@
     "Background":"Background.jpg",
     "Background2":"Background2.jpg",
     "Player":"Player.png",
+    "PlayerAni":"PlayerAnimation.png",
     "Enemy":"Enemy.png",
     "Platform":"Platform.jpg",
     "TestAnimation":"TestAnimated.bmp",

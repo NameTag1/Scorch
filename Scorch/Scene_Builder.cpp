@@ -185,6 +185,7 @@ void Scene_Builder::loadTextures(Scenes scene) {
 	//mTextures->load(Textures::Background, "resources/Background.jpg");
 	//mTextures->load(Textures::Background2, "resources/Background2.jpg");
 	mTextures->load(Textures::Player, "resources/Player.png");
+	mTextures->load("PlayerAni", "resources/PlayerAnimation.png");
 	mTextures->load(Textures::Enemy, "resources/Enemy.png");
 	mTextures->load(Textures::Platform, "resources/Platform.jpg");
 	mTextures->get(Textures::Platform).setRepeated(true);
