@@ -28,7 +28,6 @@ struct Scene_Change_Request {
 class World : private sf::NonCopyable
 {
 	public:
-											World();
 		explicit							World(sf::RenderWindow& window);
 		void								update(sf::Time dt);
 		void								draw();

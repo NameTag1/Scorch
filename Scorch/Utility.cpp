@@ -262,4 +262,5 @@ Scenes stringToScene(std::string i) {
 	if (i == "Canyons") {
 		return Canyons;
 	}
+	return Null;
 }

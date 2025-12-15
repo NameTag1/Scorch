@@ -9,14 +9,10 @@ Player_Entity* Player_Entity::instance = nullptr;
 Player_Entity::Player_Entity(const TextureHolder& resources, json data)
 : Platformer(50)
 , Animatable(resources, data["Animatable"])
-, isMarkedForRemoval(false)
 , isAttacking(false)
 , isInteracting(false)
 , suppressInteracting(false)
-, mSprite(resources.get(Textures::Player))
 {
-
-
 	// push starting weapon
 	WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
 	instance = this;
@@ -33,8 +29,9 @@ sf::FloatRect Player_Entity::getBoundingRect() const {
 	return getWorldTransform().transformRect(getGlobalBounds());
 };
 
-bool Player_Entity::markedForRemoval() {
-	return isMarkedForRemoval;
+bool Player_Entity::isMarkedForRemoval() const {
+	//return Entity::isMarkedForRemoval();
+	return false;
 };
 
 bool Player_Entity::getInteracting() {
@@ -53,14 +50,11 @@ Player_Entity* Player_Entity::getInstance() {
 };
 
 void Player_Entity::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {
-	//target.draw(mSprite, states);
-
 	target.draw(mAnimations, states);
 }
 
 void Player_Entity::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 	if (Entity::isDestroyed()) {
-		isMarkedForRemoval = true;
 		return;
 	}
 

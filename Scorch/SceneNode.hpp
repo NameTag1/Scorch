@@ -13,7 +13,6 @@
 #include <memory>
 #include <set>
 
-
 struct Command;
 class CommandQueue;
 
@@ -22,7 +21,6 @@ class SceneNode : public sf::Transformable, public sf::Drawable, private sf::Non
 	public:
 		typedef std::unique_ptr<SceneNode> Ptr;
 		typedef std::pair<SceneNode*, SceneNode*> Pair;
-
 
 	public:
 								SceneNode();

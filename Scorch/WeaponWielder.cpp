@@ -32,7 +32,7 @@ void WeaponWielder::update(sf::Time dt, CommandQueue& Commands, SceneNode& targe
 				attacker->pushAttack(weapons[selected]->getAttacks());
 			}
 			lastSelected = selected;
-			target.attachChild(SceneNode::Ptr(weapons[selected]));
+			target.attachChild(SceneNode::Ptr(std::move(weapons[selected])));
 		}
 	}
 }
@@ -40,7 +40,7 @@ void WeaponWielder::update(sf::Time dt, CommandQueue& Commands, SceneNode& targe
 std::vector<Textures::ID> WeaponWielder::weaponIcons()
 {
 	std::vector<Textures::ID> i;
-	for (Weapon* x : weapons) {
+	for (auto x : weapons) {
 		if (x != nullptr) {
 			i.push_back(x->getIcon());
 		}
@@ -54,7 +54,7 @@ std::vector<Textures::ID> WeaponWielder::weaponIcons()
 std::vector<Textures::ID> WeaponWielder::weaponIconsHeld()
 {
 	std::vector<Textures::ID> i;
-	for (Weapon* x : held) {
+	for (auto x : held) {
 		if (x != nullptr) {
 			i.push_back(x->getIcon());
 		}

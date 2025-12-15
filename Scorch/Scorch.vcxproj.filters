@@ -348,6 +348,12 @@
     <ClInclude Include="Animatable.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="ChangeAnimation.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponPickup.h">
+      <Filter>Header Files\Interactable</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHolder.inl">
@@ -561,6 +567,12 @@
     </ClCompile>
     <ClCompile Include="Animatable.cpp">
       <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeAnimation.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponPickup.cpp">
+      <Filter>Source Files\Interactable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

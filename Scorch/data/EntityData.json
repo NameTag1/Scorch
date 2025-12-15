@@ -4,6 +4,7 @@
         "Animatable":
         {
             "Default":"idle",
+            "Current":"idle",
             "Animations":{
                "idle":{
                     "Texture":"PlayerAni",
@@ -12,6 +13,15 @@
                     "Number_of_Frames":3,
                     "Duration":0.6,
                     "Repeated":true,
+                    "Centered":true
+                },
+                "greatsword":{
+                    "Texture":"GreatswordPlayer1",
+                    "Frame_W":80,
+                    "Frame_H":80,
+                    "Number_of_Frames":3,
+                    "Duration":0.1,
+                    "Repeated":false,
                     "Centered":true
                 }
             }

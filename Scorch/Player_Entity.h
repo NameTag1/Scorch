@@ -21,7 +21,9 @@ public:
 	Player_Entity(const TextureHolder& textures, json data);
 	virtual std::vector<unsigned int> getCategory() const;
 	virtual sf::FloatRect getBoundingRect() const;
-	virtual bool markedForRemoval();
+	
+	virtual bool isMarkedForRemoval() const;
+	
 	bool getInteracting();
 	void setInteracting(bool interacting);
 	static Player_Entity* getInstance();
@@ -31,11 +33,9 @@ private:
 	virtual void updateCurrent(sf::Time dt, CommandQueue& Commands);
 
 private:
-	sf::Sprite mSprite;
 	bool isAttacking;
 	bool isInteracting;
 	bool suppressInteracting;
-	bool isMarkedForRemoval;
 	static Player_Entity* instance;
 };
 

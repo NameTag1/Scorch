@@ -11,7 +11,17 @@ namespace GUI
 		mSprite.setTexture(textures.get(id));
 	}
 
+	Image::Image(const TextureHolder& textures, std::string id)
+	{
+		mSprite.setTexture(textures.get(id));
+	}
+
 	void Image::updateImage(const TextureHolder& textures, Textures::ID id)
+	{
+		mSprite.setTexture(textures.get(id));
+	}
+	
+	void Image::updateImage(const TextureHolder& textures, std::string id)
 	{
 		mSprite.setTexture(textures.get(id));
 	}

@@ -35,6 +35,7 @@ namespace Textures
 		
 		Slash,
 		Greatsword,
+		GreatswordIcon,
 		Size
 	};
 }

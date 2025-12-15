@@ -35,6 +35,9 @@ ChangeableAnimation::ChangeableAnimation(const TextureHolder& textures, json dat
 	// default animation name (optional)
 	if (data.contains("Default"))
 		mDefaultAnimation = data["Default"];
+
+	if (data.contains("Current"))
+		mCurrentAnimation = data["Current"];
 }
 
 void ChangeableAnimation::setAnimation(std::string Animation)

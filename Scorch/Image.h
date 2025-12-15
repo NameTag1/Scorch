@@ -19,8 +19,10 @@ namespace GUI
 
     public:
         Image(const TextureHolder& textures, Textures::ID id);
+        Image(const TextureHolder& textures, std::string id);
 
         void                updateImage(const TextureHolder& textures, Textures::ID id);
+        void                updateImage(const TextureHolder& textures, std::string id);
 
         virtual bool		isSelectable() const;
        

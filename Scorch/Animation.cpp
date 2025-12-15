@@ -39,6 +39,7 @@ Animation::Animation(const TextureHolder& textureHolder, json data)
 	, mRepeat(data["Repeated"])
 	, mCentered(data["Centered"])
 {
+	update(sf::seconds(0));
 }
 
 void Animation::setTexture(const sf::Texture& texture)

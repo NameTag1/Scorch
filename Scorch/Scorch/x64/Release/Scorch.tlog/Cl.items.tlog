@@ -9,6 +9,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\Attacker.cpp;C:\Users\natha\Docume
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Bar.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Bar.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Button.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\ChangeableAnimation.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ChangeableAnimation.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\ChangeAnimation.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ChangeAnimation.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\ChasePlayer.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ChasePlayer.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Command.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Command.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\CommandQueue.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\CommandQueue.obj
@@ -62,6 +63,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewArea.cpp;C:\Users\natha\Docume
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ViewHandler.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Weapon.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Weapon.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponInteractable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WeaponInteractable.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponPickup.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WeaponPickup.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponWielder.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WeaponWielder.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\With.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\With.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\World.obj

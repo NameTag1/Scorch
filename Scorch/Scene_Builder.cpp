@@ -11,6 +11,7 @@
 #include "MovingPlatform.h"
 #include "Enemy.h"
 #include "Greatsword.h"
+#include "WeaponPickup.h"
 
 #include "Logger.h"
 #include <unordered_set>
@@ -54,7 +55,9 @@ Scene_Builder::Scene_Builder(SceneNode& sceneGraph, TextureHolder* Textures, Fon
 , mTextures(Textures)
 , mFonts(Fonts)
 , buildPlayer(false)
+, mPlayer(nullptr)
 {
+	DATATABLE::loadEntityData();
 	instance = this;
 	addLayers();
 };
@@ -62,6 +65,15 @@ Scene_Builder::Scene_Builder(SceneNode& sceneGraph, TextureHolder* Textures, Fon
 void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 	try {
 		Logger::Instance->LogData(Logger::Action, " -------- Loading Scene --------");
+
+		// If a player exists, detach it from the Play layer to preserve it across the clear.
+		SceneNode::Ptr savedPlayer;
+		Player_Entity* existing = Player_Entity::getInstance();
+		if (existing != nullptr && mSceneLayers[Play] != nullptr) {
+			// detachChild returns ownership (unique_ptr) if the child is found
+			savedPlayer = mSceneLayers[Play]->detachChild(*existing);
+			// if savedPlayer is non-null we now own the player node in savedPlayer
+		}
 
 		clearLayers();
 
@@ -132,12 +144,44 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 			std::unique_ptr<Enemy> enemy(new Enemy(*mTextures));
 			enemy->setPosition(1000, 600);
 			mSceneLayers[Play]->attachChild(std::move(enemy));
+
+			std::unique_ptr<WeaponPickup> pickup(new WeaponPickup(*mTextures, new Greatsword(*mTextures, Category::Enemy), json()));
+			pickup->setPosition(1000, 600);
+			mSceneLayers[Play]->attachChild(std::move(pickup));
 		}
 
-		std::unique_ptr<Player_Entity> player(new Player_Entity(*mTextures, DATATABLE::ENTITY_DATA["Player"]));
+		if (scene == Scenes::Test2) {
+		}
+
+		// Reattach or create the player:
+		if (Player_Entity::getInstance() == nullptr) {
+			// No player exists yet: create one and attach it to Play
+			SceneNode::Ptr newPlayer(new Player_Entity(*mTextures, DATATABLE::ENTITY_DATA["Player"]));
+			// instance is set inside Player_Entity ctor
+			newPlayer->setPosition(PlayerPos.x, PlayerPos.y);
+			mSceneLayers[Play]->attachChild(std::move(newPlayer));
+		}
+		else {
+			// Player exists already.
+			if (savedPlayer) {
+				// We detached it earlier; reattach to Play layer
+				savedPlayer->setPosition(PlayerPos.x, PlayerPos.y);
+				mSceneLayers[Play]->attachChild(std::move(savedPlayer));
+			}
+			else {
+				// Could not find player node in layers (maybe already held elsewhere). Just update mPlayer pointer and position.
+				Player_Entity* p = Player_Entity::getInstance();
+				if (p) {
+					p->setPosition(PlayerPos.x, PlayerPos.y);
+					// Log so we can inspect unexpected states
+					Logger::Instance->LogData(Logger::Action, "Player instance exists but was not attached; position updated only.");
+				}
+			}
+		}
+	
+		// Update stored mPlayer pointer
 		mPlayer = Player_Entity::getInstance();
-		player->setPosition(PlayerPos.x, PlayerPos.y);
-		mSceneLayers[Play]->attachChild(std::move(player));
+		mPlayer->setInteracting(false);
 
 		Logger::Instance->LogData(Logger::Action, " -------- Scene Built --------");
 	}
@@ -167,6 +211,10 @@ void Scene_Builder::loadTextures(Scenes scene) {
 		// element is assumed to be a nlohmann::json object
 		collectTextures(element, texturesToLoad);
 	}
+	for (auto& element : DATATABLE::ENTITY_DATA) {
+		// element is assumed to be a nlohmann::json object
+		collectTextures(element, texturesToLoad);
+	}
 
 	for (const auto& x : texturesToLoad) {
 		auto it = DATATABLE::RESOURCE_LOCATIONS.find(x);
@@ -183,7 +231,8 @@ void Scene_Builder::loadTextures(Scenes scene) {
 	//mTextures->load(Textures::Background2, "resources/Background2.jpg");
 	mTextures->load(Textures::Player, "resources/Player.png");
 	mTextures->load("Player", "resources/Player.png");
-	mTextures->load("PlayerAni", "resources/PlayerAnimation.png");
+	/*mTextures->load("PlayerAni", "resources/PlayerAnimation.png");
+	mTextures->load("GreatswordPlayer1", "resources/GreatswordAnimation1.png");*/
 	mTextures->load(Textures::Enemy, "resources/Enemy.png");
 	mTextures->load(Textures::Platform, "resources/Platform.jpg");
 	mTextures->get(Textures::Platform).setRepeated(true);
@@ -193,7 +242,7 @@ void Scene_Builder::loadTextures(Scenes scene) {
 	mTextures->load(Textures::Door, "resources/DefaultDoor.bmp");
 	mTextures->load(Textures::DoorArrow, "resources/DoorArrow.png");
 	mTextures->load(Textures::Slash, "resources/Slash.png");
-	//mTextures->load(Textures::Greatsword, "resources/Greatsword.bmp");
+	mTextures->load(Textures::GreatswordIcon, "resources/GreatswordIcon.png");
 	//mTextures->load(Textures::Default, "resources/Default.bmp");
 };
 

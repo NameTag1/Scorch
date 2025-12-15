@@ -12,7 +12,7 @@ public:
 	Enemy(const TextureHolder& textures);
 	virtual std::vector<unsigned int> getCategory() const;
 	virtual sf::FloatRect getBoundingRect() const;
-	virtual bool markedForRemoval();
+	virtual bool isMarkedForRemoval() const;
 
 private:
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -21,6 +21,5 @@ private:
 private:
 	sf::Sprite mSprite;
 	bool isAttacking;
-	bool isMarkedForRemoval;
 };
 

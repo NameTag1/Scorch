@@ -78,15 +78,10 @@ struct MovementCap
 	float constantDeacell;
 };
 
-World* World::instance = new World();
+World* World::instance = nullptr;
 
 //1280, 960
 //4/3 View Ratio
-
-World::World()
-: mWindow(*new sf::RenderWindow())
-{
-}
 
 World::World(sf::RenderWindow& window)
 : mWindow(window)
@@ -105,7 +100,7 @@ World::World(sf::RenderWindow& window)
 , mConstantDeaccel(30)
 , mScene(Scenes::Test)
 {
-	changeScene(Scenes::Test, sf::Vector2f(400, 400));
+	changeScene(Scenes::Test, sf::Vector2f(0, 400));
 	instance = this;
 }
 
@@ -131,7 +126,7 @@ void World::update(sf::Time dt)
 	adaptView();
 
 	//if(mPlayer->getHitpoints()){}
-	//mSceneGraph.removeWrecks();
+	mSceneGraph.removeWrecks();
 }
 
 void World::draw()

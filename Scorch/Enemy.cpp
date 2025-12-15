@@ -11,7 +11,6 @@
 
 Enemy::Enemy(const TextureHolder& resources)
 : Platformer(50)
-, isMarkedForRemoval(false)
 , isAttacking(false)
 , mSprite(resources.get(Textures::Enemy))
 {
@@ -38,8 +37,8 @@ sf::FloatRect Enemy::getBoundingRect() const {
 	return getWorldTransform().transformRect(mSprite.getGlobalBounds());
 };
 
-bool Enemy::markedForRemoval() {
-	return true;
+bool Enemy::isMarkedForRemoval() const {
+	return Entity::isMarkedForRemoval();
 };
 
 void Enemy::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {
@@ -47,10 +46,9 @@ void Enemy::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
 };
 
 void Enemy::updateCurrent(sf::Time dt, CommandQueue& Commands) {
-	if (Entity::isDestroyed()) {
-		isMarkedForRemoval = true;
+	/*if (Entity::isDestroyed()) {
 		return;
-	}
+	}*/
 
 	Attacker::update(dt, Commands, *this);
 
