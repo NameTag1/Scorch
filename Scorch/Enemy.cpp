@@ -24,7 +24,7 @@ Enemy::Enemy(const TextureHolder& resources)
 	Actionable::pushAction(new FleePlayer(500));
 	Actionable::pushAction(new Pause(sf::seconds(1)));
 	
-	Attacker::pushAttack("Slash", new Slash(500, (unsigned int)Category::Player, resources));
+	Attacker::pushAttack("Slash", new Slash(20, (unsigned int)Category::Player, resources));
 }
 
 std::vector<unsigned int> Enemy::getCategory() const {

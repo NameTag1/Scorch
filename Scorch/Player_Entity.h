@@ -27,6 +27,7 @@ public:
 	bool getInteracting();
 	void setInteracting(bool interacting);
 	static Player_Entity* getInstance();
+	static void resetInstance();
 
 private:
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const; 

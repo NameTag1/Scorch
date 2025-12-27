@@ -54,33 +54,33 @@ void RelativeRect::update(sf::FloatRect parentRect)
 		tempRect.height = parentRect.height * h;
 	}
 
-	tempRect.left = 0;//(parentRect.width) - (tempRect.width / 2);
-	tempRect.top = 0; //(parentRect.height) - (tempRect.height / 2);
+	// Default position (use parent origin + relative offsets)
+	tempRect.left = parentRect.left + parentRect.width * x;
+	tempRect.top  = parentRect.top  + parentRect.height * y;
 
 
 	if (mAnchor == Anchor::TL) {
-		tempRect.left = parentRect.width * x;
-		tempRect.top = parentRect.height * y;
+		// already TL by default
 	}
 
 	if (mAnchor == Anchor::TR) {
-		tempRect.left = parentRect.width * x - tempRect.width;
-		tempRect.top = parentRect.height * y;
+		tempRect.left = parentRect.left + parentRect.width * x - tempRect.width;
+		tempRect.top  = parentRect.top  + parentRect.height * y;
 	}
 	
 	if (mAnchor == Anchor::BL) {
-		tempRect.left = parentRect.width * x;
-		tempRect.top = parentRect.height * y - tempRect.height;
+		tempRect.left = parentRect.left + parentRect.width * x;
+		tempRect.top  = parentRect.top  + parentRect.height * y - tempRect.height;
 	}
 
 	if (mAnchor == Anchor::BR) {
-		tempRect.left = parentRect.width * x - tempRect.width;
-		tempRect.top = parentRect.height * y - tempRect.height;
+		tempRect.left = parentRect.left + parentRect.width * x - tempRect.width;
+		tempRect.top  = parentRect.top  + parentRect.height * y - tempRect.height;
 	}
 
 	if (mAnchor == Anchor::Center) {
-		tempRect.left = parentRect.width * x - tempRect.width/2;
-		tempRect.top = parentRect.height * y - tempRect.height/2;
+		tempRect.left = parentRect.left + parentRect.width * x - tempRect.width/2;
+		tempRect.top  = parentRect.top  + parentRect.height * y - tempRect.height/2;
 	}
 
 	//std::cout << tempRect.left << "\n";
@@ -107,39 +107,50 @@ sf::FloatRect RelativeRect::getRect(sf::FloatRect target)
 
 void RelativeRect::scaleSprite(sf::Sprite& sprite)
 {
-	float scalex = tempRect.getSize().x / sprite.getGlobalBounds().width;
-	float scaley = tempRect.getSize().y / sprite.getGlobalBounds().height;
+	// Use local bounds (unaffected by current transform/scale)
+	sf::FloatRect local = sprite.getLocalBounds();
+	if (local.width <= 0.f || local.height <= 0.f) return;
 
-	sprite.scale(scalex, scaley);
+	float scalex = tempRect.getSize().x / local.width;
+	float scaley = tempRect.getSize().y / local.height;
+
+	// Set absolute scale instead of multiplying
+	sprite.setScale(scalex, scaley);
 }
 
 void RelativeRect::scaleSprite(sf::Sprite& sprite, bool maintainRatio)
 {
-	float scalex = tempRect.getSize().x / sprite.getGlobalBounds().width;
-	float scaley = tempRect.getSize().y / sprite.getGlobalBounds().height;
+	// Use local bounds (unaffected by current transform/scale)
+	sf::FloatRect local = sprite.getLocalBounds();
+	if (local.width <= 0.f || local.height <= 0.f) return;
+
+	float scalex = tempRect.getSize().x / local.width;
+	float scaley = tempRect.getSize().y / local.height;
 
 	if (mWH == RelativeWH::WBased) {
-		scalex = tempRect.getSize().x / sprite.getGlobalBounds().width;
+		scalex = tempRect.getSize().x / local.width;
 		scaley = scalex;
 	}
 
 	if (mWH == RelativeWH::HBased) {
-		scaley = tempRect.getSize().y / sprite.getGlobalBounds().height;
+		scaley = tempRect.getSize().y / local.height;
 		scalex = scaley;
 	}
 
 	if (mWH == RelativeWH::WHBased) {
+		// Keep same behavior as before, but compute from local bounds
 		if (tempRect.getSize().x * w > tempRect.getSize().y * h) {
-			scalex = tempRect.getSize().x / sprite.getGlobalBounds().width;
+			scalex = tempRect.getSize().x / local.width;
 			scaley = scalex;
 		}
 		else {
-			scaley = tempRect.getSize().y / sprite.getGlobalBounds().height;
+			scaley = tempRect.getSize().y / local.height;
 			scalex = scaley;
 		}
 	}
 
-	sprite.scale(scalex, scaley);
+	// Set absolute scale instead of multiplying
+	sprite.setScale(scalex, scaley);
 }
 
 

@@ -23,6 +23,7 @@ class Scene_Builder
 {
 public:
 	Scene_Builder(SceneNode& sceneGraph, TextureHolder* textures, FontHolder* founts);
+	~Scene_Builder();
 	void buildScene(Scenes scene, sf::Vector2f PlayerPos);
 
 	Player_Entity* getPlayerEntity();

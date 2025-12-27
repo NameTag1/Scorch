@@ -11,6 +11,7 @@
 #include "Move.h"
 
 #include "UseWeapon.h"
+#include "ChangeWeapon.h"
 
 #include <map>
 #include <string>
@@ -107,6 +108,8 @@ Player::Player()
 	mKeyBinding[sf::Keyboard::Right] = MoveRight;
 	mKeyBinding[sf::Keyboard::Up] = JumpA;
 	mKeyBinding[sf::Keyboard::Down] = MoveDown;
+	mKeyBinding[sf::Keyboard::Q] = SwitchL;
+	mKeyBinding[sf::Keyboard::E] = SwitchR;
 	mKeyBinding[sf::Keyboard::Space] = InteractA;
 	mKeyBinding[sf::Keyboard::Num1] = Attack1;
 	mKeyBinding[sf::Keyboard::Num2] = Attack2;
@@ -175,6 +178,8 @@ void Player::initializeActions()
 	mActionBinding[MoveRight].action = derivedAction<Player_Entity>(DeployAction(new Move(false)));
 	mActionBinding[MoveDown].action  = derivedAction<Player_Entity>(EntityMover(0.f, 0.f));
 	mActionBinding[JumpA].action = derivedAction<Player_Entity>(DeployAction(new Jump()));
+	mActionBinding[SwitchL].action = derivedAction<Player_Entity>(DeployAction(new ChangeWeapon(-1)));
+	mActionBinding[SwitchR].action = derivedAction<Player_Entity>(DeployAction(new ChangeWeapon(1)));
 	mActionBinding[InteractA].action = derivedAction<Player_Entity>(DeployAction(new Interact()));
 	mActionBinding[Attack1].action = derivedAction<Player_Entity>(DeployAction(new UseWeapon("Slot 1")));
 	mActionBinding[Attack2].action = derivedAction<Player_Entity>(DeployAction(new UseWeapon("Slot 2")));

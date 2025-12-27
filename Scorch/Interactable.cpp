@@ -2,6 +2,10 @@
 #include "Categories.hpp"
 #include <vector>
 
+void Interactable::touched(Player_Entity& player)
+{
+}
+
 void Interactable::interact(Player_Entity& player) {
 
 }

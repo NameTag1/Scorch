@@ -1,8 +1,46 @@
-﻿  Player_Entity.cpp
+﻿  AnimatedPlatform.cpp
+  Animation.cpp
+  Application.cpp
+  Bar.cpp
+  Button.cpp
+  ChasePlayer.cpp
+  DataTable.cpp
+  Door.cpp
+  Enemy.cpp
+  FallingPlatform.cpp
+  FleePlayer.cpp
+  Greatsword.cpp
+  Image.cpp
+  Interact.cpp
+  Label.cpp
+  LoadingState.cpp
+  MakeAttack.cpp
+  MenuState.cpp
+  MovingPlatform.cpp
+  NormalPlatform.cpp
+  Compiling...
+  PauseState.cpp
+  Platformer.cpp
+  Player.cpp
+  Player_Entity.cpp
+  SceneNode.cpp
   Scene_Builder.cpp
+  SettingsState.cpp
+  SkyBackground.cpp
+  Slash.cpp
+  TitleState.cpp
+  Utility.cpp
+  ViewArea.cpp
+  ViewHandler.cpp
+  Weapon.cpp
+  WeaponPickup.cpp
+  World.cpp
+  main.cpp
   Generating code
-  11 of 5494 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+  100 of 5310 functions ( 1.9%) were compiled, the rest were copied from previous compilation.
+    40 functions were new in current compilation
+    31 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Scorch.vcxproj -> C:\Users\natha\Documents\GitHub\Scorch\Scorch\x64\Release\Scorch.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

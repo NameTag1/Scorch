@@ -18,124 +18,25 @@
 #include "nlohmann/json.hpp"
 using json = nlohmann::json;
 
-namespace DataStorageTypes{
-	enum Datatype {
-		Entity,
-		Animation,
-		Platform,
-		AnimatedPlatform,
-		FallingPlatform,
-	};
-}
-
-struct SceneElement
-{
-	unsigned int Layer;
-	unsigned int Scene;
-	sf::Vector2f Position;
-	unsigned int DataType;
-	unsigned int DataRetrivalPosition; //DataRetrivalType
-};
-
-struct EntityData
-{
-	int								hitpoints;
-	float							speed;
-	Textures::ID					texture;
-	sf::IntRect						textureRect;
-};
-
-struct AnimationData
-{
-	sf::Vector2i 					mFrameSize;
-	std::size_t 					mNumFrames;
-	sf::Time 						mDuration;
-	bool 							mRepeat;
-};
-
-struct PlatformData
-{
-	int								friction;
-	Textures::ID					texture;
-};
-
-struct NormalPlatformData
-{
-	PlatformData					platform;
-	sf::IntRect						rect;
-};
-
-struct AnimatedPlatformData
-{
-	PlatformData					platform;
-	AnimationData					animation;
-};
-
-struct FallingPlatformData
-{
-	PlatformData					platform;
-	sf::Time						resetTime;
-	AnimationData					animation;
-};
-
-struct MovingPlatformData
-{
-	PlatformData					platform;
-	sf::Vector2i					startingPoint;
-	sf::Vector2i					endPoint;
-	sf::Vector2f					speed;
-	float							cushion;
-};
-
-struct DoorData
-{
-	Textures::ID					texture;
-	Textures::ID					arrowTexture;
-	sf::Vector2f					playerPos;
-};
-
-struct ViewAreaData
-{
-	sf::FloatRect					area;
-	sf::Vector2f					viewSize;
-	bool							lockView;
-	sf::Vector2f					viewCenter;
-};
-
 //Updated minimally after Initialization. 
 //Look to settings for Application-updated consts (which ig means their not consts...)
 class DATATABLE {
 public:
 	static void loadScene(Scenes s);
 	static void offloadScene(Scenes s);
-	static void loadResourceLocations();
+
 	static void loadEntityData();
 
-	static json ENTITY_DATA;
-	static std::map<Scenes, std::string> SCENE_FILE_NAMES;
+	static void loadSaveFile(int n);
+
+	static void loadResourceLocations();
+
 	static std::map<Scenes, json> SCENE_DATA;
+	static json ENTITY_DATA;
+	static json SAVE_DATA;
+
+	static std::map<Scenes, std::string> SCENE_FILE_NAMES;
 	static std::map<std::string, std::string> RESOURCE_LOCATIONS;
-
-	static std::vector<EntityData> entityData;
-	static std::vector<PlatformData> platformData;
-	static std::vector<AnimationData> animationData;
-	static std::vector<AnimatedPlatformData>	animatedPlatformData;
-	static std::vector<FallingPlatformData>	fallingPlatformData;
-	static std::vector<MovingPlatformData>	movingPlatformData;
-	static std::vector<DoorData>	doorData;
-	static std::vector<ViewAreaData> viewData;
-	static std::map<Scenes, std::vector<SceneElement*>> SceneData;
-
-private:
-	static std::vector<EntityData>	initializeEntityData();
-	static std::vector<PlatformData> initializePlatformData();
-	static std::vector<AnimationData> initializeAnimationData();
-	static std::vector<AnimatedPlatformData> initializeAnimatedPlatformData();
-	static std::vector<FallingPlatformData> initializeFallingPlatformData();
-	static std::vector<MovingPlatformData> initializeMovingPlatformData();
-	static std::vector<DoorData> initializeDoorData();
-	static std::vector<ViewAreaData> initializeViewAreaData();
-	static std::map<Scenes, std::vector<SceneElement*>> initializeSceneData();
 };
 
 

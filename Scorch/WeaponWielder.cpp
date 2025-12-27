@@ -32,7 +32,6 @@ void WeaponWielder::update(sf::Time dt, CommandQueue& Commands, SceneNode& targe
 				attacker->pushAttack(weapons[selected]->getAttacks());
 			}
 			lastSelected = selected;
-			target.attachChild(SceneNode::Ptr(std::move(weapons[selected])));
 		}
 	}
 }
@@ -106,6 +105,11 @@ void WeaponWielder::nextWeapon(int increment)
 	int newIndex = (selected + increment) % n;
 	if (newIndex < 0) newIndex += n;
 	selected = newIndex;
+}
+
+int WeaponWielder::getSelected()
+{
+	return selected;
 }
 
 void WeaponWielder::useWeapon(std::string selectedAttack, SceneNode& target)

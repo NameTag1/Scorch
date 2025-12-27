@@ -21,6 +21,8 @@ OverlayState::OverlayState(StateStack& stack, Context context)
 {
 	context.textures->load(Textures::Greatsword, "resources/Greatsword.bmp");
 	context.textures->load(Textures::Default, "resources/Default.bmp");
+	context.textures->load("WeaponBorderUnselected", "resources/WeaponBorderUnselected.png");
+	context.textures->load("WeaponBorderSelected", "resources/WeaponBorderSelected.png");
 
 	mGUIContainer.setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 0.25f, 0.15f), RelativeWH::WHBased, Anchor::TL));
 	mPlayerWeaponGUIContainer.setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 0.25f, 0.15f), RelativeWH::WHBased, Anchor::TL));
@@ -57,6 +59,21 @@ OverlayState::OverlayState(StateStack& stack, Context context)
 
 	mGUIContainer.pack(HealthText);
 	mGUIContainer.pack(HealthBar);
+
+	auto icon1 = std::make_shared<GUI::Image>(*getContext().textures, "WeaponBorderUnselected");
+	icon1->setRelativeRect(RelativeRect(sf::FloatRect(0.3f, 0.1f, 0.15f, 0.15f), RelativeWH::WBased, Anchor::TL));
+	mGUIContainer.pack(icon1);
+	mWeaponBorders.push_back(icon1.get());
+
+	auto icon2 = std::make_shared<GUI::Image>(*getContext().textures, "WeaponBorderUnselected");
+	icon2->setRelativeRect(RelativeRect(sf::FloatRect(0.5f, 0.1f, 0.15f, 0.15f), RelativeWH::WBased, Anchor::TL));
+	mGUIContainer.pack(icon2);
+	mWeaponBorders.push_back(icon2.get());
+
+	auto icon3 = std::make_shared<GUI::Image>(*getContext().textures, "WeaponBorderUnselected");
+	icon3->setRelativeRect(RelativeRect(sf::FloatRect(0.7f, 0.1f, 0.15f, 0.15f), RelativeWH::WBased, Anchor::TL));
+	mGUIContainer.pack(icon3);
+	mWeaponBorders.push_back(icon3.get());
 }
 
 void OverlayState::draw()
@@ -92,15 +109,24 @@ bool OverlayState::update(sf::Time)
 		}
 	}
 
-	mHealthText->setText("Health: " + std::to_string(player->getHitpoints()));
-	mHealthBar->setMessure(50.f, float(player->getHitpoints()));
-
 	// update existing icons safely
 	auto icons = player->weaponIcons();
 	const std::size_t count = std::min(mWeapons.size(), icons.size());
 	for (std::size_t i = 0; i < count; ++i) {
 		if (mWeapons[i]) {
 			mWeapons[i]->updateImage(*getContext().textures, icons[i]);
+		}
+	}
+
+	mHealthText->setText("Health: " + std::to_string(player->getHitpoints()));
+	mHealthBar->setMessure(50.f, float(player->getHitpoints()));
+
+	for (std::size_t i = 0; i < 3; ++i) {
+		if (i == player->getSelected()) {
+			mWeaponBorders[i]->updateImage(*getContext().textures, "WeaponBorderSelected");
+		}
+		else {
+			mWeaponBorders[i]->updateImage(*getContext().textures, "WeaponBorderUnselected");
 		}
 	}
 

@@ -47,11 +47,20 @@
 		"PX":800,
 		"PY":650,
 		"Texture":"Door",
-		"TextureArrow":"DoorArrow",
+		"ArrowAnim":
+			{
+			"Texture":"DoorArrow",
+			"Frame_W":100,
+			"Frame_H":100,
+			"Number_of_Frames":10,
+			"Duration":0.8,
+			"Repeated":true,
+			"Centered":false
+			},
 		"Scene":"Test"
 	},
     {
-        "Type":"ViewArea",
+        "Type":"View_Area",
         "X":200,
         "Y":450,
         "W":200,
@@ -63,7 +72,7 @@
         "ViewLock":false
     },
     {
-        "Type":"ViewArea",
+        "Type":"View_Area",
         "X":1200,
         "Y":450,
         "W":200,

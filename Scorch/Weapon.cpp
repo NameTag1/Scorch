@@ -11,16 +11,6 @@ Weapon::Weapon(const TextureHolder& textures, Category::Type type)
 {
 }
 
-void Weapon::updateCurrent(sf::Time dt, CommandQueue& commands)
-{
-	
-}
-
-void Weapon::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const
-{
-
-}
-
 void Weapon::update(sf::Time dt, CommandQueue& Commands, SceneNode& target) 
 {
 
@@ -41,11 +31,6 @@ void Weapon::flip()
 
 }
 
-void Weapon::interact(Player_Entity& player) 
-{
-	player.pushWeapon(this);
-}
-
 void Weapon::useWeapon(std::string selectedAttack, SceneNode& target)
 {
 	if (mActions[selectedAttack]) { //If weapon has attack of specified slot, can be null, eg. a bow not having a throw attack
@@ -62,7 +47,7 @@ Textures::ID Weapon::getIcon()
 
 std::vector<unsigned int> Weapon::getCategory() const 
 {
-	std::vector<unsigned int> i(Interactable::getCategory());
+	std::vector<unsigned int> i;
 	i.push_back(Category::Weapon);
 	return i;
 }

@@ -9,6 +9,7 @@ class Player_Entity;
 class Interactable : public SceneNode
 {
 public:
+	virtual void touched(Player_Entity& player);
 	virtual void interact(Player_Entity& player);
 	virtual std::vector<unsigned int> getCategory() const;
 };

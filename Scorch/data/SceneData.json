@@ -25,16 +25,6 @@
 	},
 	{
 		"Type":"Sprite_Node",
-		"W":50000,
-		"H":50000,
-		"X":-25000,
-		"Y":-25000,
-		"Texture":"Background",
-		"Layer":"Background",
-		"Repeated":true
-	},
-	{
-		"Type":"Sprite_Node",
 		"W":100,
 		"H":100,
 		"X":400,
@@ -135,7 +125,64 @@
 		"PX":800,
 		"PY":650,
 		"Texture":"Door",
-		"TextureArrow":"DoorArrow",
-		"Scene":"Test2"
-	}
+		"Scene":"Test2",
+		"ArrowAnim":
+			{
+			"Texture":"DoorArrow",
+			"Frame_W":100,
+			"Frame_H":100,
+			"Number_of_Frames":10,
+			"Duration":0.8,
+			"Repeated":true,
+			"Centered":false
+			}
+	},
+	{
+		"Type":"Weapon_Pickup",
+		"X":1400,
+		"Y":700,
+		"Weapon":{
+			"Type":"Greatsword",
+			"Category":"Enemy"
+		}
+	},
+	{
+        "Type":"NPC",
+        "X":100,
+        "Y":750,
+		"Animatable":{
+				"Default":"idle",
+				"Current":"idle",
+               "Animations":{
+					"idle":{
+						"Texture":"NPC",
+						"Frame_W":100,
+						"Frame_H":100,
+						"Number_of_Frames":1,
+						"Duration":1.0,
+						"Repeated":true,
+						"Centered":true
+					},
+					"greatsword":{
+						"Texture":"GreatswordPlayer1",
+						"Frame_W":80,
+						"Frame_H":80,
+						"Number_of_Frames":3,
+						"Duration":1.0,
+						"Repeated":false,
+						"Centered":true
+					}
+				}
+            },
+		"ArrowAnimation":
+			{
+			"Texture":"DoorArrow",
+			"Frame_W":100,
+			"Frame_H":100,
+			"Number_of_Frames":10,
+			"Duration":0.8,
+			"Repeated":true,
+			"Centered":false
+			}
+    }
 ]

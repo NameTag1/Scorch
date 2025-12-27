@@ -106,6 +106,8 @@ World::World(sf::RenderWindow& window)
 
 void World::update(sf::Time dt)
 {
+	mTimekeeper.update(dt);
+
 	// Forward commands to scene graph, adapt velocity (scrolling, diagonal correction)
 	while (!mCommandQueue.isWEmpty())
 		onCommand(mCommandQueue.popWC());
@@ -240,6 +242,8 @@ void World::handleCollisions() {
 			auto& player = static_cast<Player_Entity&>(*pair.first);
 			auto& door = static_cast<Door&>(*pair.second);
 			
+			door.touched(player);
+
 			if (player.getInteracting()) {
 				door.interact(player);
 				changeScene(door.getScene(), door.getPlayerPos());
@@ -250,6 +254,8 @@ void World::handleCollisions() {
 		else if (matchesCategories(pair, Category::Player, Category::Interactable)) {
 			auto& player = static_cast<Player_Entity&>(*pair.first);
 			auto& thing = static_cast<Interactable&>(*pair.second);
+
+			thing.touched(player);
 
 			if (player.getInteracting()) {
 				thing.interact(player);

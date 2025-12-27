@@ -11,6 +11,7 @@
 #include <array>
 #include <queue>
 #include "ViewHandler.h"
+#include "Timekeeper.h"
 
 
 // Forward declaration
@@ -83,6 +84,7 @@ class World : private sf::NonCopyable
 		float								mMaxYVelocity;
 		float								mConstantDeaccel;
 
+		Timekeeper							mTimekeeper;
 		ViewHandler							mViewHandler;
 
 		Scene_Change_Request				mSceneChangeRequest;

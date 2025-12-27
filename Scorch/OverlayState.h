@@ -24,6 +24,7 @@ private:
 	sf::Sprite			mBackgroundSprite;
 	GUI::Label*			mHealthText;
 	GUI::Bar*			mHealthBar;
+	std::vector<GUI::Image*> mWeaponBorders;
 	std::vector<GUI::Image*> mWeapons;
 	GUI::Container 		mGUIContainer;
 	GUI::Container 		mPlayerWeaponGUIContainer;

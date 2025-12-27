@@ -14,7 +14,7 @@ Player_Entity::Player_Entity(const TextureHolder& resources, json data)
 , suppressInteracting(false)
 {
 	// push starting weapon
-	WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
+	//WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
 	instance = this;
 }
 
@@ -26,7 +26,7 @@ std::vector<unsigned int> Player_Entity::getCategory() const {
 
 sf::FloatRect Player_Entity::getBoundingRect() const {
 	//return getWorldTransform().transformRect(/*getGlobalBounds()*/mSprite.getGlobalBounds());
-	return getWorldTransform().transformRect(getGlobalBounds());
+	return getWorldTransform().transformRect(Animatable::getGlobalBounds());
 };
 
 bool Player_Entity::isMarkedForRemoval() const {
@@ -47,7 +47,12 @@ void Player_Entity::setInteracting(bool interacting) {
 
 Player_Entity* Player_Entity::getInstance() {
 	return instance;
-};
+}
+
+void Player_Entity::resetInstance()
+{
+	instance = nullptr;
+}
 
 void Player_Entity::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {
 	target.draw(mAnimations, states);

@@ -1,8 +1,10 @@
 #include "WeaponPickup.h"
 
-WeaponPickup::WeaponPickup(TextureHolder& textureHolder, Weapon* weapon, json data)
-	: mChild(weapon)
-	, mSprite(textureHolder.get(weapon->getIcon()))
+#include "WeaponBuilder.h"
+
+WeaponPickup::WeaponPickup(TextureHolder& textureHolder, json data)
+	: mChild(createWeapon(textureHolder, data["Weapon"]))
+	, mSprite(textureHolder.get(mChild->getIcon()))
 	, mUsed(false)
 {
 }

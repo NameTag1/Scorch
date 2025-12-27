@@ -1,6 +1,5 @@
 #include "Scene_Builder.h"
 
-
 #include "NormalPlatform.h"
 #include "FallingPlatform.h"
 #include "AnimatedPlatform.h"
@@ -15,6 +14,8 @@
 
 #include "Logger.h"
 #include <unordered_set>
+#include "NPC.h"
+#include "SkyBackground.h"
 
 // Recursively collect texture ids from a json value
 namespace {
@@ -60,11 +61,16 @@ Scene_Builder::Scene_Builder(SceneNode& sceneGraph, TextureHolder* Textures, Fon
 	DATATABLE::loadEntityData();
 	instance = this;
 	addLayers();
-};
+}
+
+Scene_Builder::~Scene_Builder()
+{
+	Player_Entity::resetInstance();
+}
 
 void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 	try {
-		Logger::Instance->LogData(Logger::Action, " -------- Loading Scene --------");
+		Logger::Instance->LogData(Logger::Action, "-------- Loading Scene --------");
 
 		// If a player exists, detach it from the Play layer to preserve it across the clear.
 		SceneNode::Ptr savedPlayer;
@@ -73,6 +79,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 			// detachChild returns ownership (unique_ptr) if the child is found
 			savedPlayer = mSceneLayers[Play]->detachChild(*existing);
 			// if savedPlayer is non-null we now own the player node in savedPlayer
+			// When exiting then re-entering the game, player exists but is not attached to Play layer, thus returns nullptr
 		}
 
 		clearLayers();
@@ -129,10 +136,20 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 				door->setPosition(i["X"], i["Y"]);
 				mSceneLayers[Play]->attachChild(std::move(door));
 			}
-			else if (s == "ViewArea") {
+			else if (s == "View_Area") {
 				std::unique_ptr<ViewArea> viewArea(new ViewArea(i));
 				viewArea->setPosition(i["X"], i["Y"]);
 				mSceneLayers[Play]->attachChild(std::move(viewArea));
+			}
+			else if (s == "Weapon_Pickup") {
+				std::unique_ptr<WeaponPickup> pickup(new WeaponPickup(*mTextures, i));
+				pickup->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(pickup));
+			}
+			else if (s == "NPC") {
+				std::unique_ptr<NPC> npc(new NPC(*mTextures, i));
+				npc->setPosition(i["X"], i["Y"]);
+				mSceneLayers[Play]->attachChild(std::move(npc));
 			}
 			else {
 				Logger::Instance->LogData(Logger::Action, "Unknown Type " + s + " was Skipped!");
@@ -140,14 +157,13 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 			Logger::Instance->LogData(Logger::Action, "Created " + s);
 		}
 
-		if (scene == Scenes::Test) {												
+		if (scene == Scenes::Test) {
+			std::unique_ptr<SkyBackground> sky(new SkyBackground(*mTextures));
+			mSceneLayers[Background]->attachChild(std::move(sky));
+
 			std::unique_ptr<Enemy> enemy(new Enemy(*mTextures));
 			enemy->setPosition(1000, 600);
 			mSceneLayers[Play]->attachChild(std::move(enemy));
-
-			std::unique_ptr<WeaponPickup> pickup(new WeaponPickup(*mTextures, new Greatsword(*mTextures, Category::Enemy), json()));
-			pickup->setPosition(1000, 600);
-			mSceneLayers[Play]->attachChild(std::move(pickup));
 		}
 
 		if (scene == Scenes::Test2) {
@@ -227,23 +243,10 @@ void Scene_Builder::loadTextures(Scenes scene) {
 		}
 	}
 
-	//mTextures->load(Textures::Background, "resources/Background.jpg");
-	//mTextures->load(Textures::Background2, "resources/Background2.jpg");
-	mTextures->load(Textures::Player, "resources/Player.png");
-	mTextures->load("Player", "resources/Player.png");
-	/*mTextures->load("PlayerAni", "resources/PlayerAnimation.png");
-	mTextures->load("GreatswordPlayer1", "resources/GreatswordAnimation1.png");*/
 	mTextures->load(Textures::Enemy, "resources/Enemy.png");
-	mTextures->load(Textures::Platform, "resources/Platform.jpg");
-	mTextures->get(Textures::Platform).setRepeated(true);
 	mTextures->get("Platform").setRepeated(true);
-	mTextures->load(Textures::TestAnimation, "resources/TestAnimated.bmp");
-	mTextures->load(Textures::FallingSand, "resources/FallingSand.png");
-	mTextures->load(Textures::Door, "resources/DefaultDoor.bmp");
-	mTextures->load(Textures::DoorArrow, "resources/DoorArrow.png");
 	mTextures->load(Textures::Slash, "resources/Slash.png");
 	mTextures->load(Textures::GreatswordIcon, "resources/GreatswordIcon.png");
-	//mTextures->load(Textures::Default, "resources/Default.bmp");
 };
 
 void Scene_Builder::clearLayers() {

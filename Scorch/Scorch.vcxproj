@@ -40,6 +40,7 @@
     <ClInclude Include="Categories.hpp" />
     <ClInclude Include="ChangeableAnimation.h" />
     <ClInclude Include="ChangeAnimation.h" />
+    <ClInclude Include="ChangeWeapon.h" />
     <ClInclude Include="ChasePlayer.h" />
     <ClInclude Include="Command.hpp" />
     <ClInclude Include="CommandQueue.hpp" />
@@ -69,6 +70,7 @@
     <ClInclude Include="MoveDis.h" />
     <ClInclude Include="MovingPlatform.h" />
     <ClInclude Include="NormalPlatform.h" />
+    <ClInclude Include="NPC.h" />
     <ClInclude Include="OverlayState.h" />
     <ClInclude Include="Pause.h" />
     <ClInclude Include="PauseState.hpp" />
@@ -80,22 +82,26 @@
     <ClInclude Include="RelativeRect.h" />
     <ClInclude Include="ResourceHolder.hpp" />
     <ClInclude Include="ResourceIdentifiers.hpp" />
+    <ClInclude Include="SaveSelectorState.h" />
     <ClInclude Include="SceneNode.hpp" />
     <ClInclude Include="Scenes.h" />
     <ClInclude Include="Scene_Builder.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="SettingsState.hpp" />
+    <ClInclude Include="SkyBackground.h" />
     <ClInclude Include="Slash.h" />
     <ClInclude Include="SpriteNode.hpp" />
     <ClInclude Include="State.hpp" />
     <ClInclude Include="States.hpp" />
     <ClInclude Include="StateStack.hpp" />
+    <ClInclude Include="Timekeeper.h" />
     <ClInclude Include="TitleState.hpp" />
     <ClInclude Include="UseWeapon.h" />
     <ClInclude Include="Utility.hpp" />
     <ClInclude Include="ViewArea.h" />
     <ClInclude Include="ViewHandler.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponBuilder.h" />
     <ClInclude Include="WeaponInteractable.h" />
     <ClInclude Include="WeaponPickup.h" />
     <ClInclude Include="WeaponWielder.h" />
@@ -120,6 +126,7 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="ChangeableAnimation.cpp" />
     <ClCompile Include="ChangeAnimation.cpp" />
+    <ClCompile Include="ChangeWeapon.cpp" />
     <ClCompile Include="ChasePlayer.cpp" />
     <ClCompile Include="Command.cpp" />
     <ClCompile Include="CommandQueue.cpp" />
@@ -149,6 +156,7 @@
     <ClCompile Include="MoveDis.cpp" />
     <ClCompile Include="MovingPlatform.cpp" />
     <ClCompile Include="NormalPlatform.cpp" />
+    <ClCompile Include="NPC.cpp" />
     <ClCompile Include="OverlayState.cpp" />
     <ClCompile Include="Pause.cpp" />
     <ClCompile Include="PauseState.cpp" />
@@ -158,20 +166,24 @@
     <ClCompile Include="Player_Entity.cpp" />
     <ClCompile Include="Projectile.cpp" />
     <ClCompile Include="RelativeRect.cpp" />
+    <ClCompile Include="SaveSelectorState.cpp" />
     <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="Scene_Builder.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="SettingsState.cpp" />
+    <ClCompile Include="SkyBackground.cpp" />
     <ClCompile Include="Slash.cpp" />
     <ClCompile Include="SpriteNode.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateStack.cpp" />
+    <ClCompile Include="Timekeeper.cpp" />
     <ClCompile Include="TitleState.cpp" />
     <ClCompile Include="UseWeapon.cpp" />
     <ClCompile Include="Utility.cpp" />
     <ClCompile Include="ViewArea.cpp" />
     <ClCompile Include="ViewHandler.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponBuilder.cpp" />
     <ClCompile Include="WeaponInteractable.cpp" />
     <ClCompile Include="WeaponPickup.cpp" />
     <ClCompile Include="WeaponWielder.cpp" />
@@ -190,39 +202,39 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>

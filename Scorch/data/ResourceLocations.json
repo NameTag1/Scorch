@@ -9,6 +9,7 @@
     "TestAnimation":"TestAnimated.bmp",
     "FallingSand":"FallingSand.png",
     "Door":"DefaultDoor.bmp",
-    "DoorArrow":"DoorArrow.png",
-    "Slash":"Slash.png"
+    "DoorArrow":"ArrowAnimation.png",
+    "Slash":"Slash.png",
+    "NPC":"Friend.png"
 }

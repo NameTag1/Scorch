@@ -6,18 +6,15 @@
 #include "Actions.h"
 #include "Interactable.h"
 
-class Weapon : public Interactable
+class Weapon
 {
 public:
 	Weapon(const TextureHolder& textures, Category::Type type);
-	virtual void updateCurrent(sf::Time dt, CommandQueue& commands);
-	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 	
 	virtual void update(sf::Time dt, CommandQueue& Commands, SceneNode& target);
 	void setDirection(bool left, bool up);
 	virtual void flip();
 
-	virtual void interact(Player_Entity& player);
 	virtual void useWeapon(std::string selectedAttack, SceneNode& target);
 	Textures::ID getIcon();
 

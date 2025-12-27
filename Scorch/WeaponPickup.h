@@ -9,7 +9,7 @@
 class WeaponPickup : public Interactable
 {
 public:
-	WeaponPickup(TextureHolder& textureHolder, Weapon* weapon, json data);
+	WeaponPickup(TextureHolder& textureHolder, json data);
 	void setBounds(sf::IntRect newBounds);
 	virtual sf::FloatRect getBoundingRect() const;
 	virtual std::vector<unsigned int> getCategory() const;

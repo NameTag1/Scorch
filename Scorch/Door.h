@@ -16,6 +16,7 @@ public:
 	Scenes getScene() const;
 	sf::Vector2f getPlayerPos() const;
 
+	virtual void touched(Player_Entity& player);
 	virtual void interact(Player_Entity& player);
 
 private:
@@ -24,8 +25,10 @@ private:
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 
 private:
-	Scenes mScene;
 	sf::Sprite mSprite;
 	Animation mArrow;
+	bool mDrawArrow;
+
+	Scenes mScene;
 	sf::Vector2f mPlayerPos;
 };

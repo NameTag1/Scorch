@@ -29,13 +29,3 @@ void Greatsword::flip()
 		mSprite.scale(1.f, -1.f);
 	}*/
 }
-
-void Greatsword::updateCurrent(sf::Time dt, CommandQueue& commands) 
-{
-
-}
-
-void Greatsword::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const 
-{
-	//target.draw(mSprite, states);
-}

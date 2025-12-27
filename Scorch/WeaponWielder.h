@@ -21,6 +21,8 @@ public:
 
 	void selectWeapon(int weapon);
 	void nextWeapon(int increment);
+	
+	int getSelected();
 
 private:
 	int selected;

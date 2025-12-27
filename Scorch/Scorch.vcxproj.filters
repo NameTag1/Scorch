@@ -354,6 +354,24 @@
     <ClInclude Include="WeaponPickup.h">
       <Filter>Header Files\Interactable</Filter>
     </ClInclude>
+    <ClInclude Include="WeaponBuilder.h">
+      <Filter>Header Files\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveSelectorState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeWeapon.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>Header Files\Interactable</Filter>
+    </ClInclude>
+    <ClInclude Include="Timekeeper.h">
+      <Filter>Header Files\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBackground.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHolder.inl">
@@ -573,6 +591,24 @@
     </ClCompile>
     <ClCompile Include="WeaponPickup.cpp">
       <Filter>Source Files\Interactable</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponBuilder.cpp">
+      <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveSelectorState.cpp">
+      <Filter>Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeWeapon.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>Source Files\Interactable</Filter>
+    </ClCompile>
+    <ClCompile Include="Timekeeper.cpp">
+      <Filter>Source Files\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBackground.cpp">
+      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

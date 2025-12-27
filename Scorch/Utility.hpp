@@ -40,6 +40,9 @@ float adjustToNumber(float i, float adjustment, float number);
 bool matchesCategories(SceneNode::Pair& colliders, Category::Type type1, Category::Type type2);
 bool matchesCategory(SceneNode& item, Category::Type type);
 
+template <typename T>
+bool contains(const std::vector<T>& vec, const T& item);
+
 Scenes stringToScene(std::string i);
 
 #include "Utility.inl"

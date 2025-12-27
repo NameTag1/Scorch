@@ -22,6 +22,8 @@ class Player
 			MoveRight,
 			MoveDown,
 			JumpA,
+			SwitchL,
+			SwitchR,
 			InteractA,
 			Attack1,
 			Attack2,

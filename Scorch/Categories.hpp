@@ -27,6 +27,7 @@ namespace Category
 
 		Interactable,
 		Door,
+		NPC,
 		TypeCount
 	};
 }
