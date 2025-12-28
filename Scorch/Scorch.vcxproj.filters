@@ -342,9 +342,6 @@
     <ClInclude Include="Scenes.h">
       <Filter>Header Files\Enums</Filter>
     </ClInclude>
-    <ClInclude Include="Logger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Animatable.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
@@ -371,6 +368,9 @@
     </ClInclude>
     <ClInclude Include="SkyBackground.h">
       <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files\Utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -580,9 +580,6 @@
     <ClCompile Include="Slash.cpp">
       <Filter>Source Files\Attacks</Filter>
     </ClCompile>
-    <ClCompile Include="Logger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Animatable.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
@@ -609,6 +606,9 @@
     </ClCompile>
     <ClCompile Include="SkyBackground.cpp">
       <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files\Utility</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

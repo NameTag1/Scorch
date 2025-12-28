@@ -2,8 +2,6 @@
 #include "Application.hpp"
 #include "Logger.h"
 
-#include <stdexcept>
-#include <fstream>
 
 int WinMain()
 {
