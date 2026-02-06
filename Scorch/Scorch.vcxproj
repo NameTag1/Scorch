@@ -72,6 +72,8 @@
     <ClInclude Include="NormalPlatform.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="OverlayState.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticleEmitter.h" />
     <ClInclude Include="Pause.h" />
     <ClInclude Include="PauseState.hpp" />
     <ClInclude Include="Platform.h" />
@@ -158,6 +160,7 @@
     <ClCompile Include="NormalPlatform.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="OverlayState.cpp" />
+    <ClCompile Include="ParticleEmitter.cpp" />
     <ClCompile Include="Pause.cpp" />
     <ClCompile Include="PauseState.cpp" />
     <ClCompile Include="Platform.cpp" />

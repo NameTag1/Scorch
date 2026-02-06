@@ -29,6 +29,15 @@ struct Scene_Change_Request {
 class World : private sf::NonCopyable
 {
 	public:
+		enum World_Mode {
+			Normal,
+			Story,
+			Combat,
+			Boss,
+			Paused
+		};
+
+	public:
 		explicit							World(sf::RenderWindow& window);
 		void								update(sf::Time dt);
 		void								draw();
@@ -89,6 +98,8 @@ class World : private sf::NonCopyable
 
 		Scene_Change_Request				mSceneChangeRequest;
 		Scenes								mScene;
+
+		World_Mode							mMode;
 
 		static World*						instance;
 };

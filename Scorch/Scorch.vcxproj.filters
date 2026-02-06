@@ -115,9 +115,6 @@
     <Filter Include="Source Files\Weapons">
       <UniqueIdentifier>{ee35e854-2ca3-41b1-a91d-7d52ad25bfa6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\States">
-      <UniqueIdentifier>{773299e4-c4ab-4d98-8e26-f47cdd196da3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Action_Sequences\Base_Classes">
       <UniqueIdentifier>{da43c89e-7880-48f3-b672-cf2438b4bb19}</UniqueIdentifier>
     </Filter>
@@ -126,6 +123,18 @@
     </Filter>
     <Filter Include="Source Files\Action_Sequences\Only_Player">
       <UniqueIdentifier>{7c404667-0b90-42c4-8200-d28c3ceef53f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particles">
+      <UniqueIdentifier>{e76bc818-c052-4f7d-af2e-8fb222140a36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particles">
+      <UniqueIdentifier>{d8754dee-7a29-4473-b87d-45697c7691dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\States">
+      <UniqueIdentifier>{773299e4-c4ab-4d98-8e26-f47cdd196da3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Action_Sequences_World">
+      <UniqueIdentifier>{1846b93f-bdd6-44e2-a782-5d60f6a683a8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -372,6 +381,12 @@
     <ClInclude Include="Logger.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
+    <ClInclude Include="ParticleEmitter.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHolder.inl">
@@ -609,6 +624,9 @@
     </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>Source Files\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleEmitter.cpp">
+      <Filter>Source Files\Particles</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 #include "Move.h"
+#include "Platformer.h"
 
 Move::Move(bool left)
 : mLeft(left)

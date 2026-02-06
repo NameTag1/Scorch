@@ -6,6 +6,8 @@
 #include <functional>
 
 #include <SFML/Graphics/RenderWindow.hpp>
+#include "Player.hpp"
+#include "Image.h"
 
 
 SettingsState::SettingsState(StateStack& stack, Context context)
@@ -13,8 +15,9 @@ SettingsState::SettingsState(StateStack& stack, Context context)
 , mGUIContainer()
 {
 	mGUIContainer.setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 1, 1)));
-
-	mBackgroundSprite.setTexture(context.textures->get(Textures::TitleScreen));
+	
+	auto background = std::make_shared<GUI::Image>(*context.textures, Textures::TitleScreen);
+	background->setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 1, 1)));
 	
 	// Build key binding buttons and labels
 	addButtonLabel(Player::MoveLeft,  0.1f, "Left", context);
@@ -22,10 +25,13 @@ SettingsState::SettingsState(StateStack& stack, Context context)
 	addButtonLabel(Player::MoveDown, 0.25f, "Down", context);
 	addButtonLabel(Player::JumpA, 0.325f, "Up", context);
 	addButtonLabel(Player::InteractA, 0.4f, "Interact", context);
-	addButtonLabel(Player::Attack1, 0.475f, "Attack 1", context);
-	addButtonLabel(Player::Attack2, 0.55f, "Attack 2", context);
-	addButtonLabel(Player::Attack3, 0.625f, "Attack 3", context);
-	addButtonLabel(Player::Attack4, 0.7f, "Attack 4", context);
+
+	addButtonLabel(Player::SwitchL, 0.475f, "Switch Weapon Left", context);
+	addButtonLabel(Player::SwitchR, 0.55f, "Switch Weapon Right", context);
+	addButtonLabel(Player::Attack1, 0.625f, "Attack 1", context);
+	addButtonLabel(Player::Attack2, 0.7f, "Attack 2", context);
+	addButtonLabel(Player::Attack3, 0.775f, "Attack 3", context);
+	addButtonLabel(Player::Attack4, 0.85f, "Attack 4", context);
 
 	updateLabels();
 
@@ -34,6 +40,7 @@ SettingsState::SettingsState(StateStack& stack, Context context)
 	backButton->setText("Back");
 	backButton->setCallback(std::bind(&SettingsState::requestStackPop, this));
 
+	mGUIContainer.pack(background);
 	mGUIContainer.pack(backButton);
 }
 
@@ -41,7 +48,6 @@ void SettingsState::draw()
 {
 	sf::RenderWindow& window = *getContext().window;
 
-	window.draw(mBackgroundSprite);
 	window.draw(mGUIContainer);
 }
 

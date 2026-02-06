@@ -23,6 +23,6 @@ private:
 private:
 	Animation mArrow;
 	bool mDrawArrow;
-
+	bool mStickyInteract;
 };
 

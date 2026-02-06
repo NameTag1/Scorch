@@ -1,4 +1,5 @@
 #include "MoveDis.h"
+#include "Platformer.h"
 
 MoveDis::MoveDis(int distance)
 : mLeft((distance < 0)? true : false)

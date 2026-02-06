@@ -5,6 +5,7 @@ NPC::NPC(TextureHolder& textureHolder, json data)
 	: Animatable(textureHolder, data["Animatable"])
 	, mArrow(textureHolder, data["ArrowAnimation"])
 	, mDrawArrow(false)
+	, mStickyInteract(false)
 {
 	mArrow.move({ (float(-1.0 * (Animatable::getLocalBounds().getSize().x / 2))), float(-1.0 * (mArrow.getFrameSize().y + 50))});
 }
@@ -25,13 +26,17 @@ void NPC::touched(Player_Entity& player)
 }
 
 void NPC::interact(Player_Entity& player) {
-
+	mStickyInteract = true;
 };
 
 void NPC::updateCurrent(sf::Time dt, CommandQueue& commands) {
 	Animatable::update(dt);
 	mArrow.update(dt);
 	mDrawArrow = false;
+	if (mStickyInteract) {
+		mStickyInteract = false;
+
+	}
 };
 
 void NPC::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {

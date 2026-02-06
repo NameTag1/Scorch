@@ -269,7 +269,7 @@ void World::handleCollisions() {
 		}
 		else if (matchesCategories(pair, Category::Attack, Category::Entity)) {
 			auto& attack = static_cast<Attack&>(*pair.first);
-			Enemy& enemy = static_cast<Enemy&>(*pair.second);
+			auto& enemy = static_cast<Entity&>(*pair.second);
 
 			attack.dealDamage(&enemy);
 		}

@@ -1,0 +1,15 @@
+{
+    "Background":"Background.jpg",
+    "Background2":"Background2.jpg",
+    "Player":"Player.png",
+    "PlayerAni":"PlayerAnimation.png",
+    "GreatswordPlayer1":"GreatswordAnimation1.png",
+    "Enemy":"Enemy.png",
+    "Platform":"Platform.jpg",
+    "TestAnimation":"TestAnimated.bmp",
+    "FallingSand":"FallingSand.png",
+    "Door":"DefaultDoor.bmp",
+    "DoorArrow":"ArrowAnimation.png",
+    "Slash":"Slash.png",
+    "NPC":"Friend.png"
+}

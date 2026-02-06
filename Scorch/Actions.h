@@ -1,10 +1,7 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
-
 #include "CommandQueue.hpp"
-#include "Entity.hpp"
-#include "Platformer.h"
+#include "SceneNode.hpp"
 
 class Action
 {
