@@ -136,6 +136,15 @@
     <Filter Include="Header Files\Action_Sequences_World">
       <UniqueIdentifier>{1846b93f-bdd6-44e2-a782-5d60f6a683a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Time_Based">
+      <UniqueIdentifier>{39834832-310f-4584-9bc0-c425e4cff911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Time_Based">
+      <UniqueIdentifier>{915b7d82-8b01-4fe9-bd04-1337a131eed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Action_Sequences_World">
+      <UniqueIdentifier>{b434a2ba-ceba-468c-b050-ff0431952a38}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.hpp">
@@ -375,9 +384,6 @@
     <ClInclude Include="Timekeeper.h">
       <Filter>Header Files\Data</Filter>
     </ClInclude>
-    <ClInclude Include="SkyBackground.h">
-      <Filter>Header Files\Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="Logger.h">
       <Filter>Header Files\Utility</Filter>
     </ClInclude>
@@ -386,6 +392,27 @@
     </ClInclude>
     <ClInclude Include="Particle.h">
       <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyBackground.h">
+      <Filter>Header Files\Time_Based</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldAction.h">
+      <Filter>Header Files\Action_Sequences_World</Filter>
+    </ClInclude>
+    <ClInclude Include="SetWorldMode.h">
+      <Filter>Header Files\Action_Sequences_World</Filter>
+    </ClInclude>
+    <ClInclude Include="Signals.h">
+      <Filter>Header Files\Action_Sequences_World</Filter>
+    </ClInclude>
+    <ClInclude Include="WaitForSignal.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="WaitForSignalWorld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmitSignal.h">
+      <Filter>Header Files\Action_Sequences</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -619,14 +646,32 @@
     <ClCompile Include="Timekeeper.cpp">
       <Filter>Source Files\Data</Filter>
     </ClCompile>
-    <ClCompile Include="SkyBackground.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>Source Files\Utility</Filter>
     </ClCompile>
     <ClCompile Include="ParticleEmitter.cpp">
       <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyBackground.cpp">
+      <Filter>Source Files\Time_Based</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldAction.cpp">
+      <Filter>Source Files\Action_Sequences_World</Filter>
+    </ClCompile>
+    <ClCompile Include="SetWorldMode.cpp">
+      <Filter>Source Files\Action_Sequences_World</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitForSignal.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitForSignalWorld.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmitSignal.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="Signals.cpp">
+      <Filter>Source Files\Action_Sequences_World</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

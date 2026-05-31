@@ -12,6 +12,7 @@
 #include <queue>
 #include "ViewHandler.h"
 #include "Timekeeper.h"
+#include "WorldAction.h"
 
 
 // Forward declaration
@@ -30,11 +31,12 @@ class World : private sf::NonCopyable
 {
 	public:
 		enum World_Mode {
-			Normal,
-			Story,
-			Combat,
-			Boss,
-			Paused
+			Normal, //Full freedom of movement
+			Story, //All controls locked
+			Combat, //Same as normal, some things locked
+			Boss, //Same as combat, but with health/progress bar up top
+			Death, //Supress updates? decide later
+			Paused //Just in case, IDK
 		};
 
 	public:
@@ -50,6 +52,9 @@ class World : private sf::NonCopyable
 		static Player_Entity*				getPlayer();
 		static double						getGravity();
 
+		void								pushAction(WorldAction* worldAction);
+		void								pushAction(std::vector<WorldAction*> worldActions);
+
 		Scene_Change_Request				requestSceneChange();
 		void								prepareSceneForPlay(Scene_Builder* builder);
 
@@ -57,8 +62,13 @@ class World : private sf::NonCopyable
 
 		std::array<SceneNode*, LayerCount>	getSceneLayers();
 
+		World_Mode							getWorldMode();
+		void								setWorldMode(World_Mode newMode);
+
 	private:
 		void								changeScene(Scenes scene, sf::Vector2f playerPos);
+
+		void								handleWorldActions(sf::Time dt);
 
 		void								enforceGravity();
 		void								adaptPlayerPosition();
@@ -100,6 +110,7 @@ class World : private sf::NonCopyable
 		Scenes								mScene;
 
 		World_Mode							mMode;
+		std::queue<WorldAction*>			mActions;
 
 		static World*						instance;
 };

@@ -3,6 +3,7 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include "DataTable.h"
+#include "Logger.h"
 
 
 Animation::Animation()
@@ -40,6 +41,7 @@ Animation::Animation(const TextureHolder& textureHolder, json data)
 	, mCentered(data["Centered"])
 {
 	update(sf::seconds(0));
+	Logger::Instance->LogData(Logger::Action, "Animation with texture \"" + std::string(data["Texture"]) + "\" created from JSON");
 }
 
 void Animation::setTexture(const sf::Texture& texture)

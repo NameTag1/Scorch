@@ -115,6 +115,8 @@ void World::update(sf::Time dt)
 	while (!mCommandQueue.isEmpty())
 		mSceneGraph.onCommand(mCommandQueue.pop(), dt);
 
+	handleWorldActions(dt);
+
 	enforceVelocityCap();
 	adaptPlayerPosition();
 
@@ -157,6 +159,27 @@ double World::getGravity()
 	return 1;
 }
 
+void World::pushAction(WorldAction* worldAction)
+{
+	mActions.push(worldAction);
+}
+
+void World::pushAction(std::vector<WorldAction*> worldActions) {
+	for (auto i : worldActions) {
+		mActions.push(i);
+	}
+}
+
+World::World_Mode World::getWorldMode()
+{
+	return mMode;
+}
+
+void World::setWorldMode(World_Mode newMode)
+{
+	mMode = newMode;
+}
+
 Scene_Change_Request World::requestSceneChange()
 {
 	return mSceneChangeRequest;
@@ -179,7 +202,18 @@ World* World::getInstance()
 void World::changeScene(Scenes scene, sf::Vector2f playerPos) {
 	mSceneChangeRequest.scene = scene;
 	mSceneChangeRequest.playerPos = playerPos;
-};
+}
+
+void World::handleWorldActions(sf::Time dt)
+{
+	if (!mActions.empty()) {
+		mActions.front()->update(dt, mCommandQueue, *this);
+
+		if (mActions.front()->isFinnished()) {
+			mActions.pop();
+		}
+	}
+}
 
 void World::enforceGravity()
 {

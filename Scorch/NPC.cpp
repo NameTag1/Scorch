@@ -1,9 +1,14 @@
 #include "NPC.h"
 #include "Logger.h"
+#include "WorldCommand.h"
+#include "World.hpp"
+
+#include "SetWorldMode.h"
 
 NPC::NPC(TextureHolder& textureHolder, json data)
 	: Animatable(textureHolder, data["Animatable"])
 	, mArrow(textureHolder, data["ArrowAnimation"])
+	, mRunOnce(data["RunOnce"])
 	, mDrawArrow(false)
 	, mStickyInteract(false)
 {
@@ -34,8 +39,13 @@ void NPC::updateCurrent(sf::Time dt, CommandQueue& commands) {
 	mArrow.update(dt);
 	mDrawArrow = false;
 	if (mStickyInteract) {
-		mStickyInteract = false;
-
+		if (!mRunOnce) {
+			mStickyInteract = false;
+		}
+		Logger::Instance->LogData(Logger::Action, "NPC Action!");
+		std::vector<WorldAction*> actions;
+		actions.push_back(new SetWorldMode(World::Story));
+		World::getInstance()->pushAction(actions);
 	}
 };
 

@@ -102,6 +102,7 @@ struct DeployAction
 };
 
 Player::Player()
+	: mLockAction(false)
 {
 	// Set initial key bindings
 	mKeyBinding[sf::Keyboard::Left] = MoveLeft;
@@ -126,7 +127,7 @@ Player::Player()
 
 void Player::handleEvent(const sf::Event& event, CommandQueue& commands)
 {
-	if (event.type == sf::Event::KeyPressed)
+	if (event.type == sf::Event::KeyPressed && !mLockAction)
 	{
 		// Check if pressed key appears in key binding, trigger command if so
 		auto found = mKeyBinding.find(event.key.code);
@@ -141,7 +142,7 @@ void Player::handleRealtimeInput(CommandQueue& commands)
 	for(auto pair : mKeyBinding)
 	{
 		// If key is pressed, lookup action and trigger corresponding command
-		if (sf::Keyboard::isKeyPressed(pair.first) && isRealtimeAction(pair.second))
+		if (sf::Keyboard::isKeyPressed(pair.first) && isRealtimeAction(pair.second) && !mLockAction)
 			commands.push(mActionBinding[pair.second]);
 	}
 }
@@ -170,6 +171,11 @@ sf::Keyboard::Key Player::getAssignedKey(PActions action) const
 	}
 
 	return sf::Keyboard::Unknown;
+}
+
+void Player::LockActions(bool lock)
+{
+	mLockAction = lock;
 }
 
 void Player::initializeActions()

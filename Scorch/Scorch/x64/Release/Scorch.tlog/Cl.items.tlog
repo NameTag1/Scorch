@@ -18,6 +18,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\Component.cpp;C:\Users\natha\Docum
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Container.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\DataTable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\DataTable.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Door.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Door.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\EmitSignal.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\EmitSignal.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Enemy.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Enemy.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Entity.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Entity.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\FallingPlatform.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\FallingPlatform.obj
@@ -56,6 +57,8 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp;C:\Users\natha\Docum
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Scene_Builder.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Settings.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Settings.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\SettingsState.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\SettingsState.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\SetWorldMode.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\SetWorldMode.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Signals.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Signals.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\SkyBackground.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\SkyBackground.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Slash.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\SpriteNode.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\SpriteNode.obj
@@ -67,6 +70,8 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\UseWeapon.cpp;C:\Users\natha\Docum
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Utility.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Utility.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewArea.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ViewArea.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\ViewHandler.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ViewHandler.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\WaitForSignal.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WaitForSignal.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\WaitForSignalWorld.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WaitForSignalWorld.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Weapon.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Weapon.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponBuilder.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WeaponBuilder.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponInteractable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WeaponInteractable.obj
@@ -74,4 +79,5 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponPickup.cpp;C:\Users\natha\Do
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\WeaponWielder.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WeaponWielder.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\With.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\With.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\World.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\World.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\WorldAction.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WorldAction.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\WorldCommand.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\WorldCommand.obj

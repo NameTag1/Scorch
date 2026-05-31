@@ -160,6 +160,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 		if (scene == Scenes::Test) {
 			std::unique_ptr<SkyBackground> sky(new SkyBackground(*mTextures));
 			mSceneLayers[Background]->attachChild(std::move(sky));
+			Logger::Instance->LogData(Logger::Action, "Sky Backgournd Created");
 
 			std::unique_ptr<Enemy> enemy(new Enemy(*mTextures));
 			enemy->setPosition(1000, 600);
@@ -176,6 +177,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 			// instance is set inside Player_Entity ctor
 			newPlayer->setPosition(PlayerPos.x, PlayerPos.y);
 			mSceneLayers[Play]->attachChild(std::move(newPlayer));
+			Logger::Instance->LogData(Logger::Action, "Player instance created.");
 		}
 		else {
 			// Player exists already.
@@ -183,6 +185,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 				// We detached it earlier; reattach to Play layer
 				savedPlayer->setPosition(PlayerPos.x, PlayerPos.y);
 				mSceneLayers[Play]->attachChild(std::move(savedPlayer));
+				Logger::Instance->LogData(Logger::Action, "Player taken out of scene and saved.");
 			}
 			else {
 				// Could not find player node in layers (maybe already held elsewhere). Just update mPlayer pointer and position.

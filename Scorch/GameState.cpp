@@ -29,6 +29,13 @@ bool GameState::update(sf::Time dt)
 		mPlayer.handleRealtimeInput(commands);
 	}
 
+	if (mWorld.getWorldMode() == World::Story) {
+		mPlayer.LockActions(true);
+	}
+	else {
+		mPlayer.LockActions(false);
+	}
+
 	return true;
 }
 

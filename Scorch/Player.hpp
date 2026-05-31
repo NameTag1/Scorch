@@ -42,12 +42,15 @@ class Player
 		void					assignKey(PActions action, sf::Keyboard::Key key);
 		sf::Keyboard::Key		getAssignedKey(PActions action) const;
 
+		void					LockActions(bool lock);
+
 	private:
 		void					initializeActions();
 		static bool				isRealtimeAction(PActions action);
 
 
 	private:
+		bool					mLockAction; //Locking done in handleEvent AND handleRealTimeInput
 		std::map<sf::Keyboard::Key, PActions>		mKeyBinding;
 		std::map<PActions, Command>				mActionBinding;
 };

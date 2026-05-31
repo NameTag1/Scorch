@@ -3,6 +3,7 @@
 #include "Interactable.h"
 #include "ChangeableAnimation.h"
 #include "Animatable.h"
+#include "WorldAction.h"
 
 class NPC : public Interactable, public Animatable
 {
@@ -24,5 +25,7 @@ private:
 	Animation mArrow;
 	bool mDrawArrow;
 	bool mStickyInteract;
+	bool mRunOnce;
+	WorldAction mPayload;
 };
 
