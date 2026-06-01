@@ -18,11 +18,11 @@ Enemy::Enemy(const TextureHolder& resources)
 	setSpeed(70);
 	Actionable::pushAction(new Jump());
 	Actionable::pushAction(new ChasePlayer(200));
-	Actionable::pushAction(new Pause(sf::seconds(1)));
+	Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
 	Actionable::pushAction(new MakeAttack("Slash"));
-	Actionable::pushAction(new Pause(sf::seconds(1)));
+	Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
 	Actionable::pushAction(new FleePlayer(500));
-	Actionable::pushAction(new Pause(sf::seconds(1)));
+	Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
 	
 	Attacker::pushAttack("Slash", new Slash(20, (unsigned int)Category::Player, resources));
 }

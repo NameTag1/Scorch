@@ -36,7 +36,6 @@ private:
 private:
 	bool isAttacking;
 	bool isInteracting;
-	bool suppressInteracting;
 	static Player_Entity* instance;
 };
 

@@ -28,6 +28,7 @@
 #include "ViewArea.h"
 #include "Enemy.h"
 #include "Logger.h"
+#include <string>
 
 struct EntityMover
 {
@@ -207,6 +208,7 @@ void World::changeScene(Scenes scene, sf::Vector2f playerPos) {
 void World::handleWorldActions(sf::Time dt)
 {
 	if (!mActions.empty()) {
+		Logger::Instance->LogData(Logger::Action, std::to_string(mActions.size()));
 		mActions.front()->update(dt, mCommandQueue, *this);
 
 		if (mActions.front()->isFinnished()) {

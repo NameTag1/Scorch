@@ -3,7 +3,11 @@
 #include "WorldCommand.h"
 #include "World.hpp"
 
+#include "WaitForSignalWorld.h"
 #include "SetWorldMode.h"
+
+#include "Pause.h"
+#include "EmitSignal.h"
 
 NPC::NPC(TextureHolder& textureHolder, json data)
 	: Animatable(textureHolder, data["Animatable"])
@@ -25,8 +29,7 @@ std::vector<unsigned int> NPC::getCategory() const {
 	return i;
 };
 
-void NPC::touched(Player_Entity& player)
-{
+void NPC::touched(Player_Entity& player){
 	mDrawArrow = true;
 }
 
@@ -34,8 +37,9 @@ void NPC::interact(Player_Entity& player) {
 	mStickyInteract = true;
 };
 
-void NPC::updateCurrent(sf::Time dt, CommandQueue& commands) {
+void NPC::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 	Animatable::update(dt);
+	Actionable::update(dt, Commands, *this);
 	mArrow.update(dt);
 	mDrawArrow = false;
 	if (mStickyInteract) {
@@ -45,12 +49,16 @@ void NPC::updateCurrent(sf::Time dt, CommandQueue& commands) {
 		Logger::Instance->LogData(Logger::Action, "NPC Action!");
 		std::vector<WorldAction*> actions;
 		actions.push_back(new SetWorldMode(World::Story));
+		actions.push_back(new WaitForSignalWorld("Test"));
+		actions.push_back(new SetWorldMode(World::Normal));
 		World::getInstance()->pushAction(actions);
+
+		Actionable::pushAction(new Pause(Action::RunOnce, sf::seconds(1)));
+		Actionable::pushAction(new EmitSignal(Action::RunOnce, "Test"));
 	}
 };
 
 void NPC::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {
-	//Logger::Instance->LogData(Logger::Action,"NPC DRAWING");
 	target.draw(mAnimations, states);
 	if (mDrawArrow == true) {
 		target.draw(mArrow, states);

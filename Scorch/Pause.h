@@ -6,7 +6,7 @@
 class Pause : public Action
 {
 public:
-	Pause(sf::Time duration);
+	Pause(Action::Type type, sf::Time duration);
 	virtual void update(sf::Time dt, CommandQueue& Commands, SceneNode& target);
 	virtual bool isFinnished();
 	virtual void reset();

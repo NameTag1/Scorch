@@ -11,7 +11,6 @@ Player_Entity::Player_Entity(const TextureHolder& resources, json data)
 , Animatable(resources, data["Animatable"])
 , isAttacking(false)
 , isInteracting(false)
-, suppressInteracting(false)
 {
 	// push starting weapon
 	//WeaponWielder::pushWeapon(new Greatsword(resources, Category::Enemy));
@@ -31,7 +30,7 @@ sf::FloatRect Player_Entity::getBoundingRect() const {
 
 bool Player_Entity::isMarkedForRemoval() const {
 	//return Entity::isMarkedForRemoval();
-	return false;
+	return false; //Player is never removed, only killed (destroyed)
 };
 
 bool Player_Entity::getInteracting() {
@@ -39,9 +38,6 @@ bool Player_Entity::getInteracting() {
 };
 
 void Player_Entity::setInteracting(bool interacting) {
-	if (interacting == true) {
-		suppressInteracting = true;
-	}
 	isInteracting = interacting;
 }
 
@@ -63,12 +59,7 @@ void Player_Entity::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 		return;
 	}
 
-	if (suppressInteracting == true) {
-		suppressInteracting = false;
-	}
-	else {
-		isInteracting = false;
-	}
+	isInteracting = false; //Every tic, stop interacting.
 
 	Animatable::update(dt);
 

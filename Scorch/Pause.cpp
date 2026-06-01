@@ -1,9 +1,9 @@
 #include "Pause.h"
 
-Pause::Pause(sf::Time duration)
+Pause::Pause(Action::Type type, sf::Time duration)
 : mDurration(duration)
 , mTime(sf::seconds(0))
-, Action(Persistent)
+, Action(type)
 {
 }
 

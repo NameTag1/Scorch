@@ -4,8 +4,9 @@
 #include "ChangeableAnimation.h"
 #include "Animatable.h"
 #include "WorldAction.h"
+#include "Actionable.h"
 
-class NPC : public Interactable, public Animatable
+class NPC : public Interactable, public Animatable, public Actionable
 {
 public:
 	NPC(TextureHolder& textureHolder, json data);
@@ -17,7 +18,7 @@ public:
 	virtual void interact(Player_Entity& player);
 
 private:
-	virtual void updateCurrent(sf::Time dt, CommandQueue& commands);
+	virtual void updateCurrent(sf::Time dt, CommandQueue& Commands);
 
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 
