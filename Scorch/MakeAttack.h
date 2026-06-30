@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Attack.h"
-#include "Actions.h"
+#include "Action.h"
 
 class MakeAttack : public Action
 {

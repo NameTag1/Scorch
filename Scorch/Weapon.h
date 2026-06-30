@@ -3,7 +3,7 @@
 #include "ResourceIdentifiers.hpp"
 #include "SceneNode.hpp"
 #include "Attack.h"
-#include "Actions.h"
+#include "Action.h"
 #include "Interactable.h"
 
 class Weapon

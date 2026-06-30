@@ -5,16 +5,18 @@
 
 #include "WaitForSignalWorld.h"
 #include "SetWorldMode.h"
+#include "DeployAction.h"
 
 #include "Pause.h"
 #include "EmitSignal.h"
+#include "Jump.h"
 
 NPC::NPC(TextureHolder& textureHolder, json data)
-	: Animatable(textureHolder, data["Animatable"])
-	, mArrow(textureHolder, data["ArrowAnimation"])
-	, mRunOnce(data["RunOnce"])
-	, mDrawArrow(false)
-	, mStickyInteract(false)
+: Animatable(textureHolder, data["Animatable"])
+, mArrow(textureHolder, data["ArrowAnimation"])
+, mRunOnce(data["RunOnce"])
+, mDrawArrow(false)
+, mStickyInteract(false)
 {
 	mArrow.move({ (float(-1.0 * (Animatable::getLocalBounds().getSize().x / 2))), float(-1.0 * (mArrow.getFrameSize().y + 50))});
 }
@@ -49,11 +51,13 @@ void NPC::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 		Logger::Instance->LogData(Logger::Action, "NPC Action!");
 		std::vector<WorldAction*> actions;
 		actions.push_back(new SetWorldMode(World::Story));
+		actions.push_back(new DeployAction(Category::Player, new Jump()));
 		actions.push_back(new WaitForSignalWorld("Test"));
+		actions.push_back(new DeployAction(Category::Player, new Jump()));
 		actions.push_back(new SetWorldMode(World::Normal));
 		World::getInstance()->pushAction(actions);
 
-		Actionable::pushAction(new Pause(Action::RunOnce, sf::seconds(1)));
+		Actionable::pushAction(new Pause(Action::RunOnce, sf::seconds(5)));
 		Actionable::pushAction(new EmitSignal(Action::RunOnce, "Test"));
 	}
 };

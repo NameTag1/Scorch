@@ -19,6 +19,11 @@ void Container::pack(Component::Ptr component)
 		select(mChildren.size() - 1);
 }
 
+void Container::remove(Component::Ptr component)
+{
+	mChildren.erase(std::remove(mChildren.begin(), mChildren.end(), component), mChildren.end());
+}
+
 bool Container::isSelectable() const
 {
     return false;

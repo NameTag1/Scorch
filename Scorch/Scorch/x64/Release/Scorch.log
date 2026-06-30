@@ -1,46 +1,13 @@
-﻿  AnimatedPlatform.cpp
-  Animation.cpp
-  Application.cpp
-  Attacker.cpp
-  Bar.cpp
-  Button.cpp
-  ChasePlayer.cpp
-  DataTable.cpp
-  Door.cpp
-  Enemy.cpp
-  FallingPlatform.cpp
-  FleePlayer.cpp
-  GameState.cpp
-  Greatsword.cpp
-  Image.cpp
-  Interact.cpp
-  Label.cpp
-  LoadingState.cpp
-  MakeAttack.cpp
+﻿  Application.cpp
+  BossOverlayState.cpp
+  Container.cpp
   MenuState.cpp
-  Compiling...
-  MovingPlatform.cpp
-  NPC.cpp
-  NormalPlatform.cpp
   OverlayState.cpp
-  ParticleEmitter.cpp
   PauseState.cpp
-  Player.cpp
-  Player_Entity.cpp
-  Scene_Builder.cpp
-  SetWorldMode.cpp
   SettingsState.cpp
-  Slash.cpp
   TitleState.cpp
-  ViewArea.cpp
-  ViewHandler.cpp
-  Weapon.cpp
-  WeaponPickup.cpp
-  World.cpp
-  main.cpp
   Generating code
-  5 of 5564 functions (<0.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    3 functions had inline decision re-evaluated but remain unchanged
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 5807 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   Scorch.vcxproj -> C:\Users\natha\Documents\GitHub\Scorch\Scorch\x64\Release\Scorch.exe

@@ -12,10 +12,17 @@ public:
 		offscreenLensing,
 		letterboxing
 	};
+	enum viewEffects {
+		none,
+		story,
+		portrait
+	};
 	ViewHandler();
 	void update(sf::View& view, sf::Window& window); //Mainly for letterboxing view
 	void adaptView(sf::View& view, Player_Entity* player, sf::FloatRect bounds);
 	void activeViewArea(ViewArea& area);
+
+	void setViewEffects(viewEffects effect);
 
 	float getXViewAbsolute();
 	float getYViewAbsolute();
@@ -40,7 +47,10 @@ private:
 	sf::Vector2f						mViewCenter;
 	bool								mLockViewScroll;
 	bool								mInViewArea;
-	static ViewHandler*					instance;
-	viewtype							setAs;
+
+	viewtype							mActiveViewType;
+	viewEffects							mActiveViewEffect;
+
+	static ViewHandler* instance;
 };
 

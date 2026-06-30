@@ -15,6 +15,7 @@ class Entity : public Movable
 		virtual std::vector<unsigned int> getCategory() const;
 
 		int					getHitpoints();
+		int					getMaxHitpoints();
 		void				heal(int heal);
 		void				damage(int damage);
 		virtual bool		isDestroyed() const;

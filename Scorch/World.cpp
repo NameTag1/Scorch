@@ -171,6 +171,16 @@ void World::pushAction(std::vector<WorldAction*> worldActions) {
 	}
 }
 
+void World::deployActionToChildren(Category::Type target, Action* actionToDeploy)
+{
+	std::vector<SceneNode*> i;
+	mSceneGraph.findCategory(i, target);
+	for (auto n : i) {
+		Actionable* a = dynamic_cast<Actionable*>(n);
+		a->pushAction(actionToDeploy);
+	}
+}
+
 World::World_Mode World::getWorldMode()
 {
 	return mMode;
@@ -213,6 +223,10 @@ void World::handleWorldActions(sf::Time dt)
 
 		if (mActions.front()->isFinnished()) {
 			mActions.pop();
+		}
+
+		if (mMode == Story) {
+			mViewHandler.setViewEffects(ViewHandler::story);
 		}
 	}
 }

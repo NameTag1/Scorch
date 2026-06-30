@@ -119,7 +119,7 @@ bool OverlayState::update(sf::Time)
 	}
 
 	mHealthText->setText("Health: " + std::to_string(player->getHitpoints()));
-	mHealthBar->setMessure(50.f, float(player->getHitpoints()));
+	mHealthBar->setMessure(float(player->getMaxHitpoints()), float(player->getHitpoints()));
 
 	for (std::size_t i = 0; i < 3; ++i) {
 		if (i == player->getSelected()) {

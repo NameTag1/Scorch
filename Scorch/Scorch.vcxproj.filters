@@ -159,7 +159,7 @@
     <ClInclude Include="Actionable.h">
       <Filter>Header Files\Action_Sequences\Base_Classes</Filter>
     </ClInclude>
-    <ClInclude Include="Actions.h">
+    <ClInclude Include="Action.h">
       <Filter>Header Files\Action_Sequences\Base_Classes</Filter>
     </ClInclude>
     <ClInclude Include="With.h">
@@ -414,6 +414,15 @@
     <ClInclude Include="WaitForSignalWorld.h">
       <Filter>Header Files\Action_Sequences_World</Filter>
     </ClInclude>
+    <ClInclude Include="DeployAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Roam.h">
+      <Filter>Header Files\Action_Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="BossOverlayState.h">
+      <Filter>Header Files\States</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHolder.inl">
@@ -517,7 +526,7 @@
     <ClCompile Include="Attacker.cpp">
       <Filter>Source Files\Attacks</Filter>
     </ClCompile>
-    <ClCompile Include="Actions.cpp">
+    <ClCompile Include="Action.cpp">
       <Filter>Source Files\Action_Sequences\Base_Classes</Filter>
     </ClCompile>
     <ClCompile Include="Actionable.cpp">
@@ -672,6 +681,15 @@
     </ClCompile>
     <ClCompile Include="WaitForSignalWorld.cpp">
       <Filter>Source Files\Action_Sequences_World</Filter>
+    </ClCompile>
+    <ClCompile Include="DeployAction.cpp">
+      <Filter>Source Files\Action_Sequences_World</Filter>
+    </ClCompile>
+    <ClCompile Include="Roam.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="BossOverlayState.cpp">
+      <Filter>Source Files\States</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

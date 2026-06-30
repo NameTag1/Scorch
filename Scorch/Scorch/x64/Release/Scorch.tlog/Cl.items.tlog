@@ -1,5 +1,5 @@
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Actionable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Actionable.obj
-C:\Users\natha\Documents\GitHub\Scorch\Scorch\Actions.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Actions.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Action.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Action.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Animatable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Animatable.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\AnimatedPlatform.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\AnimatedPlatform.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Animation.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Animation.obj
@@ -7,6 +7,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\Application.cpp;C:\Users\natha\Doc
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Attack.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Attack.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Attacker.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Attacker.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Bar.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Bar.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\BossOverlayState.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\BossOverlayState.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Button.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Button.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\ChangeableAnimation.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ChangeableAnimation.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\ChangeAnimation.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\ChangeAnimation.obj
@@ -17,6 +18,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\CommandQueue.cpp;C:\Users\natha\Do
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Component.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Component.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Container.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\DataTable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\DataTable.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\DeployAction.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\DeployAction.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Door.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Door.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\EmitSignal.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\EmitSignal.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Enemy.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Enemy.obj
@@ -52,6 +54,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player.cpp;C:\Users\natha\Document
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Player_Entity.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Player_Entity.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Projectile.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Projectile.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\RelativeRect.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\RelativeRect.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Roam.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Roam.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\SaveSelectorState.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\SaveSelectorState.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\SceneNode.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\SceneNode.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scene_Builder.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Scene_Builder.obj

@@ -163,7 +163,7 @@ void Scene_Builder::buildScene(Scenes scene, sf::Vector2f PlayerPos) {
 			Logger::Instance->LogData(Logger::Action, "Sky Backgournd Created");
 
 			std::unique_ptr<Enemy> enemy(new Enemy(*mTextures));
-			enemy->setPosition(1000, 600);
+			enemy->setPosition(1600, 600);
 			mSceneLayers[Play]->attachChild(std::move(enemy));
 		}
 

@@ -1,4 +1,5 @@
 #include "Enemy.h"
+
 #include "MoveDis.h"
 #include "Jump.h"
 #include "Pause.h"
@@ -7,6 +8,7 @@
 #include "FleePlayer.h"
 #include "MakeAttack.h"
 #include "Utility.hpp"
+#include "Roam.h"
 #include "With.h"
 
 Enemy::Enemy(const TextureHolder& resources)
@@ -16,6 +18,7 @@ Enemy::Enemy(const TextureHolder& resources)
 {
 	centerOrigin(mSprite);
 	setSpeed(70);
+	Actionable::pushAction(new Roam(Action::RunOnce, 200, 200));
 	Actionable::pushAction(new Jump());
 	Actionable::pushAction(new ChasePlayer(200));
 	Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));

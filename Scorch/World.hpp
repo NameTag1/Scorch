@@ -54,6 +54,7 @@ class World : private sf::NonCopyable
 
 		void								pushAction(WorldAction* worldAction);
 		void								pushAction(std::vector<WorldAction*> worldActions);
+		void								deployActionToChildren(Category::Type target, Action* actionToDeploy);
 
 		Scene_Change_Request				requestSceneChange();
 		void								prepareSceneForPlay(Scene_Builder* builder);

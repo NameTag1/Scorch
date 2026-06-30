@@ -57,6 +57,11 @@ int Entity::getHitpoints() {
 	return mHitpoints;
 }
 
+int Entity::getMaxHitpoints()
+{
+	return mMaxHitpoints;
+}
+
 void Entity::heal(int heal) {
 	assert(heal > 0);
 	mHitpoints += heal;

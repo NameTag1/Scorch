@@ -18,7 +18,8 @@ ViewHandler::ViewHandler()
 , mViewCenter()
 , mLockViewScroll(false)
 , mInViewArea(false)
-, setAs(ViewHandler::offscreen)
+, mActiveViewType(ViewHandler::offscreen)
+, mActiveViewEffect(ViewHandler::none)
 {
 	instance = this;
 }
@@ -33,12 +34,12 @@ void ViewHandler::update(sf::View& view, sf::Window& window)
 	float posY = 0;
 
 	bool horizontalSpacing = false;
-	if (setAs == letterboxing) {
+	if (mActiveViewType == letterboxing) {
 		horizontalSpacing = true;
 		if (windowRatio < viewRatio)
 			horizontalSpacing = false;
 	}
-	if (setAs == offscreen || setAs == offscreenLensing) {
+	if (mActiveViewType == offscreen || mActiveViewType == offscreenLensing) {
 		horizontalSpacing = false;
 		if (windowRatio < viewRatio)
 			horizontalSpacing = true;
@@ -119,6 +120,11 @@ void ViewHandler::activeViewArea(ViewArea& area) {
 		mLockViewScroll = true;
 		mViewCenter = area.getViewCenter();
 	}
+}
+
+void ViewHandler::setViewEffects(viewEffects effect)
+{
+	mActiveViewEffect = effect;
 }
 
 float ViewHandler::getXViewAbsolute()
