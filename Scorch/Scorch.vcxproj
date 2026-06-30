@@ -36,6 +36,7 @@
     <ClInclude Include="Attack.h" />
     <ClInclude Include="Attacker.h" />
     <ClInclude Include="Bar.h" />
+    <ClInclude Include="Boss.h" />
     <ClInclude Include="BossOverlayState.h" />
     <ClInclude Include="Button.hpp" />
     <ClInclude Include="Categories.hpp" />
@@ -134,6 +135,7 @@
     <ClCompile Include="Attack.cpp" />
     <ClCompile Include="Attacker.cpp" />
     <ClCompile Include="Bar.cpp" />
+    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="BossOverlayState.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="ChangeableAnimation.cpp" />

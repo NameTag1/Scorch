@@ -10,6 +10,7 @@
 #include "Utility.hpp"
 #include "Roam.h"
 #include "With.h"
+#include "WorldAction.h"
 
 Enemy::Enemy(const TextureHolder& resources)
 : Platformer(50)
@@ -42,7 +43,12 @@ sf::FloatRect Enemy::getBoundingRect() const {
 
 bool Enemy::isMarkedForRemoval() const {
 	return Entity::isMarkedForRemoval();
-};
+}
+
+bool Enemy::isInCombat() const
+{
+	return inCombat;
+}
 
 void Enemy::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {
 	target.draw(mSprite, states);

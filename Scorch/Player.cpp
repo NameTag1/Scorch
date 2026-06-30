@@ -34,16 +34,18 @@ struct EntityMover
 
 struct PlatformerMover
 {
-	PlatformerMover(bool left)
-		: left(left)
+	PlatformerMover(bool running, bool left)
+		: running(running)
+		, left(left)
 	{
 	}
 
 	void operator() (Platformer& entity, sf::Time) const
 	{
-		entity.move(left);
+		entity.move(running, left);
 	}
 
+	bool running;
 	bool left;
 };
 
@@ -180,8 +182,8 @@ void Player::LockActions(bool lock)
 
 void Player::initializeActions()
 {
-	mActionBinding[MoveLeft].action	 = derivedAction<Player_Entity>(DeployAction(new Move(true)));
-	mActionBinding[MoveRight].action = derivedAction<Player_Entity>(DeployAction(new Move(false)));
+	mActionBinding[MoveLeft].action	 = derivedAction<Player_Entity>(DeployAction(new Move(true, true)));
+	mActionBinding[MoveRight].action = derivedAction<Player_Entity>(DeployAction(new Move(true, false)));
 	mActionBinding[MoveDown].action  = derivedAction<Player_Entity>(EntityMover(0.f, 0.f));
 	mActionBinding[JumpA].action = derivedAction<Player_Entity>(DeployAction(new Jump()));
 	mActionBinding[SwitchL].action = derivedAction<Player_Entity>(DeployAction(new ChangeWeapon(-1)));

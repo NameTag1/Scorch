@@ -13,6 +13,7 @@ public:
 	virtual std::vector<unsigned int> getCategory() const;
 	virtual sf::FloatRect getBoundingRect() const;
 	virtual bool isMarkedForRemoval() const;
+	virtual bool isInCombat() const;
 
 private:
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -21,5 +22,6 @@ private:
 private:
 	sf::Sprite mSprite;
 	bool isAttacking;
+	bool inCombat;
 };
 

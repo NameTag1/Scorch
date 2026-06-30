@@ -22,9 +22,9 @@ namespace sf
 }
 
 struct Scene_Change_Request {
-	Scenes scene;
+	Scenes scene = Scenes::Null;
 	sf::Vector2f playerPos;
-	bool fadeIn;
+	bool fadeIn = false;
 };
 
 class World : private sf::NonCopyable

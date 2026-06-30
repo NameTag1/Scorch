@@ -98,7 +98,7 @@ World::World(sf::RenderWindow& window)
 , mMaxFallVelocity(1200)
 , mMaxXVelocity(800)
 , mMaxYVelocity(2500)
-, mConstantDeaccel(30)
+, mConstantDeaccel(1)
 , mScene(Scenes::Test)
 {
 	changeScene(Scenes::Test, sf::Vector2f(0, 400));

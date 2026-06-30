@@ -8,7 +8,7 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"Friction":60
 			}
 	},
 	{
@@ -20,7 +20,7 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"Friction":60
 			}
 	},
 	{
@@ -52,7 +52,7 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"Friction":60
 			}
 	},
 	{
@@ -64,7 +64,7 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"Friction":60
 			}
 	},
 	{
@@ -76,7 +76,7 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"Friction":60
 			}
 	},
 	{
@@ -85,7 +85,7 @@
 		"Y":150,
 		"Platform":
 			{
-			"Friction":20
+			"Friction":60
 			},
 		"Animation":
 			{
@@ -105,7 +105,7 @@
 		"Duration":5,
 		"Platform":
 			{
-			"Friction":20
+			"Friction":60
 			},
 		"Animation":
 			{

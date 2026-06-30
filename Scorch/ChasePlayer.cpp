@@ -18,7 +18,7 @@ void ChasePlayer::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 	}
 
 	if (!isFinnished()) {
-		platformer->move(left);
+		platformer->move(true, left);
 	}
 	mLastPos = platformer->getWorldPosition();
 };

@@ -1,12 +1,15 @@
 #include "Platformer.h"
 #include "Utility.hpp"
+#include <cmath>
 
 Platformer::Platformer(int health) 
 : onPlatform(false) 
 , Entity(health)
-, maxMoveSpeed(9999)
-, mSpeed(100)
+, maxMoveSpeed(9999.f)
+, mRunSpeed(150.f)
+, mWalkFactor(0.3f)
 , mJumpPower(1400)
+, mPlatformState(grounded)
 {
 }
 
@@ -65,7 +68,6 @@ std::vector<unsigned int> Platformer::getCategory() const
 	i.push_back(Category::Platformer);
 	return i;
 }
-;
 
 bool Platformer::getOnPlatform() {
 	return onPlatform;
@@ -76,6 +78,7 @@ bool Platformer::jump() {
 		Entity::setVelocity(Entity::getVelocity().x, 0);
 		Entity::accelerate(0, -mJumpPower);
 		onPlatform = false;
+		mPlatformState = jumping;
 		return true;
 	}
 	else {
@@ -83,18 +86,38 @@ bool Platformer::jump() {
 	}
 }
 
-void Platformer::move(bool left) {
+void Platformer::move(bool running, bool left) {
+	if (!onPlatform) {
+		return;
+	}
+
+	double speed = (running) ? mRunSpeed : mRunSpeed*mWalkFactor;
+	float vx = Entity::getVelocity().x;
+	// Determine intended horizontal direction: -1 for left, +1 for right
+	int intendedDir = (left) ? -1 : 1;
+
+	// If applying acceleration opposite current motion, we're drifting
+	if ((vx > 0 && intendedDir < 0) || (vx < 0 && intendedDir > 0)) {
+		mPlatformState = drifting;
+	}
+	else if (running) {
+		mPlatformState = platformState::running;
+	}
+	else {
+		mPlatformState = walking;
+	}
+
 	if (left) {
-		if (Entity::getVelocity().x - mSpeed > -maxMoveSpeed) {
-			Entity::accelerate(-mSpeed, 0);
+		if (Entity::getVelocity().x - speed > -maxMoveSpeed) {
+			Entity::accelerate(-float(speed), 0);
 		}
 		else {
 			Entity::setVelocity(-maxMoveSpeed, getVelocity().y);
 		}
 	}
 	else {
-		if (Entity::getVelocity().x + mSpeed < maxMoveSpeed) {
-			Entity::accelerate(mSpeed, 0);
+		if (Entity::getVelocity().x + speed < maxMoveSpeed) {
+			Entity::accelerate(float(speed), 0);
 		}
 		else {
 			Entity::setVelocity(maxMoveSpeed, getVelocity().y);
@@ -104,12 +127,43 @@ void Platformer::move(bool left) {
 
 void Platformer::setSpeed(float speed)
 {
-	mSpeed = speed;
+	mRunSpeed = speed;
 }
 
 void Platformer::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 	onPlatform = false; //Handle Collisions in World will change if on platform
 	Entity::updateCurrent(dt, Commands);
+	// Update platform state based on whether we're on a platform and our velocity
+	if (onPlatform) {
+		float vx = getVelocity().x;
+		// Standing still on ground
+		if (std::abs(vx) < 0.001f) {
+			mPlatformState = grounded;
+		}
+		// if already set to running/walking/drifting by move(), keep it
+		// otherwise default to walking when moving slowly, running when fast
+		else {
+			if (mPlatformState == grounded || mPlatformState == jumping || mPlatformState == falling) {
+				// choose by speed magnitude
+				if (std::abs(vx) > mRunSpeed * 0.5f) {
+					mPlatformState = running;
+				}
+				else {
+					mPlatformState = walking;
+				}
+			}
+		}
+	}
+	else {
+		// In air: determine jump vs fall by vertical velocity
+		float vy = getVelocity().y;
+		if (vy < 0) {
+			mPlatformState = jumping;
+		}
+		else {
+			mPlatformState = falling;
+		}
+	}
 };
 
 sf::FloatRect Platformer::calculateOverlap(sf::FloatRect rect1, sf::FloatRect rect2) {

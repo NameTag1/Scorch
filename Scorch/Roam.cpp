@@ -99,7 +99,7 @@ void Roam::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 			}
 			// Move using Platformer API (expects left boolean)
 			bool left = !movingRight;
-			platformer->move(left);
+			platformer->move(false, left);
 		}
 	}
 }

@@ -16,7 +16,7 @@ void MoveDis::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 	if (mStart == sf::Vector2f()) {
 		mStart = platformer->getWorldPosition();
 	}
-	platformer->move(mLeft);
+	platformer->move(true, mLeft);
 	mDistanceTraveled += int((platformer->getWorldPosition() - mStart).x);
 };
 
