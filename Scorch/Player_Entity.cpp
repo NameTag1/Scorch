@@ -50,6 +50,11 @@ void Player_Entity::resetInstance()
 	instance = nullptr;
 }
 
+Player_Entity::playerState Player_Entity::getPlayerState() const
+{
+	return mPlayerState;
+}
+
 void Player_Entity::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const {
 	target.draw(mAnimations, states);
 }
@@ -70,4 +75,5 @@ void Player_Entity::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 	Actionable::update(dt, Commands, *this);
 
 	Platformer::updateCurrent(dt, Commands);
+
 };

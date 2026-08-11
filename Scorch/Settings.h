@@ -16,4 +16,6 @@ public:
 	static double FontScalar; //WindowPixels * FontScalar * DefaultFontSizeX = FontSizeX
 
 	static sf::Vector2u DefaultWindowSize;
+
+	static float MtPConversionRate; //Pixels to Meters Conversion Rate
 };

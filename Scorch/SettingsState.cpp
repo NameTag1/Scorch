@@ -20,9 +20,9 @@ SettingsState::SettingsState(StateStack& stack, Context context)
 	background->setRelativeRect(RelativeRect(sf::FloatRect(0, 0, 1, 1)));
 	
 	// Build key binding buttons and labels
-	addButtonLabel(Player::MoveLeft,  0.1f, "Left", context);
-	addButtonLabel(Player::MoveRight, 0.175f, "Right", context);
-	addButtonLabel(Player::MoveDown, 0.25f, "Down", context);
+	addButtonLabel(Player::Left,  0.1f, "Left", context);
+	addButtonLabel(Player::Right, 0.175f, "Right", context);
+	addButtonLabel(Player::Down, 0.25f, "Down", context);
 	addButtonLabel(Player::JumpA, 0.325f, "Up", context);
 	addButtonLabel(Player::InteractA, 0.4f, "Interact", context);
 

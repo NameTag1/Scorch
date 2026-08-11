@@ -1,40 +1,40 @@
-2026-06-30
-18:38:55 - Loaded: data/ResourceLocations.json
-18:38:57 - Loaded: data/EntityData.json
-18:38:57 - -------- Loading Scene --------
-18:38:57 - Loaded: data/SceneData.json
-18:38:57 - Loaded: data/EntityData.json
-18:38:57 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-18:38:57 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-18:38:57 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-18:38:57 - Scenebuilder loaded: Platform from resources/Platform.jpg
-18:38:57 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-18:38:57 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-18:38:57 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-18:38:57 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-18:38:57 - Scenebuilder loaded: NPC from resources/Friend.png
-18:38:57 - Created Normal_Platform
-18:38:57 - Created Normal_Platform
-18:38:57 - Created Sprite_Node
-18:38:57 - Created Sprite_Node
-18:38:57 - Created Normal_Platform
-18:38:57 - Created Normal_Platform
-18:38:57 - Created Normal_Platform
-18:38:57 - Animation with texture "TestAnimation" created from JSON
-18:38:57 - Created Animated_Platform
-18:38:57 - Animation with texture "FallingSand" created from JSON
-18:38:57 - Created Falling_Platform
-18:38:57 - Animation with texture "DoorArrow" created from JSON
-18:38:57 - Created Door
-18:38:57 - Created Weapon_Pickup
-18:38:57 - Animation with texture "NPC" created from JSON
-18:38:57 - Creating ChangeableAnimation "idle" from JSON
-18:38:57 - Animation with texture "DoorArrow" created from JSON
-18:38:57 - Created NPC
-18:38:57 - Sky Backgournd Created
-18:38:57 - Animation with texture "GreatswordPlayer1" created from JSON
-18:38:57 - Creating ChangeableAnimation "greatsword" from JSON
-18:38:57 - Animation with texture "PlayerAni" created from JSON
-18:38:57 - Creating ChangeableAnimation "idle" from JSON
-18:38:57 - Player instance created.
-18:38:57 -  -------- Scene Built --------
+2026-08-10
+21:41:36 - Loaded: data/ResourceLocations.json
+21:41:38 - Loaded: data/EntityData.json
+21:41:38 - -------- Loading Scene --------
+21:41:38 - Loaded: data/SceneData.json
+21:41:38 - Loaded: data/EntityData.json
+21:41:38 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+21:41:38 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+21:41:38 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+21:41:38 - Scenebuilder loaded: Platform from resources/Platform.jpg
+21:41:38 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+21:41:38 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+21:41:38 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+21:41:38 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+21:41:38 - Scenebuilder loaded: NPC from resources/Friend.png
+21:41:38 - Created Normal_Platform
+21:41:38 - Created Normal_Platform
+21:41:38 - Created Sprite_Node
+21:41:38 - Created Sprite_Node
+21:41:38 - Created Normal_Platform
+21:41:38 - Created Normal_Platform
+21:41:38 - Created Normal_Platform
+21:41:38 - Animation with texture "TestAnimation" created from JSON
+21:41:38 - Created Animated_Platform
+21:41:38 - Animation with texture "FallingSand" created from JSON
+21:41:38 - Created Falling_Platform
+21:41:38 - Animation with texture "DoorArrow" created from JSON
+21:41:38 - Created Door
+21:41:38 - Created Weapon_Pickup
+21:41:38 - Animation with texture "NPC" created from JSON
+21:41:38 - Creating ChangeableAnimation "idle" from JSON
+21:41:38 - Animation with texture "DoorArrow" created from JSON
+21:41:38 - Created NPC
+21:41:38 - Sky Backgournd Created
+21:41:38 - Animation with texture "GreatswordPlayer1" created from JSON
+21:41:38 - Creating ChangeableAnimation "greatsword" from JSON
+21:41:38 - Animation with texture "PlayerAni" created from JSON
+21:41:38 - Creating ChangeableAnimation "idle" from JSON
+21:41:38 - Player instance created.
+21:41:38 -  -------- Scene Built --------

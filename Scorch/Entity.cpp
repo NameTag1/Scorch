@@ -44,13 +44,6 @@ std::vector<unsigned int> Entity::getCategory() const {
 void Entity::updateCurrent(sf::Time dt, CommandQueue& commands)
 {	
 	Movable::updateCurrent(dt, commands);
-	/*move(mVelocity * dt.asSeconds());
-	if (mVelocity.x != 0) {
-		mLastDirection.x = mVelocity.x;
-	}
-	if (mVelocity.y != 0) {
-		mLastDirection.y = mVelocity.y;
-	}*/
 }
 
 int Entity::getHitpoints() {

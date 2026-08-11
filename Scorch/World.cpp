@@ -39,7 +39,7 @@ struct EntityMover
 
 	void operator() (Entity& entity, sf::Time) const
 	{
-		entity.accelerate(velocity);
+		entity.accelerate(velocity.x, velocity.y);
 	}
 
 	sf::Vector2f velocity;
@@ -54,15 +54,15 @@ struct MovementCap
 	{
 	}
 
-	void operator() (Entity& entity, sf::Time) const
+	void operator() (Entity& entity, sf::Time dt) const
 	{
 		double changedVX = 0;
 		double changedVY = 0;
 		if (entity.getVelocity().x < 0) {
-			changedVX = std::max((float)adjustToZero(entity.getVelocity().x, constantDeacell), -MaxVX);
+			changedVX = std::max((float)adjustToZero(entity.getVelocity().x, constantDeacell * dt.asSeconds()), -MaxVX);
 		}
 		if (entity.getVelocity().x > 0) {
-			changedVX = std::min((float)adjustToZero(entity.getVelocity().x, constantDeacell), MaxVX);
+			changedVX = std::min((float)adjustToZero(entity.getVelocity().x, constantDeacell * dt.asSeconds()), MaxVX);
 		}
 
 		if (entity.getVelocity().y < 0) {
@@ -71,7 +71,7 @@ struct MovementCap
 		if (entity.getVelocity().y > 0) {
 			changedVY = std::min((float)entity.getVelocity().y, MaxVY);
 		}
-		entity.setVelocity((float)changedVX, (float)changedVY);
+		entity.setVelocity((float)changedVX, (float)changedVY * dt.asSeconds());
 	}
 
 	float MaxVX;
@@ -94,8 +94,7 @@ World::World(sf::RenderWindow& window)
 , mPlayer(nullptr)
 , mWorldBounds(-500.f, -500.f, mWorldView.getSize().x+2000, mWorldView.getSize().y+2000)
 , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldBounds.height - mWorldView.getSize().y / 2.f)
-, mGravity(60)
-, mMaxFallVelocity(1200)
+, mGravity(20) //Almost real-world gravity
 , mMaxXVelocity(800)
 , mMaxYVelocity(2500)
 , mConstantDeaccel(1)
@@ -121,7 +120,7 @@ void World::update(sf::Time dt)
 	enforceVelocityCap();
 	adaptPlayerPosition();
 
-	enforceGravity();
+	enforceGravity(dt);
 
 	mViewHandler.update(mWorldView, mWindow);
 	mSceneGraph.update(dt, mCommandQueue);
@@ -157,7 +156,7 @@ Player_Entity* World::getPlayer() {
 
 double World::getGravity()
 {
-	return 1;
+	return mGravity;
 }
 
 void World::pushAction(WorldAction* worldAction)
@@ -231,11 +230,11 @@ void World::handleWorldActions(sf::Time dt)
 	}
 }
 
-void World::enforceGravity()
+void World::enforceGravity(sf::Time dt)
 {
 	Command Gravity;
 	Gravity.action = derivedAction<Platformer>(EntityMover(0.f, mGravity));
-	Gravity.category = Category::Platformer;
+	Gravity.category = Category::Movable;
 	mCommandQueue.push(Gravity);
 }
 
@@ -251,10 +250,10 @@ void World::adaptPlayerPosition() {
 };
 
 void World::enforceVelocityCap() {
-	Command VelocityCap;
-	VelocityCap.action = derivedAction<Platformer>(MovementCap(mConstantDeaccel, mMaxXVelocity, mMaxYVelocity));
-	VelocityCap.category = Category::Platformer;
-	mCommandQueue.push(VelocityCap);
+	//Command VelocityCap;
+	//VelocityCap.action = derivedAction<Platformer>(MovementCap(mConstantDeaccel, mMaxXVelocity, mMaxYVelocity));
+	//VelocityCap.category = Category::Platformer;
+	//mCommandQueue.push(VelocityCap);
 };
 
 void World::adaptView() {

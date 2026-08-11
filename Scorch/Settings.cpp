@@ -8,6 +8,8 @@ int Settings::DefaultFontSizeS = 12;
 int Settings::DefaultFontSizeM = 16;
 int Settings::DefaultFontSizeL = 24;
 
+float Settings::MtPConversionRate = 100.f; //1 meter = 100 pixels
+
 double Settings::FontScalar = 1;
 
 sf::Vector2u Settings::DefaultWindowSize(1000,750);

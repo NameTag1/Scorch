@@ -18,6 +18,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\Command.cpp;C:\Users\natha\Documen
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\CommandQueue.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\CommandQueue.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Component.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Component.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Container.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Container.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Dash.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Dash.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\DataTable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\DataTable.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\DeployAction.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\DeployAction.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Door.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Door.obj
@@ -68,6 +69,7 @@ C:\Users\natha\Documents\GitHub\Scorch\Scorch\Slash.cpp;C:\Users\natha\Documents
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\SpriteNode.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\SpriteNode.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\State.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\State.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\StateStack.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\StateStack.obj
+C:\Users\natha\Documents\GitHub\Scorch\Scorch\Talkable.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Talkable.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\Timekeeper.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\Timekeeper.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\TitleState.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\TitleState.obj
 C:\Users\natha\Documents\GitHub\Scorch\Scorch\UseWeapon.cpp;C:\Users\natha\Documents\GitHub\Scorch\Scorch\Scorch\x64\Release\UseWeapon.obj

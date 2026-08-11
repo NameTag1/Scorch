@@ -9,6 +9,7 @@
 #include "MakeAttack.h"
 #include "Interact.h"
 #include "Move.h"
+#include "Dash.h"
 
 #include "UseWeapon.h"
 #include "ChangeWeapon.h"
@@ -107,10 +108,11 @@ Player::Player()
 	: mLockAction(false)
 {
 	// Set initial key bindings
-	mKeyBinding[sf::Keyboard::Left] = MoveLeft;
-	mKeyBinding[sf::Keyboard::Right] = MoveRight;
+	mKeyBinding[sf::Keyboard::Left] = Left;
+	mKeyBinding[sf::Keyboard::Right] = Right;
 	mKeyBinding[sf::Keyboard::Up] = JumpA;
-	mKeyBinding[sf::Keyboard::Down] = MoveDown;
+	mKeyBinding[sf::Keyboard::Down] = Down;
+	mKeyBinding[sf::Keyboard::F] = DashA;
 	mKeyBinding[sf::Keyboard::Q] = SwitchL;
 	mKeyBinding[sf::Keyboard::E] = SwitchR;
 	mKeyBinding[sf::Keyboard::Space] = InteractA;
@@ -182,10 +184,11 @@ void Player::LockActions(bool lock)
 
 void Player::initializeActions()
 {
-	mActionBinding[MoveLeft].action	 = derivedAction<Player_Entity>(DeployAction(new Move(true, true)));
-	mActionBinding[MoveRight].action = derivedAction<Player_Entity>(DeployAction(new Move(true, false)));
-	mActionBinding[MoveDown].action  = derivedAction<Player_Entity>(EntityMover(0.f, 0.f));
+	mActionBinding[Left].action	 = derivedAction<Player_Entity>(DeployAction(new Move(true, true)));
+	mActionBinding[Right].action = derivedAction<Player_Entity>(DeployAction(new Move(true, false)));
+	mActionBinding[Down].action  = derivedAction<Player_Entity>(EntityMover(0.f, 0.f));
 	mActionBinding[JumpA].action = derivedAction<Player_Entity>(DeployAction(new Jump()));
+	mActionBinding[DashA].action = derivedAction<Player_Entity>(DeployAction(new Dash()));
 	mActionBinding[SwitchL].action = derivedAction<Player_Entity>(DeployAction(new ChangeWeapon(-1)));
 	mActionBinding[SwitchR].action = derivedAction<Player_Entity>(DeployAction(new ChangeWeapon(1)));
 	mActionBinding[InteractA].action = derivedAction<Player_Entity>(DeployAction(new Interact()));
@@ -199,9 +202,9 @@ bool Player::isRealtimeAction(PActions action)
 {
 	switch (action)
 	{
-		case MoveLeft:
-		case MoveRight:
-		case MoveDown:
+		case Left:
+		case Right:
+		case Down:
 			return true;
 
 		default:

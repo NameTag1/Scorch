@@ -45,5 +45,11 @@ bool contains(const std::vector<T>& vec, const T& item);
 
 Scenes stringToScene(std::string i);
 
+float pixelToMeter(float pixels);
+sf::Vector2f pixelToMeter(sf::Vector2f pixels);
+
+float meterToPixel(float meters);
+sf::Vector2f meterToPixel(sf::Vector2f meters);
+
 #include "Utility.inl"
 #endif

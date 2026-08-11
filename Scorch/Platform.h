@@ -20,14 +20,19 @@ public:
 	virtual std::vector<unsigned int> getCategory() const;
 	virtual unsigned int getPlatformType() const;
 	virtual sf::FloatRect getBoundingRect() const;
-	void setFriction(int friction);
-	int getFriction();
+
+	void setSFriction(float friction);
+	float getSFriction();
+
+	void setKFriction(float friction);
+	float getKFriction();
 
 private:
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
 	
 private:
-	int mFriction;
+	float mSFriction;
+	float mKFriction;
 	DataRetrivalType::Platforms mType;
 };
 

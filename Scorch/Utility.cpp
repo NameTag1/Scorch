@@ -1,5 +1,7 @@
 #include "Utility.hpp"
 
+#include "Settings.h"
+
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
 
@@ -263,4 +265,24 @@ Scenes stringToScene(std::string i) {
 		return Canyons;
 	}
 	return Null;
+}
+
+float pixelToMeter(float pixels)
+{
+	return pixels / Settings::MtPConversionRate;
+}
+
+sf::Vector2f pixelToMeter(sf::Vector2f pixels)
+{
+	return pixels / Settings::MtPConversionRate;
+}
+
+float meterToPixel(float meters)
+{
+	return meters * Settings::MtPConversionRate;
+}
+
+sf::Vector2f meterToPixel(sf::Vector2f meters)
+{
+	return meters * Settings::MtPConversionRate;
 }

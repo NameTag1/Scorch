@@ -18,16 +18,40 @@
 class Player_Entity : public Platformer, public WeaponWielder, public Attacker, public Actionable, public Animatable
 {
 public:
+	enum playerState {
+		grounded,
+		drifting, //When applying acceleration one way, but moving the other bc of inertia
+		running,
+		walking,
+		jumping,
+		falling,
+		climbing, //When climbing walls
+		ledge //Clinging to the edge of a surface
+	};
+
+public:
 	Player_Entity(const TextureHolder& textures, json data);
 	virtual std::vector<unsigned int> getCategory() const;
 	virtual sf::FloatRect getBoundingRect() const;
 	
 	virtual bool isMarkedForRemoval() const;
+
+	//void leftPressed();
+	//void rightPressed();
+	//void upPressed();
+	//void downPressed();
+	//void dashPressed();
+	//void slot1Pressed();
+	//void slot2Pressed();
+	//void slot3Pressed();
 	
 	bool getInteracting();
 	void setInteracting(bool interacting);
 	static Player_Entity* getInstance();
 	static void resetInstance();
+
+	playerState getPlayerState() const;
+
 
 private:
 	virtual void drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const; 
@@ -37,6 +61,8 @@ private:
 	bool isAttacking;
 	bool isInteracting;
 	static Player_Entity* instance;
+
+	playerState mPlayerState;
 };
 
 #endif

@@ -414,9 +414,6 @@
     <ClInclude Include="WaitForSignalWorld.h">
       <Filter>Header Files\Action_Sequences_World</Filter>
     </ClInclude>
-    <ClInclude Include="DeployAction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Roam.h">
       <Filter>Header Files\Action_Sequences</Filter>
     </ClInclude>
@@ -425,6 +422,15 @@
     </ClInclude>
     <ClInclude Include="Boss.h">
       <Filter>Header Files\Entity_Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="DeployAction.h">
+      <Filter>Header Files\Action_Sequences_World</Filter>
+    </ClInclude>
+    <ClInclude Include="Talkable.h">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Dash.h">
+      <Filter>Header Files\Action_Sequences</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -696,6 +702,12 @@
     </ClCompile>
     <ClCompile Include="Boss.cpp">
       <Filter>Source Files\Entity_Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Talkable.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Dash.cpp">
+      <Filter>Source Files\Action_Sequences</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -18,9 +18,10 @@ class Player
 	public:
 		enum PActions
 		{
-			MoveLeft,
-			MoveRight,
-			MoveDown,
+			Left,
+			Right,
+			Down,
+			DashA,
 			JumpA,
 			SwitchL,
 			SwitchR,

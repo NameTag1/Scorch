@@ -2,7 +2,8 @@
 
 
 Platform::Platform(json data)
-: mFriction(data["Friction"])
+: mSFriction(data["sFriction"])
+, mKFriction(data["kFriction"])
 {
 }
 
@@ -28,10 +29,18 @@ void Platform::drawCurrent(sf::RenderTarget& target, sf::RenderStates states) co
 	
 };
 
-void Platform::setFriction(int friction) {
-	mFriction = friction;
+void Platform::setSFriction(float friction) {
+	mSFriction = friction;
 }
 
-int Platform::getFriction() {
-	return mFriction;
+float Platform::getSFriction() {
+	return mSFriction;
+}
+
+void Platform::setKFriction(float friction) {
+	mKFriction = friction;
+}
+
+float Platform::getKFriction() {
+	return mKFriction;
 }

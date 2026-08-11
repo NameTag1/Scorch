@@ -18,7 +18,8 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":60
+			"sFriction":0.3,
+			"kFriction":0.15
 			}
 	},
     {
@@ -37,7 +38,8 @@
         "Cushion":0,
         "Platform":
 			{
-			"Friction":60
+			"sFriction":0.3,
+			"kFriction":0.15
 			}
 	},
 	{

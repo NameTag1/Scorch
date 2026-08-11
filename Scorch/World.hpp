@@ -50,7 +50,7 @@ class World : private sf::NonCopyable
 		SceneNode*							getSceneGraph();
 
 		static Player_Entity*				getPlayer();
-		static double						getGravity();
+		double						getGravity();
 
 		void								pushAction(WorldAction* worldAction);
 		void								pushAction(std::vector<WorldAction*> worldActions);
@@ -71,7 +71,7 @@ class World : private sf::NonCopyable
 
 		void								handleWorldActions(sf::Time dt);
 
-		void								enforceGravity();
+		void								enforceGravity(sf::Time dt);
 		void								adaptPlayerPosition();
 		void								enforceVelocityCap();
 
@@ -98,8 +98,7 @@ class World : private sf::NonCopyable
 
 		Player_Entity*						mPlayer;
 
-		float								mGravity;
-		float								mMaxFallVelocity;
+		float								mGravity; //In m/s^2, converted to px later
 		float								mMaxXVelocity;
 		float								mMaxYVelocity;
 		float								mConstantDeaccel;

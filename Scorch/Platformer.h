@@ -10,28 +10,18 @@
 class Platformer : public Entity
 {
 public:
-	enum platformState {
-		grounded,
-		drifting, //When applying acceleration one way, but moving the other bc of inertia
-		running,
-		walking,
-		jumping,
-		falling
-	};
-
-public:
 	Platformer(int health);
 	void adust_for_platform(Platform& p);
 
 	virtual std::vector<unsigned int> getCategory() const;
 
 	bool getOnPlatform();
-	bool jump();
-	void move(bool running, bool left);
+	virtual bool jump();
+	virtual bool dash(bool left);
+	virtual void move(bool running, bool left);
 
 	void setSpeed(float speed);
-
-	platformState getPlatformState() const;
+	void braking(bool isBraking);
 
 protected:
 	virtual void updateCurrent(sf::Time dt, CommandQueue& Commands);
@@ -41,11 +31,19 @@ private:
 
 private:
 	bool onPlatform;
-	float mRunSpeed;
-	float mWalkFactor; //THIS IS A FACTOR OF RUN SPEED (e.g. 0.3)
+	bool brakingEnabled; //This is what enables braking when no input is given, handled in ADUST_FOR_PLATFORM and MOVE
+
+	// Last intended horizontal force applied by player this frame (in Newtons). Set by move().
+	float mIntendedForceX;
+
+	float mAcceleration;
+	float mMaxSpeed;
+
+	float mDashPower;
+
+	float mWalkFactor; //THIS IS A FACTOR OF RUN FORCE (e.g. 0.3)
 	float mJumpPower;
-	float maxMoveSpeed;
-	platformState mPlatformState;
+	float mFallControl; //Factor of how much player can move while falling
 
 };
 #endif

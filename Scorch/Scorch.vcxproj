@@ -48,6 +48,7 @@
     <ClInclude Include="CommandQueue.hpp" />
     <ClInclude Include="Component.hpp" />
     <ClInclude Include="Container.hpp" />
+    <ClInclude Include="Dash.h" />
     <ClInclude Include="DataRetrivalTypes.h" />
     <ClInclude Include="DataTable.h" />
     <ClInclude Include="DeployAction.h" />
@@ -103,6 +104,7 @@
     <ClInclude Include="State.hpp" />
     <ClInclude Include="States.hpp" />
     <ClInclude Include="StateStack.hpp" />
+    <ClInclude Include="Talkable.h" />
     <ClInclude Include="Timekeeper.h" />
     <ClInclude Include="TitleState.hpp" />
     <ClInclude Include="UseWeapon.h" />
@@ -146,6 +148,7 @@
     <ClCompile Include="CommandQueue.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Container.cpp" />
+    <ClCompile Include="Dash.cpp" />
     <ClCompile Include="DataTable.cpp" />
     <ClCompile Include="DeployAction.cpp" />
     <ClCompile Include="Door.cpp" />
@@ -196,6 +199,7 @@
     <ClCompile Include="SpriteNode.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateStack.cpp" />
+    <ClCompile Include="Talkable.cpp" />
     <ClCompile Include="Timekeeper.cpp" />
     <ClCompile Include="TitleState.cpp" />
     <ClCompile Include="UseWeapon.cpp" />
