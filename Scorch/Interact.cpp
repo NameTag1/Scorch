@@ -8,8 +8,13 @@ Interact::Interact()
 };
 
 void Interact::update(sf::Time dt, CommandQueue& Commands, SceneNode& target) {
-	Player_Entity* a = dynamic_cast<Player_Entity*>(&target);
-	a->setInteracting(true);
+	if (mTarget == nullptr) {
+		if (Player_Entity* castedPtr = dynamic_cast<Player_Entity*>(&target)) {
+			mTarget = castedPtr;
+		}
+		//mTarget = safeCast<Player_Entity*, SceneNode*>(&target);
+	}
+	mTarget->setInteracting(true);
 };
 
 bool Interact::isFinnished() {

@@ -10,18 +10,23 @@ FleePlayer::FleePlayer(int distance)
 
 void FleePlayer::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 {
-	Platformer* platformer = dynamic_cast<Platformer*>(&target);
+	if (mTarget == nullptr) {
+		if (Platformer* castedPtr = dynamic_cast<Platformer*>(&target)) {
+			mTarget = castedPtr;
+		}
+		//mTarget = safeCast<Platformer*, SceneNode*>(&target);
+	}
 	sf::Vector2f playerPos = Player_Entity::getInstance()->getWorldPosition();
 
 	bool left = false;
-	if (playerPos.x > platformer->getWorldPosition().x) {
+	if (playerPos.x > mTarget->getWorldPosition().x) {
 		left = true;
 	}
 
 	if (!isFinnished()) {
-		platformer->move(true, left);
+		mTarget->move(true, left);
 	}
-	mLastPos = platformer->getWorldPosition();
+	mLastPos = mTarget->getWorldPosition();
 };
 
 bool FleePlayer::isFinnished() {

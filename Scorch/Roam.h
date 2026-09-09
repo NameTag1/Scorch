@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Action.h"
+#include "Platformer.h"
+
 #include <SFML/System.hpp>
 #include <random>
 
@@ -31,4 +33,6 @@ private:
 
 	// RNG for intervals and target selection
 	std::mt19937 rng;
+
+	Platformer* mTarget;
 };

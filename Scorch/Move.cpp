@@ -1,5 +1,6 @@
 #include "Move.h"
-#include "Platformer.h"
+
+#include "Utility.hpp"
 
 Move::Move(bool running, bool left)
 : mRunning(running)
@@ -10,8 +11,13 @@ Move::Move(bool running, bool left)
 
 void Move::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 {
-	Platformer* platformer = dynamic_cast<Platformer*>(&target);
-	platformer->move(mRunning, mLeft);
+	if (mTarget == nullptr) {
+		if (PlatformerMovementSuite* castedPtr = dynamic_cast<PlatformerMovementSuite*>(&target)) {
+			mTarget = castedPtr;
+		}
+		//mTarget = safeCast<PlatformerMovementSuite*, SceneNode*>(&target);
+	}
+	mTarget->move(mRunning, mLeft);
 }
 
 bool Move::isFinnished()

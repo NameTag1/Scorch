@@ -41,9 +41,9 @@ void Attacker::makeAttack(std::string selectedAttack, SceneNode& target)
 		return;
 	}
 
-	Entity* entity = dynamic_cast<Entity*>(&target);
-	bool left = (entity->lastKnownDirection().x <= 0) ? true : false;
-	bool up = (entity->lastKnownDirection().y <= 0) ? true : false;
+	Movable* targetMovable = dynamic_cast<Movable*>(&target);
+	bool left = (targetMovable->lastKnownDirection().x <= 0) ? true : false;
+	bool up = (targetMovable->lastKnownDirection().y <= 0) ? true : false;
 	if (canAttack()) {
 		mCooldown = sf::seconds(0);
 		mCooldown += mAttacks[selectedAttack]->getCooldown();
@@ -53,12 +53,12 @@ void Attacker::makeAttack(std::string selectedAttack, SceneNode& target)
 		a->setDirection(left, up);
 		if (a->getIndependent()) {
 			a->move(a->getOffset());
-			a->move(entity->getWorldPosition());
+			a->move(targetMovable->getWorldPosition());
 			Scene_Builder::getInstance()->getLayers()[AttackLayer]->attachChild((std::unique_ptr<SceneNode>) a);
 		}
 		else {
 			a->move(a->getOffset());
-			entity->attachChild((std::unique_ptr<SceneNode>) a);
+			targetMovable->attachChild((std::unique_ptr<SceneNode>) a);
 		}
 	}
 	/*if (canAttack()) {

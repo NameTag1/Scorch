@@ -25,25 +25,9 @@ Entity::Entity(int hitpoints)
 //}
 
 std::vector<unsigned int> Entity::getCategory() const {
-	std::vector<unsigned int> i = Movable::getCategory();
+	std::vector<unsigned int> i;
 	i.push_back(Category::Entity);
 	return i;
-}
-
-//void Entity::accelerate(sf::Vector2f velocity)
-//{
-//	mVelocity += velocity;
-//}
-//
-//void Entity::accelerate(float vx, float vy)
-//{
-//	mVelocity.x += vx;
-//	mVelocity.y += vy;
-//}
-
-void Entity::updateCurrent(sf::Time dt, CommandQueue& commands)
-{	
-	Movable::updateCurrent(dt, commands);
 }
 
 int Entity::getHitpoints() {

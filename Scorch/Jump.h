@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Action.h"
-#include "Entity.hpp"
-#include "Platformer.h"
+
+#include "PlatformerMovementSuite.h"
 
 class Jump : public Action
 {
@@ -14,5 +14,7 @@ public:
 
 private:
 	bool mJumped;
+
+	PlatformerMovementSuite* mTarget;
 };
 

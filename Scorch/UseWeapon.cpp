@@ -1,6 +1,8 @@
 #include "UseWeapon.h"
 #include "WeaponWielder.h"
 
+#include "Utility.hpp"
+
 UseWeapon::UseWeapon(std::string action)
 : mString(action)
 , Action(Live)
@@ -15,9 +17,13 @@ UseWeapon::UseWeapon(std::string action, Action::Type runOnce)
 
 void UseWeapon::update(sf::Time dt, CommandQueue& Commands, SceneNode& target) 
 {
-	WeaponWielder* a = dynamic_cast<WeaponWielder*>(&target);
-	a->useWeapon(mString, target);
-	//std::cout << "USING\n";
+	if (mTarget == nullptr) {
+		if (WeaponWielder* castedPtr = dynamic_cast<WeaponWielder*>(&target)) {
+			mTarget = castedPtr;
+		}
+		//mTarget = safeCast<WeaponWielder*, SceneNode*>(&target);
+	}
+	mTarget->useWeapon(mString, target);
 }
 
 bool UseWeapon::isFinnished() {

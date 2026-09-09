@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Action.h"
+#include "PlatformerMovementSuite.h"
 
 class Move : public Action
 {
@@ -13,5 +14,7 @@ public:
 private:
 	bool mRunning;
 	bool mLeft;
+
+	PlatformerMovementSuite* mTarget;
 };
 

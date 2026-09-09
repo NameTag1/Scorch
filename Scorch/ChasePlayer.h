@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Action.h"
+#include "Platformer.h"
 
 class ChasePlayer : public Action
 {
@@ -13,5 +14,7 @@ public:
 private:
 	int distance;
 	sf::Vector2f mLastPos;
+
+	Platformer* mTarget;
 };
 

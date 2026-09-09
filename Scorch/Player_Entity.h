@@ -4,8 +4,9 @@
 #define Player_Entity_h
 
 #include "Entity.hpp"
-#include "Platformer.h"
+#include "PlatformerMovementSuite.h"
 #include "Attacker.h"
+#include "Actionable.h"
 #include "WeaponWielder.h"
 #include "CommandQueue.hpp"
 #include "ResourceHolder.hpp"
@@ -15,7 +16,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class Player_Entity : public Platformer, public WeaponWielder, public Attacker, public Actionable, public Animatable
+class Player_Entity : public PlatformerMovementSuite, public Entity, public WeaponWielder, public Attacker, public Actionable, public Animatable
 {
 public:
 	enum playerState {
@@ -35,6 +36,7 @@ public:
 	virtual sf::FloatRect getBoundingRect() const;
 	
 	virtual bool isMarkedForRemoval() const;
+	virtual bool isDestroyed() const;
 
 	//void leftPressed();
 	//void rightPressed();

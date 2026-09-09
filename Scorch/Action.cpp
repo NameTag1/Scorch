@@ -1,13 +1,12 @@
 #include "Action.h"
-#include "With.h"
 
 Action::Action(Type type)
-: mType(type)
+	: mType(type)
 {
 }
 
-void Action::update(sf::Time dt, CommandQueue& Commands, SceneNode& target) {
-	
+void Action::update(sf::Time dt, CommandQueue& Commands, SceneNode& Target) {
+
 };
 
 bool Action::isFinnished() {

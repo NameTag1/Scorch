@@ -1,162 +1,295 @@
-2026-02-06
-10:01:37 - Loaded: data/ResourceLocations.json
-10:01:38 - Loaded: data/EntityData.json
-10:01:38 - -------- Loading Scene --------
-10:01:38 - Loaded: data/SceneData.json
-10:01:38 - Loaded: data/EntityData.json
-10:01:38 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-10:01:38 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-10:01:39 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-10:01:39 - Scenebuilder loaded: Platform from resources/Platform.jpg
-10:01:39 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-10:01:39 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-10:01:39 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-10:01:39 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-10:01:39 - Scenebuilder loaded: NPC from resources/Friend.png
-10:01:39 - Created Normal_Platform
-10:01:39 - Created Normal_Platform
-10:01:39 - Created Sprite_Node
-10:01:39 - Created Sprite_Node
-10:01:39 - Created Normal_Platform
-10:01:39 - Created Normal_Platform
-10:01:39 - Created Normal_Platform
-10:01:39 - Created Animated_Platform
-10:01:39 - Created Falling_Platform
-10:01:39 - Created Door
-10:01:39 - Created Weapon_Pickup
-10:01:39 - Creating ChangeableAnimation "greatsword" from JSON
-10:01:39 - Creating ChangeableAnimation "idle" from JSON
-10:01:39 - Created NPC
-10:01:39 - Creating ChangeableAnimation "greatsword" from JSON
-10:01:39 - Creating ChangeableAnimation "idle" from JSON
-10:01:39 -  -------- Scene Built --------
-10:01:58 - Falling Reset
-10:02:05 - -------- Loading Scene --------
-10:02:05 - Loaded: data/SceneData2.json
-10:02:05 - Loaded: data/EntityData.json
-10:02:05 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-10:02:05 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-10:02:05 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-10:02:05 - Scenebuilder loaded: Platform from resources/Platform.jpg
-10:02:05 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-10:02:05 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-10:02:05 - Created Sprite_Node
-10:02:05 - Created Normal_Platform
-10:02:05 - Created Moving_Platform
-10:02:05 - Created Door
-10:02:05 - Created View_Area
-10:02:05 - Created View_Area
-10:02:05 -  -------- Scene Built --------
-10:02:06 - -------- Loading Scene --------
-10:02:06 - Loaded: data/SceneData.json
-10:02:06 - Loaded: data/EntityData.json
-10:02:06 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-10:02:06 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-10:02:06 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-10:02:06 - Scenebuilder loaded: Platform from resources/Platform.jpg
-10:02:06 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-10:02:06 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-10:02:06 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-10:02:06 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-10:02:06 - Scenebuilder loaded: NPC from resources/Friend.png
-10:02:06 - Created Normal_Platform
-10:02:06 - Created Normal_Platform
-10:02:06 - Created Sprite_Node
-10:02:06 - Created Sprite_Node
-10:02:06 - Created Normal_Platform
-10:02:06 - Created Normal_Platform
-10:02:06 - Created Normal_Platform
-10:02:06 - Created Animated_Platform
-10:02:06 - Created Falling_Platform
-10:02:06 - Created Door
-10:02:06 - Created Weapon_Pickup
-10:02:06 - Creating ChangeableAnimation "greatsword" from JSON
-10:02:06 - Creating ChangeableAnimation "idle" from JSON
-10:02:06 - Created NPC
-10:02:06 -  -------- Scene Built --------
-10:02:07 - -------- Loading Scene --------
-10:02:07 - Loaded: data/SceneData2.json
-10:02:07 - Loaded: data/EntityData.json
-10:02:07 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-10:02:07 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-10:02:07 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-10:02:07 - Scenebuilder loaded: Platform from resources/Platform.jpg
-10:02:07 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-10:02:07 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-10:02:07 - Created Sprite_Node
-10:02:07 - Created Normal_Platform
-10:02:07 - Created Moving_Platform
-10:02:07 - Created Door
-10:02:07 - Created View_Area
-10:02:07 - Created View_Area
-10:02:07 -  -------- Scene Built --------
-10:02:08 - -------- Loading Scene --------
-10:02:08 - Loaded: data/SceneData.json
-10:02:08 - Loaded: data/EntityData.json
-10:02:08 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-10:02:08 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-10:02:08 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-10:02:08 - Scenebuilder loaded: Platform from resources/Platform.jpg
-10:02:08 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-10:02:08 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-10:02:08 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-10:02:08 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-10:02:08 - Scenebuilder loaded: NPC from resources/Friend.png
-10:02:08 - Created Normal_Platform
-10:02:08 - Created Normal_Platform
-10:02:08 - Created Sprite_Node
-10:02:08 - Created Sprite_Node
-10:02:08 - Created Normal_Platform
-10:02:08 - Created Normal_Platform
-10:02:08 - Created Normal_Platform
-10:02:08 - Created Animated_Platform
-10:02:08 - Created Falling_Platform
-10:02:08 - Created Door
-10:02:08 - Created Weapon_Pickup
-10:02:08 - Creating ChangeableAnimation "greatsword" from JSON
-10:02:08 - Creating ChangeableAnimation "idle" from JSON
-10:02:08 - Created NPC
-10:02:08 -  -------- Scene Built --------
-10:02:09 - -------- Loading Scene --------
-10:02:09 - Loaded: data/SceneData2.json
-10:02:09 - Loaded: data/EntityData.json
-10:02:09 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-10:02:09 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-10:02:09 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-10:02:09 - Scenebuilder loaded: Platform from resources/Platform.jpg
-10:02:09 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-10:02:09 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-10:02:09 - Created Sprite_Node
-10:02:09 - Created Normal_Platform
-10:02:09 - Created Moving_Platform
-10:02:09 - Created Door
-10:02:09 - Created View_Area
-10:02:09 - Created View_Area
-10:02:09 -  -------- Scene Built --------
-10:02:11 - -------- Loading Scene --------
-10:02:11 - Loaded: data/SceneData.json
-10:02:11 - Loaded: data/EntityData.json
-10:02:11 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
-10:02:11 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
-10:02:11 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
-10:02:11 - Scenebuilder loaded: Platform from resources/Platform.jpg
-10:02:11 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
-10:02:11 - Scenebuilder loaded: Background2 from resources/Background2.jpg
-10:02:11 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
-10:02:11 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
-10:02:11 - Scenebuilder loaded: NPC from resources/Friend.png
-10:02:11 - Created Normal_Platform
-10:02:11 - Created Normal_Platform
-10:02:11 - Created Sprite_Node
-10:02:11 - Created Sprite_Node
-10:02:11 - Created Normal_Platform
-10:02:11 - Created Normal_Platform
-10:02:11 - Created Normal_Platform
-10:02:11 - Created Animated_Platform
-10:02:11 - Created Falling_Platform
-10:02:11 - Created Door
-10:02:11 - Created Weapon_Pickup
-10:02:11 - Creating ChangeableAnimation "greatsword" from JSON
-10:02:11 - Creating ChangeableAnimation "idle" from JSON
-10:02:11 - Created NPC
-10:02:11 -  -------- Scene Built --------
+2026-09-04
+12:24:59 - Loaded: data/ResourceLocations.json
+12:24:59 - Loaded: data/EntityData.json
+12:24:59 - -------- Loading Scene --------
+12:25:00 - Loaded: data/SceneData.json
+12:25:00 - Loaded: data/EntityData.json
+12:25:00 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:00 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:00 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+12:25:00 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:00 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+12:25:00 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:00 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:00 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:00 - Scenebuilder loaded: NPC from resources/Friend.png
+12:25:00 - Created Normal_Platform
+12:25:00 - Created Normal_Platform
+12:25:00 - Created Sprite_Node
+12:25:00 - Created Sprite_Node
+12:25:00 - Created Normal_Platform
+12:25:00 - Created Normal_Platform
+12:25:00 - Created Normal_Platform
+12:25:00 - Animation with texture "TestAnimation" created from JSON
+12:25:00 - Created Animated_Platform
+12:25:00 - Animation with texture "FallingSand" created from JSON
+12:25:00 - Created Falling_Platform
+12:25:00 - Animation with texture "DoorArrow" created from JSON
+12:25:00 - Created Door
+12:25:00 - Created Weapon_Pickup
+12:25:00 - Animation with texture "NPC" created from JSON
+12:25:00 - Creating ChangeableAnimation "idle" from JSON
+12:25:00 - Animation with texture "DoorArrow" created from JSON
+12:25:00 - Created NPC
+12:25:00 - Sky Backgournd Created
+12:25:00 - Animation with texture "GreatswordPlayer1" created from JSON
+12:25:00 - Creating ChangeableAnimation "greatsword" from JSON
+12:25:00 - Animation with texture "PlayerAni" created from JSON
+12:25:00 - Creating ChangeableAnimation "idle" from JSON
+12:25:00 - Player instance created.
+12:25:00 -  -------- Scene Built --------
+12:25:29 - -------- Loading Scene --------
+12:25:29 - Loaded: data/SceneData2.json
+12:25:29 - Loaded: data/EntityData.json
+12:25:29 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:29 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:29 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:29 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:29 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:29 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:29 - Created Sprite_Node
+12:25:29 - Created Normal_Platform
+12:25:29 - Created Moving_Platform
+12:25:29 - Animation with texture "DoorArrow" created from JSON
+12:25:29 - Created Door
+12:25:29 - Created View_Area
+12:25:29 - Created View_Area
+12:25:29 - Player taken out of scene and saved.
+12:25:29 -  -------- Scene Built --------
+12:25:29 - -------- Loading Scene --------
+12:25:29 - Loaded: data/SceneData.json
+12:25:29 - Loaded: data/EntityData.json
+12:25:29 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:29 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:29 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+12:25:29 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:29 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+12:25:29 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:29 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:29 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:29 - Scenebuilder loaded: NPC from resources/Friend.png
+12:25:29 - Created Normal_Platform
+12:25:29 - Created Normal_Platform
+12:25:29 - Created Sprite_Node
+12:25:29 - Created Sprite_Node
+12:25:29 - Created Normal_Platform
+12:25:29 - Created Normal_Platform
+12:25:29 - Created Normal_Platform
+12:25:29 - Animation with texture "TestAnimation" created from JSON
+12:25:29 - Created Animated_Platform
+12:25:29 - Animation with texture "FallingSand" created from JSON
+12:25:29 - Created Falling_Platform
+12:25:29 - Animation with texture "DoorArrow" created from JSON
+12:25:29 - Created Door
+12:25:29 - Created Weapon_Pickup
+12:25:29 - Animation with texture "NPC" created from JSON
+12:25:29 - Creating ChangeableAnimation "idle" from JSON
+12:25:29 - Animation with texture "DoorArrow" created from JSON
+12:25:29 - Created NPC
+12:25:29 - Sky Backgournd Created
+12:25:29 - Player taken out of scene and saved.
+12:25:29 -  -------- Scene Built --------
+12:25:30 - -------- Loading Scene --------
+12:25:30 - Loaded: data/SceneData2.json
+12:25:30 - Loaded: data/EntityData.json
+12:25:30 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:30 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:30 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:30 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:30 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:30 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:30 - Created Sprite_Node
+12:25:30 - Created Normal_Platform
+12:25:30 - Created Moving_Platform
+12:25:30 - Animation with texture "DoorArrow" created from JSON
+12:25:30 - Created Door
+12:25:30 - Created View_Area
+12:25:30 - Created View_Area
+12:25:30 - Player taken out of scene and saved.
+12:25:30 -  -------- Scene Built --------
+12:25:30 - -------- Loading Scene --------
+12:25:30 - Loaded: data/SceneData.json
+12:25:30 - Loaded: data/EntityData.json
+12:25:30 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:30 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:30 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+12:25:30 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:30 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+12:25:30 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:30 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:30 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:30 - Scenebuilder loaded: NPC from resources/Friend.png
+12:25:30 - Created Normal_Platform
+12:25:30 - Created Normal_Platform
+12:25:30 - Created Sprite_Node
+12:25:30 - Created Sprite_Node
+12:25:30 - Created Normal_Platform
+12:25:30 - Created Normal_Platform
+12:25:30 - Created Normal_Platform
+12:25:30 - Animation with texture "TestAnimation" created from JSON
+12:25:30 - Created Animated_Platform
+12:25:30 - Animation with texture "FallingSand" created from JSON
+12:25:30 - Created Falling_Platform
+12:25:30 - Animation with texture "DoorArrow" created from JSON
+12:25:30 - Created Door
+12:25:30 - Created Weapon_Pickup
+12:25:30 - Animation with texture "NPC" created from JSON
+12:25:30 - Creating ChangeableAnimation "idle" from JSON
+12:25:30 - Animation with texture "DoorArrow" created from JSON
+12:25:30 - Created NPC
+12:25:30 - Sky Backgournd Created
+12:25:30 - Player taken out of scene and saved.
+12:25:30 -  -------- Scene Built --------
+12:25:30 - -------- Loading Scene --------
+12:25:30 - Loaded: data/SceneData2.json
+12:25:30 - Loaded: data/EntityData.json
+12:25:30 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:30 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:30 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:30 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:30 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:30 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:30 - Created Sprite_Node
+12:25:30 - Created Normal_Platform
+12:25:30 - Created Moving_Platform
+12:25:30 - Animation with texture "DoorArrow" created from JSON
+12:25:30 - Created Door
+12:25:30 - Created View_Area
+12:25:30 - Created View_Area
+12:25:30 - Player taken out of scene and saved.
+12:25:30 -  -------- Scene Built --------
+12:25:31 - -------- Loading Scene --------
+12:25:31 - Loaded: data/SceneData.json
+12:25:31 - Loaded: data/EntityData.json
+12:25:31 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:31 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:31 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+12:25:31 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:31 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+12:25:31 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:31 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:31 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:31 - Scenebuilder loaded: NPC from resources/Friend.png
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Sprite_Node
+12:25:31 - Created Sprite_Node
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Normal_Platform
+12:25:31 - Animation with texture "TestAnimation" created from JSON
+12:25:31 - Created Animated_Platform
+12:25:31 - Animation with texture "FallingSand" created from JSON
+12:25:31 - Created Falling_Platform
+12:25:31 - Animation with texture "DoorArrow" created from JSON
+12:25:31 - Created Door
+12:25:31 - Created Weapon_Pickup
+12:25:31 - Animation with texture "NPC" created from JSON
+12:25:31 - Creating ChangeableAnimation "idle" from JSON
+12:25:31 - Animation with texture "DoorArrow" created from JSON
+12:25:31 - Created NPC
+12:25:31 - Sky Backgournd Created
+12:25:31 - Player taken out of scene and saved.
+12:25:31 -  -------- Scene Built --------
+12:25:31 - -------- Loading Scene --------
+12:25:31 - Loaded: data/SceneData2.json
+12:25:31 - Loaded: data/EntityData.json
+12:25:31 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:31 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:31 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:31 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:31 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:31 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:31 - Created Sprite_Node
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Moving_Platform
+12:25:31 - Animation with texture "DoorArrow" created from JSON
+12:25:31 - Created Door
+12:25:31 - Created View_Area
+12:25:31 - Created View_Area
+12:25:31 - Player taken out of scene and saved.
+12:25:31 -  -------- Scene Built --------
+12:25:31 - -------- Loading Scene --------
+12:25:31 - Loaded: data/SceneData.json
+12:25:31 - Loaded: data/EntityData.json
+12:25:31 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:31 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:31 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+12:25:31 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:31 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+12:25:31 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:31 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:31 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:31 - Scenebuilder loaded: NPC from resources/Friend.png
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Sprite_Node
+12:25:31 - Created Sprite_Node
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Normal_Platform
+12:25:31 - Created Normal_Platform
+12:25:31 - Animation with texture "TestAnimation" created from JSON
+12:25:31 - Created Animated_Platform
+12:25:31 - Animation with texture "FallingSand" created from JSON
+12:25:31 - Created Falling_Platform
+12:25:31 - Animation with texture "DoorArrow" created from JSON
+12:25:31 - Created Door
+12:25:31 - Created Weapon_Pickup
+12:25:31 - Animation with texture "NPC" created from JSON
+12:25:31 - Creating ChangeableAnimation "idle" from JSON
+12:25:31 - Animation with texture "DoorArrow" created from JSON
+12:25:31 - Created NPC
+12:25:31 - Sky Backgournd Created
+12:25:31 - Player taken out of scene and saved.
+12:25:31 -  -------- Scene Built --------
+12:25:38 - -------- Loading Scene --------
+12:25:38 - Loaded: data/SceneData2.json
+12:25:38 - Loaded: data/EntityData.json
+12:25:38 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:38 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:38 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:38 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:38 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:38 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:38 - Created Sprite_Node
+12:25:38 - Created Normal_Platform
+12:25:38 - Created Moving_Platform
+12:25:38 - Animation with texture "DoorArrow" created from JSON
+12:25:38 - Created Door
+12:25:38 - Created View_Area
+12:25:38 - Created View_Area
+12:25:38 - Player taken out of scene and saved.
+12:25:38 -  -------- Scene Built --------
+12:25:40 - -------- Loading Scene --------
+12:25:40 - Loaded: data/SceneData.json
+12:25:40 - Loaded: data/EntityData.json
+12:25:40 - Scenebuilder loaded: DoorArrow from resources/ArrowAnimation.png
+12:25:40 - Scenebuilder loaded: PlayerAni from resources/PlayerAnimation.png
+12:25:40 - Scenebuilder loaded: FallingSand from resources/FallingSand.png
+12:25:40 - Scenebuilder loaded: Platform from resources/Platform.jpg
+12:25:40 - Scenebuilder loaded: TestAnimation from resources/TestAnimated.bmp
+12:25:40 - Scenebuilder loaded: Background2 from resources/Background2.jpg
+12:25:40 - Scenebuilder loaded: GreatswordPlayer1 from resources/GreatswordAnimation1.png
+12:25:40 - Scenebuilder loaded: Door from resources/DefaultDoor.bmp
+12:25:40 - Scenebuilder loaded: NPC from resources/Friend.png
+12:25:40 - Created Normal_Platform
+12:25:40 - Created Normal_Platform
+12:25:40 - Created Sprite_Node
+12:25:40 - Created Sprite_Node
+12:25:40 - Created Normal_Platform
+12:25:40 - Created Normal_Platform
+12:25:40 - Created Normal_Platform
+12:25:40 - Animation with texture "TestAnimation" created from JSON
+12:25:40 - Created Animated_Platform
+12:25:40 - Animation with texture "FallingSand" created from JSON
+12:25:40 - Created Falling_Platform
+12:25:40 - Animation with texture "DoorArrow" created from JSON
+12:25:40 - Created Door
+12:25:40 - Created Weapon_Pickup
+12:25:40 - Animation with texture "NPC" created from JSON
+12:25:40 - Creating ChangeableAnimation "idle" from JSON
+12:25:40 - Animation with texture "DoorArrow" created from JSON
+12:25:40 - Created NPC
+12:25:40 - Sky Backgournd Created
+12:25:40 - Player taken out of scene and saved.
+12:25:40 -  -------- Scene Built --------

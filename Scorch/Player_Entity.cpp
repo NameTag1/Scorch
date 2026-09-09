@@ -7,8 +7,10 @@
 Player_Entity* Player_Entity::instance = nullptr;
 
 Player_Entity::Player_Entity(const TextureHolder& resources, json data)
-: Platformer(50)
+: PlatformerMovementSuite()
+, Entity(50)
 , Animatable(resources, data["Animatable"])
+, mPlayerState(grounded)
 , isAttacking(false)
 , isInteracting(false)
 {
@@ -18,7 +20,7 @@ Player_Entity::Player_Entity(const TextureHolder& resources, json data)
 }
 
 std::vector<unsigned int> Player_Entity::getCategory() const {
-	std::vector<unsigned int> i(Platformer::getCategory());
+	std::vector<unsigned int> i(PlatformerMovementSuite::getCategory());
 	i.push_back(Category::Player);
 	return i;
 };
@@ -31,7 +33,12 @@ sf::FloatRect Player_Entity::getBoundingRect() const {
 bool Player_Entity::isMarkedForRemoval() const {
 	//return Entity::isMarkedForRemoval();
 	return false; //Player is never removed, only killed (destroyed)
-};
+}
+
+bool Player_Entity::isDestroyed() const
+{
+	return Entity::isDestroyed();
+}
 
 bool Player_Entity::getInteracting() {
 	return isInteracting;
@@ -74,6 +81,6 @@ void Player_Entity::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 
 	Actionable::update(dt, Commands, *this);
 
-	Platformer::updateCurrent(dt, Commands);
+	PlatformerMovementSuite::updateCurrent(dt, Commands);
 
 };

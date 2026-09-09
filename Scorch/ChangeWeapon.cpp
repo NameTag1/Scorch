@@ -1,6 +1,6 @@
 #include "ChangeWeapon.h"
 
-#include "WeaponWielder.h"
+#include "Utility.hpp"
 
 ChangeWeapon::ChangeWeapon(int changeBy)
 	: mChangeBy(changeBy)
@@ -16,9 +16,12 @@ ChangeWeapon::ChangeWeapon(int changeBy, Action::Type runOnce)
 
 void ChangeWeapon::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 {
-	WeaponWielder* a = dynamic_cast<WeaponWielder*>(&target);
-	a->nextWeapon(mChangeBy);
-	//std::cout << "USING\n";
+	if (mTarget == nullptr) {
+		if (WeaponWielder* castedPtr = dynamic_cast<WeaponWielder*>(&target)) {
+			mTarget = castedPtr;
+		}
+	}
+	mTarget->nextWeapon(mChangeBy);
 }
 
 bool ChangeWeapon::isFinnished() {

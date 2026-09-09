@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Action.h"
-#include "Entity.hpp"
+#include "Platformer.h"
 
 class MoveDis : public Action
 {
@@ -16,5 +16,7 @@ private:
 	sf::Vector2f mStart;
 	int mDistance;
 	int mDistanceTraveled;
+
+	Platformer* mTarget;
 };
 

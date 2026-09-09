@@ -7,7 +7,7 @@
 #include "CommandQueue.hpp"
 #include "Movable.h"
 
-class Entity : public Movable
+class Entity
 {
 	public:
 		explicit			Entity(int hitpoints);
@@ -19,10 +19,6 @@ class Entity : public Movable
 		void				heal(int heal);
 		void				damage(int damage);
 		virtual bool		isDestroyed() const;
-
-	protected:
-		virtual void		updateCurrent(sf::Time dt, CommandQueue& commands);
-
 
 	private:
 		int					mMaxHitpoints;

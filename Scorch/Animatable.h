@@ -1,11 +1,9 @@
 #pragma once
 
-#include "DataRetrivalTypes.h"
 #include "SceneNode.hpp"
 #include "Animation.h"
 #include "ChangeableAnimation.h"
 #include <SFML/Graphics/RenderTarget.hpp>
-#include <map>
 
 class Animatable : public sf::Drawable
 {

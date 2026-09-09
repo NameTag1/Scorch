@@ -12,7 +12,7 @@ public:
 	virtual void reset();
 
 private:
-	sf::Time mDurration;
+	sf::Time mDuration;
 	sf::Time mTime;
 };
 

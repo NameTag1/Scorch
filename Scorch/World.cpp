@@ -13,6 +13,7 @@
 #include "SceneNode.hpp"
 #include "SpriteNode.hpp"
 #include "Entity.hpp"
+#include "PlatformerMovementSuite.h"
 
 #include "CommandQueue.hpp"
 #include "Command.hpp"
@@ -30,16 +31,16 @@
 #include "Logger.h"
 #include <string>
 
-struct EntityMover
+struct Mover
 {
-	EntityMover(float vx, float vy)
+	Mover(float vx, float vy)
 		: velocity(vx, vy)
 	{
 	}
 
-	void operator() (Entity& entity, sf::Time) const
+	void operator() (Movable& target, sf::Time) const
 	{
-		entity.accelerate(velocity.x, velocity.y);
+		target.accelerate(velocity.x, velocity.y);
 	}
 
 	sf::Vector2f velocity;
@@ -54,24 +55,24 @@ struct MovementCap
 	{
 	}
 
-	void operator() (Entity& entity, sf::Time dt) const
+	void operator() (Movable& target, sf::Time dt) const
 	{
 		double changedVX = 0;
 		double changedVY = 0;
-		if (entity.getVelocity().x < 0) {
-			changedVX = std::max((float)adjustToZero(entity.getVelocity().x, constantDeacell * dt.asSeconds()), -MaxVX);
+		if (target.getVelocity().x < 0) {
+			changedVX = std::max((float)adjustToZero(target.getVelocity().x, constantDeacell * dt.asSeconds()), -MaxVX);
 		}
-		if (entity.getVelocity().x > 0) {
-			changedVX = std::min((float)adjustToZero(entity.getVelocity().x, constantDeacell * dt.asSeconds()), MaxVX);
+		if (target.getVelocity().x > 0) {
+			changedVX = std::min((float)adjustToZero(target.getVelocity().x, constantDeacell * dt.asSeconds()), MaxVX);
 		}
 
-		if (entity.getVelocity().y < 0) {
-			changedVY = std::max((float)entity.getVelocity().y, -MaxVY);
+		if (target.getVelocity().y < 0) {
+			changedVY = std::max((float)target.getVelocity().y, -MaxVY);
 		}
-		if (entity.getVelocity().y > 0) {
-			changedVY = std::min((float)entity.getVelocity().y, MaxVY);
+		if (target.getVelocity().y > 0) {
+			changedVY = std::min((float)target.getVelocity().y, MaxVY);
 		}
-		entity.setVelocity((float)changedVX, (float)changedVY * dt.asSeconds());
+		target.setVelocity((float)changedVX, (float)changedVY * dt.asSeconds());
 	}
 
 	float MaxVX;
@@ -233,7 +234,7 @@ void World::handleWorldActions(sf::Time dt)
 void World::enforceGravity(sf::Time dt)
 {
 	Command Gravity;
-	Gravity.action = derivedAction<Platformer>(EntityMover(0.f, mGravity));
+	Gravity.action = derivedAction<Platformer>(Mover(0.f, mGravity));
 	Gravity.category = Category::Movable;
 	mCommandQueue.push(Gravity);
 }
@@ -281,14 +282,14 @@ void World::handleCollisions() {
 
 	for (SceneNode::Pair pair : collisionPairs) {
 		if (matchesCategories(pair, Category::Platformer, Category::Platform)) {
-			auto& platformer = static_cast<Platformer&>(*pair.first);
+			auto& platformer = dynamic_cast<Platformer&>(*pair.first);
 			auto& platform = static_cast<Platform&>(*pair.second);
 
 			platformer.adust_for_platform(platform);
 			platform.adust_for_platformer(platformer);
 		}
 		else if (matchesCategories(pair, Category::Player, Category::Door)) {
-			auto& player = static_cast<Player_Entity&>(*pair.first);
+			auto& player = dynamic_cast<Player_Entity&>(*pair.first);
 			auto& door = static_cast<Door&>(*pair.second);
 			
 			door.touched(player);
@@ -301,7 +302,7 @@ void World::handleCollisions() {
 			}
 		}
 		else if (matchesCategories(pair, Category::Player, Category::Interactable)) {
-			auto& player = static_cast<Player_Entity&>(*pair.first);
+			auto& player = dynamic_cast<Player_Entity&>(*pair.first);
 			auto& thing = static_cast<Interactable&>(*pair.second);
 
 			thing.touched(player);
@@ -318,9 +319,9 @@ void World::handleCollisions() {
 		}
 		else if (matchesCategories(pair, Category::Attack, Category::Entity)) {
 			auto& attack = static_cast<Attack&>(*pair.first);
-			auto& enemy = static_cast<Entity&>(*pair.second);
-
-			attack.dealDamage(&enemy);
+			auto* enemy = dynamic_cast<Entity*>(pair.second);
+			
+			attack.dealDamage(enemy);
 		}
 	}
 }

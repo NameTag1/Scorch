@@ -83,6 +83,7 @@
     <ClInclude Include="PauseState.hpp" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="Platformer.h" />
+    <ClInclude Include="PlatformerMovementSuite.h" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="Player_Entity.h" />
     <ClInclude Include="Projectile.h" />
@@ -182,6 +183,7 @@
     <ClCompile Include="PauseState.cpp" />
     <ClCompile Include="Platform.cpp" />
     <ClCompile Include="Platformer.cpp" />
+    <ClCompile Include="PlatformerMovementSuite.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Player_Entity.cpp" />
     <ClCompile Include="Projectile.cpp" />

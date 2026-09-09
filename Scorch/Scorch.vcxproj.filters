@@ -432,6 +432,9 @@
     <ClInclude Include="Dash.h">
       <Filter>Header Files\Action_Sequences</Filter>
     </ClInclude>
+    <ClInclude Include="PlatformerMovementSuite.h">
+      <Filter>Header Files\Platforms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceHolder.inl">
@@ -708,6 +711,9 @@
     </ClCompile>
     <ClCompile Include="Dash.cpp">
       <Filter>Source Files\Action_Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="PlatformerMovementSuite.cpp">
+      <Filter>Source Files\Platforms</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

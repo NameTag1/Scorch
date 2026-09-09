@@ -2,6 +2,8 @@
 
 #include "Action.h"
 
+class Animatable;
+
 class ChangeAnimation : public Action
 {
 public:
@@ -12,5 +14,7 @@ public:
 
 private:
 	std::string animation;
+
+	Animatable* mTarget;
 };
 

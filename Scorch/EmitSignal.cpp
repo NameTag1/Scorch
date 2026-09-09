@@ -3,8 +3,8 @@
 #include "Signals.h"
 
 EmitSignal::EmitSignal(Type a, std::string signalName)
-	: mSignalName(signalName)
-	, Action(a)
+: mSignalName(signalName)
+, Action(a)
 {
 }
 

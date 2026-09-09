@@ -13,20 +13,20 @@
 #include "WorldAction.h"
 
 Enemy::Enemy(const TextureHolder& resources)
-: Platformer(50)
+: Platformer()
+, Entity(50)
 , isAttacking(false)
 , mSprite(resources.get(Textures::Enemy))
 {
 	centerOrigin(mSprite);
-	setSpeed(70);
 	Actionable::pushAction(new Roam(Action::RunOnce, 200, 200));
-	Actionable::pushAction(new Jump());
-	Actionable::pushAction(new ChasePlayer(200));
-	Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
-	Actionable::pushAction(new MakeAttack("Slash"));
-	Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
-	Actionable::pushAction(new FleePlayer(500));
-	Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
+	//Actionable::pushAction(new Jump());
+	//Actionable::pushAction(new ChasePlayer(200));
+	//Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
+	//Actionable::pushAction(new MakeAttack("Slash"));
+	//Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
+	//Actionable::pushAction(new FleePlayer(500));
+	//Actionable::pushAction(new Pause(Action::Persistent, sf::seconds(1)));
 	
 	Attacker::pushAttack("Slash", new Slash(20, (unsigned int)Category::Player, resources));
 }
@@ -41,8 +41,13 @@ sf::FloatRect Enemy::getBoundingRect() const {
 	return getWorldTransform().transformRect(mSprite.getGlobalBounds());
 };
 
+bool Enemy::isDestroyed() const
+{
+	return Entity::isDestroyed();
+}
+
 bool Enemy::isMarkedForRemoval() const {
-	return Entity::isMarkedForRemoval();
+	return SceneNode::isMarkedForRemoval();
 }
 
 bool Enemy::isInCombat() const

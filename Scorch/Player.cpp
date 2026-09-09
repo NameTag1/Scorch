@@ -3,6 +3,7 @@
 #include "Entity.hpp"
 #include "Player_Entity.h"
 #include "Platformer.h"
+#include "PlatformerMovementSuite.h"
 
 #include "Jump.h"
 #include "Lock.h"
@@ -18,37 +19,37 @@
 #include <string>
 #include <algorithm>
 
-struct EntityMover
+struct PlatformerMover
 {
-	EntityMover(float vx, float vy)
+	PlatformerMover(float vx, float vy)
 	: velocity(vx, vy)
 	{
 	}
 
-	void operator() (Entity& entity, sf::Time) const
+	void operator() (PlatformerMovementSuite& target, sf::Time) const
 	{
-		entity.accelerate(velocity);
+		target.accelerate(velocity);
 	}
 
 	sf::Vector2f velocity;
 };
 
-struct PlatformerMover
-{
-	PlatformerMover(bool running, bool left)
-		: running(running)
-		, left(left)
-	{
-	}
-
-	void operator() (Platformer& entity, sf::Time) const
-	{
-		entity.move(running, left);
-	}
-
-	bool running;
-	bool left;
-};
+//struct PlatformerMover
+//{
+//	PlatformerMover(bool running, bool left)
+//		: running(running)
+//		, left(left)
+//	{
+//	}
+//
+//	void operator() (Platformer& entity, sf::Time) const
+//	{
+//		entity.move(running, left);
+//	}
+//
+//	bool running;
+//	bool left;
+//};
 
 struct Jumper
 {
@@ -56,9 +57,9 @@ struct Jumper
 	{
 	}
 
-	void operator() (Platformer& entity, sf::Time) const
+	void operator() (PlatformerMovementSuite& target, sf::Time) const
 	{
-		entity.jump();
+		target.jump();
 	}
 };
 
@@ -186,7 +187,7 @@ void Player::initializeActions()
 {
 	mActionBinding[Left].action	 = derivedAction<Player_Entity>(DeployAction(new Move(true, true)));
 	mActionBinding[Right].action = derivedAction<Player_Entity>(DeployAction(new Move(true, false)));
-	mActionBinding[Down].action  = derivedAction<Player_Entity>(EntityMover(0.f, 0.f));
+	mActionBinding[Down].action  = derivedAction<Player_Entity>(PlatformerMover(0.f, 0.f));
 	mActionBinding[JumpA].action = derivedAction<Player_Entity>(DeployAction(new Jump()));
 	mActionBinding[DashA].action = derivedAction<Player_Entity>(DeployAction(new Dash()));
 	mActionBinding[SwitchL].action = derivedAction<Player_Entity>(DeployAction(new ChangeWeapon(-1)));

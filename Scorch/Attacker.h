@@ -1,10 +1,6 @@
 #pragma once
 
-#include "Actionable.h"
-#include "Action.h"
-#include "Entity.hpp"
 #include "Attack.h"
-#include "MakeAttack.h"
 
 class Attacker
 {

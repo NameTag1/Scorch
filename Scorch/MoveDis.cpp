@@ -1,5 +1,6 @@
 #include "MoveDis.h"
-#include "Platformer.h"
+
+#include "Utility.hpp"
 
 MoveDis::MoveDis(int distance)
 : mLeft((distance < 0)? true : false)
@@ -12,12 +13,17 @@ MoveDis::MoveDis(int distance)
 
 void MoveDis::update(sf::Time dt, CommandQueue& Commands, SceneNode& target) 
 {
-	Platformer* platformer = dynamic_cast<Platformer*>(&target);
-	if (mStart == sf::Vector2f()) {
-		mStart = platformer->getWorldPosition();
+	if (mTarget == nullptr) {
+		if (Platformer* castedPtr = dynamic_cast<Platformer*>(&target)) {
+			mTarget = castedPtr;
+		}
+		//mTarget = safeCast<Platformer*, SceneNode*>(&target);
 	}
-	platformer->move(true, mLeft);
-	mDistanceTraveled += int((platformer->getWorldPosition() - mStart).x);
+	if (mStart == sf::Vector2f()) {
+		mStart = mTarget->getWorldPosition();
+	}
+	mTarget->move(true, mLeft);
+	mDistanceTraveled += int((mTarget->getWorldPosition() - mStart).x);
 };
 
 bool MoveDis::isFinnished() {

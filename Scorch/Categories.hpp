@@ -13,6 +13,7 @@ namespace Category
 		Superlayer, //Special category for drawing on above layers
 
 		Platformer,
+		PlatformerMover,
 		Platform,
 
 		Entity,

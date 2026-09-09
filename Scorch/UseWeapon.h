@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Action.h"
+#include "WeaponWielder.h"
 
 class UseWeapon : public Action
 {
@@ -13,5 +14,7 @@ public:
 
 private:
 	std::string mString;
+
+	WeaponWielder* mTarget;
 };
 

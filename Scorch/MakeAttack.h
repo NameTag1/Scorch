@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Attack.h"
 #include "Action.h"
+#include "Attacker.h"
 
 class MakeAttack : public Action
 {
@@ -17,5 +17,6 @@ private:
 	bool mAttackMade;
 	sf::Time mCooldown;
 	bool mDone;
-};
 
+	Attacker* mTarget;
+};

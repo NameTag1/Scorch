@@ -8,7 +8,8 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"sFriction":0.85,
+			"kFriction":0.6
 			}
 	},
 	{
@@ -20,7 +21,8 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"sFriction":0.85,
+			"kFriction":0.6
 			}
 	},
 	{
@@ -52,7 +54,8 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"sFriction":0.85,
+			"kFriction":0.6
 			}
 	},
 	{
@@ -64,7 +67,8 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"sFriction":0.85,
+			"kFriction":0.6
 			}
 	},
 	{
@@ -76,7 +80,8 @@
 		"Texture":"Platform",
 		"Platform":
 			{
-			"Friction":20
+			"sFriction":0.85,
+			"kFriction":0.6
 			}
 	},
 	{
@@ -85,7 +90,8 @@
 		"Y":150,
 		"Platform":
 			{
-			"Friction":20
+			"sFriction":0.85,
+			"kFriction":0.6
 			},
 		"Animation":
 			{
@@ -105,7 +111,8 @@
 		"Duration":5,
 		"Platform":
 			{
-			"Friction":20
+			"sFriction":0.85,
+			"kFriction":0.6
 			},
 		"Animation":
 			{
@@ -150,10 +157,11 @@
         "Type":"NPC",
         "X":100,
         "Y":750,
+		"RunOnce":false,
 		"Animatable":{
 				"Default":"idle",
 				"Current":"idle",
-               "Animations":{
+            	"Animations":{
 					"idle":{
 						"Texture":"NPC",
 						"Frame_W":100,
@@ -162,27 +170,17 @@
 						"Duration":1.0,
 						"Repeated":true,
 						"Centered":true
-					},
-					"greatsword":{
-						"Texture":"GreatswordPlayer1",
-						"Frame_W":80,
-						"Frame_H":80,
-						"Number_of_Frames":3,
-						"Duration":1.0,
-						"Repeated":false,
-						"Centered":true
 					}
 				}
             },
-		"ArrowAnimation":
-			{
-			"Texture":"DoorArrow",
-			"Frame_W":100,
-			"Frame_H":100,
-			"Number_of_Frames":10,
-			"Duration":0.8,
-			"Repeated":true,
-			"Centered":false
+		"ArrowAnimation":{
+				"Texture":"DoorArrow",
+				"Frame_W":100,
+				"Frame_H":100,
+				"Number_of_Frames":10,
+				"Duration":0.8,
+				"Repeated":true,
+				"Centered":false
 			}
     }
 ]

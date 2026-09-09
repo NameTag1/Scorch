@@ -2,6 +2,8 @@
 
 #include "Action.h"
 
+#include "Platformer.h"
+
 class FleePlayer : public Action
 {
 public:
@@ -13,6 +15,8 @@ public:
 private:
 	int distance;
 	sf::Vector2f mLastPos;
+
+	Platformer* mTarget;
 };
 
 

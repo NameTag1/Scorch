@@ -43,6 +43,9 @@ bool matchesCategory(SceneNode& item, Category::Type type);
 template <typename T>
 bool contains(const std::vector<T>& vec, const T& item);
 
+template <typename TargetPtr, typename SourcePtr>
+TargetPtr safeCast(SourcePtr source);
+
 Scenes stringToScene(std::string i);
 
 float pixelToMeter(float pixels);

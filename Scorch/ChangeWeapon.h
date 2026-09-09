@@ -2,6 +2,8 @@
 
 #include "Action.h"
 
+#include "WeaponWielder.h"
+
 class ChangeWeapon : public Action
 {
 public:
@@ -13,5 +15,7 @@ public:
 
 private:
 	int mChangeBy;
+
+	WeaponWielder* mTarget;
 };
 

@@ -4,17 +4,8 @@
 #include "Logger.h"
 #include "World.hpp"
 
-Platformer::Platformer(int health)
+Platformer::Platformer()
 : onPlatform(false)
-, brakingEnabled(true)
-, Entity(health)
-, mAcceleration(30.f) //meters per second^2
-, mMaxSpeed(6.5f) //meters per second
-, mWalkFactor(0.3f)
-, mDashPower(1000.f) //In N
-, mJumpPower(500.f) //In N
-, mIntendedForceX(0.f)
-, mFallControl(0.1f)
 {
 }
 
@@ -68,45 +59,18 @@ void Platformer::adust_for_platform(Platform& p) {
 		float kForce = p.getKFriction() * normal; // kinetic friction force magnitude (N)
 
 		const float velThreshold = 0.2f; // m/s: below this we consider the player stopped
+		
+		//Static and Kinetic Friction
+		if (std::fabs(vx) < velThreshold) {
+			setVelocity(0, getVelocity().y);
 
-		// Player IS attempting to move.
-		if (mIntendedForceX != 0.f) {
-			if (std::fabs(vx) < velThreshold && std::fabs(mIntendedForceX) <= sMax) {
-				setVelocity(0, getVelocity().y);
-			}
-			else {
-				// moving: apply kinetic friction opposing motion
-				if (vx > 0) {
-					Movable::applyForce(-kForce, 0);
-
-					//BRAKING
-					if (brakingEnabled && mIntendedForceX < 0) {
-						Movable::applyForce(-mAcceleration * getWeight(), 0);
-					}
-				}
-				else if (vx < 0) {
-					Movable::applyForce(kForce, 0);
-
-					//BRAKING
-					if (brakingEnabled && mIntendedForceX < 0) {
-						Movable::applyForce(mAcceleration * getWeight(), 0);
-					}
-				}
-			}
 		}
-		// Player IS NOT attempting to move.
 		else {
-			// No input: kinetic friction slows player to a stop
-			if (std::fabs(vx) < velThreshold) {
-				setVelocity(0, getVelocity().y);
+			if (vx > 0) {
+				Movable::applyForce(-kForce, 0);
 			}
-			else {
-				if (vx > 0) {
-					Movable::applyForce(-kForce, 0);
-				}
-				else if (vx < 0) {
-					Movable::applyForce(kForce, 0);
-				}
+			else if (vx < 0) {
+				Movable::applyForce(kForce, 0);
 			}
 		}
 	}
@@ -114,7 +78,7 @@ void Platformer::adust_for_platform(Platform& p) {
 
 std::vector<unsigned int> Platformer::getCategory() const
 {
-	std::vector<unsigned int> i(Entity::getCategory());
+	std::vector<unsigned int> i(Movable::getCategory());
 	i.push_back(Category::Platformer);
 	return i;
 }
@@ -123,72 +87,10 @@ bool Platformer::getOnPlatform() {
 	return onPlatform;
 }
 
-bool Platformer::jump() {
-	if (getOnPlatform() && Entity::getVelocity().y >= 0) {
-		Entity::setVelocity(Entity::getVelocity().x, 0);
-		Entity::applyInstantaneousForce(0, -mJumpPower);
-		onPlatform = false;
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-bool Platformer::dash(bool left) {
-	if (Movable::lastKnownAcceleration().x > 0) {
-		Movable::applyInstantaneousForce(mDashPower, 0);
-		Logger::Instance->LogData(Logger::Action, "Dashed");
-	}
-	else if (Movable::lastKnownAcceleration().x < 0) {
-		Movable::applyInstantaneousForce(-mDashPower, 0);
-		Logger::Instance->LogData(Logger::Action, "Dashed");
-	}
-	else {
-		Logger::Instance->LogData(Logger::Action, "FAIL");
-		return false;
-	}
-	return true;
-};
-
-void Platformer::move(bool running, bool left) {
-	float appliedForce = (running) ? mAcceleration * getWeight() : mAcceleration * mWalkFactor * getWeight();
-
-	if (!onPlatform/* && mPlatformState != falling*/) {
-		appliedForce *= mFallControl; // Reduce horizontal control while falling
-	}
-
-	float vx = Entity::getVelocity().x;
-	// Determine intended horizontal direction: -1 for left, +1 for right
-	int intendedDir = (left) ? -1 : 1;
-
-	// Record intended force for friction/static friction checks
-	mIntendedForceX = (left ? -appliedForce : appliedForce);
-
-	// Only apply force if we haven't reached the signed max speed in the intended direction.
-	if (left && Movable::getVelocity().x > -mMaxSpeed) {	
-		Entity::applyForce(mIntendedForceX, 0);
-	}
-	else if (!left && Movable::getVelocity().x < mMaxSpeed) {
-		Entity::applyForce(mIntendedForceX, 0);
-	}
-}
-
-void Platformer::setSpeed(float speed)
-{
-	mMaxSpeed = speed;
-}
-
-void Platformer::braking(bool isBraking)
-{
-	brakingEnabled = isBraking;
-}
-
 void Platformer::updateCurrent(sf::Time dt, CommandQueue& Commands) {
 	onPlatform = false; //Handle Collisions in World will change if on platform
-	// Reset intended input force; move() will set this if input is present this frame
-	mIntendedForceX = 0.f;
-	Entity::updateCurrent(dt, Commands);
+
+	Movable::updateCurrent(dt, Commands);
 };
 
 sf::FloatRect Platformer::calculateOverlap(sf::FloatRect rect1, sf::FloatRect rect2) {

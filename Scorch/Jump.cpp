@@ -1,5 +1,7 @@
 #include "Jump.h"
 
+#include "Utility.hpp"
+
 Jump::Jump()
 : mJumped(false)
 , Action(Action::RunOnce)
@@ -8,8 +10,13 @@ Jump::Jump()
 
 void Jump::update(sf::Time dt, CommandQueue& Commands, SceneNode& target)
 {
-	Platformer *platformer = dynamic_cast<Platformer*>(&target);
-	if (platformer->jump()) {
+	if (mTarget == nullptr) {
+		if (PlatformerMovementSuite* castedPtr = dynamic_cast<PlatformerMovementSuite*>(&target)) {
+			mTarget = castedPtr;
+		}
+		// mTarget = safeCast<PlatformerMovementSuite*, SceneNode*>(&target);
+	}
+	if (mTarget->jump()) {
 		mJumped = true;
 	};
 };

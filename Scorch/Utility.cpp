@@ -1,6 +1,7 @@
 #include "Utility.hpp"
 
 #include "Settings.h"
+#include "Logger.h"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -237,6 +238,33 @@ bool matchesCategory(std::vector<unsigned int> category, Category::Type type)
 		}
 	}
 	return false;
+}
+
+template<typename TargetPtr, typename SourcePtr>
+inline TargetPtr safeCast(SourcePtr source)
+{
+	// 1. Ensure at compile-time that the user is passing pointer types
+	static_assert(std::is_pointer<TargetPtr>::value, "safeCast target must be a pointer type.");
+	static_assert(std::is_pointer<SourcePtr>::value, "safeCast source must be a pointer type.");
+
+	// 2. Perform the cast safely
+	if (TargetPtr castedPtr = dynamic_cast<TargetPtr>(source)) {
+		return castedPtr;
+	}
+
+	// 3. If it fails, log it. If source is null, log that; otherwise, get the true dynamic object type.
+	if (source != nullptr) {
+		std::string sourceDynamicName = typeid(*source).name(); // Use *source to extract the actual dynamic type
+		std::string targetName = typeid(typename std::remove_pointer<TargetPtr>::type).name();
+
+		Logger::Instance->LogData(Logger::Action,
+			"Utility::safeCast: Failed to cast dynamic type " + sourceDynamicName + " to " + targetName);
+	}
+	else {
+		Logger::Instance->LogData(Logger::Action, "Utility::safeCast: Attempted to cast a nullptr.");
+	}
+
+	return nullptr;
 }
 
 Scenes stringToScene(std::string i) {
